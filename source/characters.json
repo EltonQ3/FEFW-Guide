@@ -1,0 +1,2222 @@
+{
+ "_source": [
+  {
+   "label": "姊妹站角色資料（招募表、送禮表）",
+   "url": "https://github.com/EltonQ3/fe-guide-wanlvqiansi"
+  }
+ ],
+ "items": [
+  {
+   "id": "2",
+   "name": "凯伊",
+   "aliases": [
+    "凱伊"
+   ],
+   "jp": "カイ",
+   "en": "Cai",
+   "faction": "ribeira",
+   "portrait": "portrait/2.webp",
+   "avatar": "avatar/2.webp",
+   "likes": "体能锻炼、捕捉动物",
+   "hobbies": "钓鱼、枪术训练",
+   "gifts": "马匹用品 （胡须草、马匹美容套装、鬃毛装饰）；训练用品亦可",
+   "recruit": {
+    "kai": {
+     "kind": "lead",
+     "text": "本路线主角"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "3",
+   "name": "迪托利希",
+   "aliases": [],
+   "jp": "ディートリヒ",
+   "en": "Dietrich",
+   "faction": "lamine",
+   "portrait": "portrait/3.webp",
+   "avatar": "avatar/3.webp",
+   "likes": "美丽之物、甜食、妹妹",
+   "hobbies": "与强者战斗、冥想",
+   "gifts": "甜食、美术品类",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "lead",
+     "text": "本路线主角"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "4",
+   "name": "赛奥朵拉",
+   "aliases": [
+    "賽奧朵拉"
+   ],
+   "jp": "セオドラ",
+   "en": "Theodora",
+   "faction": "megaira",
+   "portrait": "portrait/4.webp",
+   "avatar": "avatar/4.webp",
+   "likes": "战斗、尤法斯、看子民繁荣",
+   "hobbies": "狩猎、战斗训练",
+   "gifts": "尤法斯肖像画 （最优）；咖啡、训练用品、时尚用品、结实背包、烹饪用品亦可接受",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "lead",
+     "text": "本路线主角"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "5",
+   "name": "蕾达",
+   "aliases": [
+    "蕾達"
+   ],
+   "jp": "レダ",
+   "en": "Leda",
+   "faction": "rose",
+   "portrait": "portrait/5.webp",
+   "avatar": "avatar/5.webp",
+   "likes": "双亲的回忆、家乡的歌、宝石、掌声",
+   "hobbies": "为比维拉琴调音、长途骑马",
+   "gifts": "东方耳环 、 蓝玫瑰花束 为其最爱",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "lead",
+     "text": "本路线主角"
+    }
+   }
+  },
+  {
+   "id": "hero",
+   "name": "伊修玛尔",
+   "aliases": [],
+   "jp": "イシュマール",
+   "en": "Eshmel",
+   "faction": "savior",
+   "portrait": "portrait/hero.webp",
+   "avatar": "avatar/hero.webp",
+   "likes": "有抱负的人、才能出众的人、无名小花",
+   "hobbies": "玩棋盘游戏",
+   "gifts": "棋盘游戏类",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "6",
+   "name": "蒂亚拉",
+   "aliases": [
+    "媞雅拉"
+   ],
+   "jp": "ティアラ",
+   "en": "",
+   "faction": "ribeira",
+   "portrait": "portrait/6.webp",
+   "avatar": "avatar/6.webp",
+   "likes": "图书馆、聊恋爱八卦、独处、祖父",
+   "hobbies": "阅读、玩棋盘游戏",
+   "gifts": "书籍、各类 Cervi 饮料、棋盘游戏",
+   "recruit": {
+    "kai": {
+     "kind": "auto",
+     "text": "自动加入"
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "凯伊外传",
+      "3000G"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "凯伊外传",
+      "3000G"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "凯伊外传",
+      "3000G"
+     ]
+    }
+   }
+  },
+  {
+   "id": "7",
+   "name": "彼得",
+   "aliases": [
+    "皮特鲁"
+   ],
+   "jp": "ピーテル",
+   "en": "",
+   "faction": "ribeira",
+   "portrait": "portrait/7.webp",
+   "avatar": "avatar/7.webp",
+   "likes": "母亲的手作料理、金橘果",
+   "hobbies": "吃东西、看云",
+   "gifts": "各类 Cervi 饮料、甜食、糕点食谱",
+   "recruit": {
+    "kai": {
+     "kind": "auto",
+     "text": "自动加入"
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "完成「彼得的请求」"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "完成「彼得的请求」"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "完成「彼得的请求」"
+     ]
+    }
+   }
+  },
+  {
+   "id": "8",
+   "name": "乌尔坦德",
+   "aliases": [
+    "乌尔坦"
+   ],
+   "jp": "ウルタンド",
+   "en": "",
+   "faction": "ribeira",
+   "portrait": "portrait/8.webp",
+   "avatar": "avatar/8.webp",
+   "likes": "照顾他人、家人、家务、爱情故事",
+   "hobbies": "存钱、逛市集",
+   "gifts": "鱼酱（garum） 、书籍、食谱等「爱下厨的人」用品；最爱为 东方爱情故事",
+   "recruit": {
+    "kai": {
+     "kind": "auto",
+     "text": "第 6 章自动加入"
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 5,
+     "needs": [
+      "乌尔坦德的请求（赠礼盒）"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "乌尔坦德的请求（赠礼盒）"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "乌尔坦德的请求（赠礼盒）"
+     ]
+    }
+   }
+  },
+  {
+   "id": "9",
+   "name": "法比奥",
+   "aliases": [
+    "法毕欧"
+   ],
+   "jp": "ファビオ",
+   "en": "",
+   "faction": "lamine",
+   "portrait": "portrait/9.webp",
+   "avatar": "avatar/9.webp",
+   "likes": "痛苦、被遗忘的情感、解剖美丽之物",
+   "hobbies": "绘画、与深思者交谈",
+   "gifts": "—",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "auto",
+     "text": "自动加入"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "迪托利希外传",
+      "迪托利希队败退后交涉",
+      "合适武器（达·米纳系护手有成功记录）"
+     ]
+    }
+   }
+  },
+  {
+   "id": "10",
+   "name": "艾丝梅拉尔达",
+   "aliases": [
+    "艾丝梅拉达"
+   ],
+   "jp": "エスメラルダ",
+   "en": "",
+   "faction": "lamine",
+   "portrait": "portrait/10.webp",
+   "avatar": "avatar/10.webp",
+   "likes": "美男子、投掷三叉戟、保养钓具",
+   "hobbies": "钓鱼、雕刻木偶",
+   "gifts": "东方耳环 、 蓝玫瑰花束 为其最爱",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 7,
+     "needs": [
+      "完成「エスメラルダの頼み」"
+     ]
+    },
+    "dietrich": {
+     "kind": "auto",
+     "text": "自动加入"
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "完成「エスメラルダの頼み」"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "完成「エスメラルダの頼み」"
+     ]
+    }
+   }
+  },
+  {
+   "id": "11",
+   "name": "米迦艾拉",
+   "aliases": [],
+   "jp": "ミカエラ",
+   "en": "",
+   "faction": "lamine",
+   "portrait": "portrait/11.webp",
+   "avatar": "avatar/11.webp",
+   "likes": "活动身体、照顾他人",
+   "hobbies": "烹饪、烘焙、煮咖啡",
+   "gifts": "柔软钓竿、鬃毛装饰、虚弱 Cervi、幼小 Ghosh、结实背包",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 5,
+     "needs": [
+      "3000G"
+     ]
+    },
+    "dietrich": {
+     "kind": "note",
+     "text": "第 4 章剧情加入・3000G（详细页记载，待实机核对）"
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "3000G"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "3000G"
+     ]
+    }
+   }
+  },
+  {
+   "id": "12",
+   "name": "波拿帕尔特",
+   "aliases": [],
+   "jp": "ボナパルテ",
+   "en": "",
+   "faction": "megaira",
+   "portrait": "portrait/12.webp",
+   "avatar": "avatar/12.webp",
+   "likes": "知识、与贤者对话、了解他国",
+   "hobbies": "烹饪、吟诗",
+   "gifts": "书籍",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "auto",
+     "text": "自动加入"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "13",
+   "name": "托比亚斯",
+   "aliases": [],
+   "jp": "トビヤス",
+   "en": "",
+   "faction": "megaira",
+   "portrait": "portrait/13.webp",
+   "avatar": "avatar/13.webp",
+   "likes": "喝酒、战斗、唱歌、与人交流",
+   "hobbies": "狩猎、独自露营",
+   "gifts": "发酵饮料（ghosh / shosh）",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "auto",
+     "text": "自动加入"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "14",
+   "name": "莉利安",
+   "aliases": [],
+   "jp": "リリアン",
+   "en": "",
+   "faction": "megaira",
+   "portrait": "portrait/14.webp",
+   "avatar": "avatar/14.webp",
+   "likes": "金币、宝石、年长男性",
+   "hobbies": "节俭、狩猎",
+   "gifts": "金币、宝石类",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 8,
+     "needs": [
+      "5000G"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 8,
+     "needs": [
+      "5000G"
+     ]
+    },
+    "theodora": {
+     "kind": "auto",
+     "text": "自动加入"
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 7,
+     "needs": [
+      "5000G"
+     ]
+    }
+   }
+  },
+  {
+   "id": "15",
+   "name": "莱桑达",
+   "aliases": [],
+   "jp": "ライサンダー",
+   "en": "",
+   "faction": "megaira",
+   "portrait": "portrait/15.webp",
+   "avatar": "avatar/15.webp",
+   "likes": "观星、与女性共餐",
+   "hobbies": "制作飞镖、长途骑行",
+   "gifts": "武器 （仪式用枪）、训练用品、 仿制勋章",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "铁枪×5"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "铁枪×5"
+     ]
+    },
+    "theodora": {
+     "kind": "auto",
+     "text": "自动加入"
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "铁枪×5"
+     ]
+    }
+   }
+  },
+  {
+   "id": "16",
+   "name": "巴卡尼亚",
+   "aliases": [],
+   "jp": "バッカニア",
+   "en": "",
+   "faction": "rose",
+   "portrait": "portrait/16.webp",
+   "avatar": "avatar/16.webp",
+   "likes": "忠诚、训练、梦见蕾达的幸福",
+   "hobbies": "烹饪、指导年轻人",
+   "gifts": "发酵饮料、军用品、训练用品",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "蕾达外传"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "蕾达外传"
+     ]
+    },
+    "leda": {
+     "kind": "auto",
+     "text": "自动加入"
+    }
+   }
+  },
+  {
+   "id": "17",
+   "name": "西洛可",
+   "aliases": [],
+   "jp": "シロッコ",
+   "en": "",
+   "faction": "rose",
+   "portrait": "portrait/17.webp",
+   "avatar": "avatar/17.webp",
+   "likes": "女神卡拉、所有女性、吟诵诗歌",
+   "hobbies": "阅读、绘制肖像",
+   "gifts": "发酵饮料 、绘画（特别是 尤法斯肖像 ）、书籍",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "完成「西洛可的请求」"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "完成「西洛可的请求」"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 5,
+     "needs": [
+      "完成「西洛可的请求」"
+     ]
+    },
+    "leda": {
+     "kind": "auto",
+     "text": "自动加入"
+    }
+   }
+  },
+  {
+   "id": "18",
+   "name": "奥林匹亚",
+   "aliases": [],
+   "jp": "オリンピア",
+   "en": "",
+   "faction": "rose",
+   "portrait": "portrait/18.webp",
+   "avatar": "avatar/18.webp",
+   "likes": "歌、舞、演奏乐器、作曲、引人注目",
+   "hobbies": "保养乐器、研究音乐舞蹈",
+   "gifts": "花卉、绘画、给「爱美者」的物品、棋盘游戏",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "3 个任务"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "3 个任务"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "3 个任务"
+     ]
+    },
+    "leda": {
+     "kind": "auto",
+     "text": "自动加入"
+    }
+   }
+  },
+  {
+   "id": "19",
+   "name": "穆",
+   "aliases": [],
+   "jp": "ムウ",
+   "en": "",
+   "faction": "rose",
+   "portrait": "portrait/19.webp",
+   "avatar": "avatar/19.webp",
+   "likes": "调配新药、父母、吃甜食",
+   "hobbies": "制作药液、运动",
+   "gifts": "各类 Cervi 饮料、甜食、咖啡",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "グルマオサ ×3"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "グルマオサ ×3"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "グルマオサ ×3"
+     ]
+    },
+    "leda": {
+     "kind": "auto",
+     "text": "自动加入"
+    }
+   }
+  },
+  {
+   "id": "21",
+   "name": "盖茨",
+   "aliases": [],
+   "jp": "ゲイツ",
+   "en": "",
+   "faction": "mane",
+   "portrait": "portrait/21.webp",
+   "avatar": "avatar/21.webp",
+   "likes": "赛伊的茶、费尔加纳马、决斗、书法",
+   "hobbies": "泡茶、练武",
+   "gifts": "茶、马匹用品、决斗/书法相关",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "贝特朗外传",
+      "贝特朗队败退后"
+     ]
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "22",
+   "name": "但丁",
+   "aliases": [],
+   "jp": "ダンテ",
+   "en": "",
+   "faction": "mane",
+   "portrait": "portrait/22.webp",
+   "avatar": "avatar/22.webp",
+   "likes": "她自己、快速书写、寻找戏剧性题材",
+   "hobbies": "研究他人、观察他人反应",
+   "gifts": "咖啡、书籍",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "8000G"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 8,
+     "needs": [
+      "8000G"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "8000G"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "8000G"
+     ]
+    }
+   }
+  },
+  {
+   "id": "24",
+   "name": "乌修拉",
+   "aliases": [],
+   "jp": "ウーシュラ",
+   "en": "",
+   "faction": "moon",
+   "portrait": "portrait/24.webp",
+   "avatar": "avatar/24.webp",
+   "likes": "诗歌、动物、阴处绽放的花、数钱",
+   "hobbies": "阅读、绘画",
+   "gifts": "咖啡、棋盘游戏、书籍、绘画、花卉",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "塔利穆恩外传",
+      "四次都选择「はい」"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "塔利穆恩外传",
+      "四次都选择「はい」"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "塔利穆恩外传",
+      "四次都选择「はい」"
+     ]
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "25",
+   "name": "希蒙",
+   "aliases": [],
+   "jp": "シモン",
+   "en": "",
+   "faction": "moon",
+   "portrait": "portrait/25.webp",
+   "avatar": "avatar/25.webp",
+   "likes": "殊死战斗、家乡菜、拈花惹草",
+   "hobbies": "",
+   "gifts": "蔬菜",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "支付 500G，掷硬币选择「裏」"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "支付 500G，掷硬币选择「裏」"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "支付 500G，掷硬币选择「裏」"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "支付 500G，掷硬币选择「裏」"
+     ]
+    }
+   }
+  },
+  {
+   "id": "27",
+   "name": "迪雅各",
+   "aliases": [],
+   "jp": "ディエゴ",
+   "en": "",
+   "faction": "linaria",
+   "portrait": "portrait/27.webp",
+   "avatar": "avatar/27.webp",
+   "likes": "森林漫步、采药、奥尔赫尔",
+   "hobbies": "吹笛、侍奉奥尔赫尔",
+   "gifts": "弓术用品 （装饰箭、关节舒缓手套、弓保养套装）",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "奥尔赫尔外传"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "奥尔赫尔外传"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 8,
+     "needs": [
+      "奥尔赫尔外传"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "奥尔赫尔外传"
+     ]
+    }
+   }
+  },
+  {
+   "id": "28",
+   "name": "妮涅",
+   "aliases": [],
+   "jp": "ニネ",
+   "en": "",
+   "faction": "linaria",
+   "portrait": "portrait/28.webp",
+   "avatar": "avatar/28.webp",
+   "likes": "可怜的人、与灵魂交谈、定情项链、观星",
+   "hobbies": "白日梦、训练",
+   "gifts": "东方黑丝绸",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "カガヤキウオ ×1"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "カガヤキウオ ×1"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "カガヤキウオ ×1"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "カガヤキウオ ×1"
+     ]
+    }
+   }
+  },
+  {
+   "id": "29",
+   "name": "阿纳托莉娅",
+   "aliases": [
+    "阿纳托利亚",
+    "爱娜特莉亚"
+   ],
+   "jp": "アナトリア",
+   "en": "",
+   "faction": "crow",
+   "portrait": "portrait/29.webp",
+   "avatar": "avatar/29.webp",
+   "likes": "八卦占卜、圆形之物",
+   "hobbies": "",
+   "gifts": "八卦占卜套装 、罕见书籍与时尚用品",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "30",
+   "name": "莎兰",
+   "aliases": [],
+   "jp": "サラン",
+   "en": "",
+   "faction": "crow",
+   "portrait": "portrait/30.webp",
+   "avatar": "avatar/30.webp",
+   "likes": "美食、酒、社交",
+   "hobbies": "",
+   "gifts": "「爱下厨的人」用品、茶",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "阿纳托莉娅外传",
+      "わかった → サラミス国 → ダ",
+      "ミナ → 座礁した巨大船"
+     ]
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "阿纳托莉娅外传",
+      "わかった → サラミス国 → ダ",
+      "ミナ → 座礁した巨大船"
+     ]
+    }
+   }
+  },
+  {
+   "id": "31",
+   "name": "哪吒",
+   "aliases": [],
+   "jp": "ナジャ",
+   "en": "",
+   "faction": "crow",
+   "portrait": "portrait/31.webp",
+   "avatar": "avatar/31.webp",
+   "likes": "体力活动、正义、战斗、美食",
+   "hobbies": "",
+   "gifts": "蔬菜、棋盘游戏",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "砂虫肉 ×3"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "砂虫肉 ×3"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 6,
+     "needs": [
+      "砂虫肉 ×3"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "砂虫肉 ×3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "32",
+   "name": "古扎岚",
+   "aliases": [],
+   "jp": "グザラン",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/32.webp",
+   "avatar": "avatar/32.webp",
+   "likes": "酒、女人、有趣的人、年轻新手",
+   "hobbies": "吹嘘",
+   "gifts": "发酵饮料（ghosh / shosh）",
+   "recruit": {
+    "kai": {
+     "kind": "note",
+     "text": "挖角教学加入"
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": []
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": []
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 3,
+     "needs": []
+    }
+   }
+  },
+  {
+   "id": "33",
+   "name": "伊欧",
+   "aliases": [
+    "伊奥"
+   ],
+   "jp": "イオ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/33.webp",
+   "avatar": "avatar/33.webp",
+   "likes": "骑士精神、自律、爱马罗西南",
+   "hobbies": "",
+   "gifts": "马匹用品",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "4000G"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 3,
+     "needs": [
+      "800G"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "4000G"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 6,
+     "needs": [
+      "1500G"
+     ]
+    }
+   }
+  },
+  {
+   "id": "34",
+   "name": "卡塔妮雅",
+   "aliases": [],
+   "jp": "カターニャ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/34.webp",
+   "avatar": "avatar/34.webp",
+   "likes": "上等商品、上等人、上等餐食",
+   "hobbies": "",
+   "gifts": "咖啡、绘画、任意稀有物品",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": []
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 8,
+     "needs": []
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": []
+    },
+    "leda": {
+     "kind": "note",
+     "text": "挖角教学加入"
+    }
+   }
+  },
+  {
+   "id": "35",
+   "name": "努蒂奴",
+   "aliases": [],
+   "jp": "ヌディーヌ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/35.webp",
+   "avatar": "avatar/35.webp",
+   "likes": "恪守职责、照顾奥尼乌斯",
+   "hobbies": "",
+   "gifts": "弓术用品 （装饰箭、关节舒缓手套、弓保养套装）、马匹美容套装、书籍",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 6,
+     "needs": [
+      "青铜斧 ×2"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 5,
+     "needs": [
+      "青铜斧 ×2"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 5,
+     "needs": [
+      "铁斧 ×3"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "铁斧 ×3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "36",
+   "name": "班迪兹",
+   "aliases": [
+    "本迪茨"
+   ],
+   "jp": "ベンディッツ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/36.webp",
+   "avatar": "avatar/36.webp",
+   "likes": "伟大的奥古斯特的战术、上进的年轻人",
+   "hobbies": "",
+   "gifts": "武器、战术与军史书籍、军功勋章、棋盘游戏",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": []
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 7,
+     "needs": []
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 8,
+     "needs": []
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": []
+    }
+   }
+  },
+  {
+   "id": "37",
+   "name": "亚历山德拉",
+   "aliases": [],
+   "jp": "アレキサンドラ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/37.webp",
+   "avatar": "avatar/37.webp",
+   "likes": "双亲、布凯法卢斯、有德之人、谈情说爱",
+   "hobbies": "",
+   "gifts": "马匹用品 、天马绘画",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 7,
+     "needs": []
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": []
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 6,
+     "needs": []
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": []
+    }
+   }
+  },
+  {
+   "id": "44",
+   "name": "诺克裘拉",
+   "aliases": [],
+   "jp": "ノクチュラ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/44.webp",
+   "avatar": "avatar/44.webp",
+   "likes": "城市与市民、斗殴",
+   "hobbies": "",
+   "gifts": "训练用品（训练柱、训练重物）",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 4,
+     "needs": []
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 6,
+     "needs": []
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 3,
+     "needs": []
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": []
+    }
+   }
+  },
+  {
+   "id": "45",
+   "name": "杨界",
+   "aliases": [],
+   "jp": "ヨーカイ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/45.webp",
+   "avatar": "avatar/45.webp",
+   "likes": "酒、古老故事、远方旅程、拯救弱者",
+   "hobbies": "",
+   "gifts": "发酵饮料、书籍 ；最爱为 但丁的著作",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 3,
+     "needs": [
+      "乾酪 → 満月の夜 → 任意选项"
+     ]
+    },
+    "dietrich": {
+     "kind": "note",
+     "text": "挖角教学加入"
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "乾酪 → 満月の夜 → 任意选项"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "乾酪 → 満月の夜 → 任意选项"
+     ]
+    }
+   }
+  },
+  {
+   "id": "46",
+   "name": "索绯雅",
+   "aliases": [],
+   "jp": "ソフィア",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/46.webp",
+   "avatar": "avatar/46.webp",
+   "likes": "美食、上菜瞬间（随即消失）",
+   "hobbies": "",
+   "gifts": "甜食、鱼酱、「爱下厨的人」用品",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": []
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": []
+    },
+    "theodora": {
+     "kind": "note",
+     "text": "挖角教学加入"
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": []
+    }
+   }
+  },
+  {
+   "id": "47",
+   "name": "努佐",
+   "aliases": [],
+   "jp": "ヌッツォ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/47.webp",
+   "avatar": "avatar/47.webp",
+   "likes": "传统、荣誉、强大力量",
+   "hobbies": "",
+   "gifts": "户外烹饪套装 等「爱下厨」用品、蔬菜",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 6,
+     "needs": [
+      "铁弓×3"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 9,
+     "needs": [
+      "铁弓（数量以交涉提示确认）"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 6,
+     "needs": [
+      "铁弓×3"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "铁弓×3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "48",
+   "name": "马吉迪",
+   "aliases": [],
+   "jp": "マジーデ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/48.webp",
+   "avatar": "avatar/48.webp",
+   "likes": "酒、女人、战斗、变强",
+   "hobbies": "",
+   "gifts": "成熟 Shosh",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 5,
+     "needs": [
+      "连续三次选择「必要だ」"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "连续三次选择「必要だ」"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "连续三次选择「必要だ」"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "连续三次选择「必要だ」"
+     ]
+    }
+   }
+  },
+  {
+   "id": "49",
+   "name": "札可捏",
+   "aliases": [],
+   "jp": "ザーコネ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/49.webp",
+   "avatar": "avatar/49.webp",
+   "likes": "钱、暴力、好女人、蔬菜、与友饮酒",
+   "hobbies": "",
+   "gifts": "蔬菜",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "砍价至 10G"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "砍价至 10G"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 4,
+     "needs": [
+      "砍价至 10G"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 5,
+     "needs": [
+      "砍价至 10G"
+     ]
+    }
+   }
+  },
+  {
+   "id": "50",
+   "name": "歌利亚",
+   "aliases": [
+    "哥莱亚斯"
+   ],
+   "jp": "ゴライアス",
+   "en": "",
+   "faction": "mane",
+   "portrait": "portrait/50.webp",
+   "avatar": "avatar/50.webp",
+   "likes": "暴走、食物、动物、熏肉",
+   "hobbies": "训练、参加角斗",
+   "gifts": "—",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "巨人肉 ×3"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "巨人肉 ×3"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "巨人肉 ×3"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "巨人肉 ×3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "51",
+   "name": "杰斯特",
+   "aliases": [
+    "杰斯塔"
+   ],
+   "jp": "ジェスター",
+   "en": "",
+   "faction": "mane",
+   "portrait": "portrait/51.webp",
+   "avatar": "avatar/51.webp",
+   "likes": "白鬃恶魔、看对手脸上的恐惧",
+   "hobbies": "将对手切成碎片、吓唬观众",
+   "gifts": "—",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "战斗任务×3"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "战斗任务×3"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "战斗任务×3"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "战斗任务×3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "52",
+   "name": "鲁鲁迪娅",
+   "aliases": [
+    "露迪娅"
+   ],
+   "jp": "ルルディヤー",
+   "en": "",
+   "faction": "moon",
+   "portrait": "portrait/52.webp",
+   "avatar": "avatar/52.webp",
+   "likes": "写故事、欣赏艺术、谈情说爱",
+   "hobbies": "",
+   "gifts": "咖啡、书籍、绘画",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "完成「鲁鲁迪娅的请求」"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "完成「鲁鲁迪娅的请求」"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "完成「鲁鲁迪娅的请求」"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "完成「鲁鲁迪娅的请求」"
+     ]
+    }
+   }
+  },
+  {
+   "id": "53",
+   "name": "菲亚娜",
+   "aliases": [],
+   "jp": "フィアナ",
+   "en": "",
+   "faction": "moon",
+   "portrait": "portrait/53.webp",
+   "avatar": "avatar/53.webp",
+   "likes": "诗集、辛辣食物、咖啡、可信赖的人",
+   "hobbies": "",
+   "gifts": "诗集、辛辣食物、咖啡",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "3000G"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "3000G"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "3000G"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 5,
+     "needs": [
+      "3000G"
+     ]
+    }
+   }
+  },
+  {
+   "id": "54",
+   "name": "西提司",
+   "aliases": [],
+   "jp": "セテス",
+   "en": "",
+   "faction": "linaria",
+   "portrait": "portrait/54.webp",
+   "avatar": "avatar/54.webp",
+   "likes": "赛罗斯的教诲、钓鱼、女儿、勤奋的人",
+   "hobbies": "写寓言、讲道、教学",
+   "gifts": "钓鱼用品 （鱼钩、钓竿、鱼眼、腌鱼肠）",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "完成「西提司的请求」"
+     ]
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 6,
+     "needs": [
+      "完成「西提司的请求」"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "完成「西提司的请求」"
+     ]
+    }
+   }
+  },
+  {
+   "id": "55",
+   "name": "洛蕾塔",
+   "aliases": [
+    "罗蕾塔"
+   ],
+   "jp": "ロレッタ",
+   "en": "",
+   "faction": "linaria",
+   "portrait": "portrait/55.webp",
+   "avatar": "avatar/55.webp",
+   "likes": "可靠的人、甜食、朋友",
+   "hobbies": "剑术训练、钓鱼",
+   "gifts": "糕点等甜食",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "铁剑×3"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "铁剑×3"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 5,
+     "needs": [
+      "铁剑×3"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 5,
+     "needs": [
+      "铁剑×3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "56",
+   "name": "大刀",
+   "aliases": [],
+   "jp": "ダイトウ",
+   "en": "",
+   "faction": "crow",
+   "portrait": "portrait/56.webp",
+   "avatar": "avatar/56.webp",
+   "likes": "女人（尤其阿纳托莉娅）、机械、美食、战斗",
+   "hobbies": "",
+   "gifts": "各类 Cervi 饮料",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "コーシャルーガー ×2（资料表记载）"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "コーシャルーガー ×2（资料表记载）"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 5,
+     "needs": [
+      "コーシャルーガー ×2（资料表记载）"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 5,
+     "needs": [
+      "コーシャルーガー ×2（资料表记载）"
+     ]
+    }
+   }
+  },
+  {
+   "id": "57",
+   "name": "哈尔温",
+   "aliases": [],
+   "jp": "ハルヴィン",
+   "en": "",
+   "faction": "crow",
+   "portrait": "portrait/57.webp",
+   "avatar": "avatar/57.webp",
+   "likes": "种菜、购物、街头表演",
+   "hobbies": "",
+   "gifts": "盆栽蔬菜、幼小 Ghosh、俗艳手镯",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 5,
+     "needs": [
+      "椰枣×10"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "椰枣×10"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "椰枣×10"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 7,
+     "needs": [
+      "椰枣×10"
+     ]
+    }
+   }
+  },
+  {
+   "id": "58",
+   "name": "贾斯敏",
+   "aliases": [],
+   "jp": "ジャスミン",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/58.webp",
+   "avatar": "avatar/58.webp",
+   "likes": "",
+   "hobbies": "",
+   "gifts": "",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 8,
+     "needs": [
+      "2000G"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 9,
+     "needs": [
+      "5000G"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "5000G"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 4,
+     "needs": [
+      "500G"
+     ]
+    }
+   }
+  },
+  {
+   "id": "59",
+   "name": "基罗伊卡",
+   "aliases": [],
+   "jp": "キロイカ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/59.webp",
+   "avatar": "avatar/59.webp",
+   "likes": "偷盗、大海、船、顺从的下属",
+   "hobbies": "",
+   "gifts": "海运相关",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "圣水 ×8"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 4,
+     "needs": [
+      "圣水 ×3"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 10,
+     "needs": [
+      "圣水 ×8"
+     ]
+    },
+    "leda": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 4,
+     "needs": [
+      "圣水 ×3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "61",
+   "name": "佩佩",
+   "aliases": [],
+   "jp": "ペペ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/61.webp",
+   "avatar": "avatar/61.webp",
+   "likes": "",
+   "hobbies": "",
+   "gifts": "",
+   "recruit": {
+    "kai": {
+     "kind": "scout",
+     "support": 1,
+     "renown": 9,
+     "needs": [
+      "贝特朗外传"
+     ]
+    },
+    "dietrich": {
+     "kind": "scout",
+     "support": 3,
+     "renown": 8,
+     "needs": [
+      "贝特朗外传"
+     ]
+    },
+    "theodora": {
+     "kind": "scout",
+     "support": 2,
+     "renown": 7,
+     "needs": [
+      "贝特朗外传"
+     ]
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "62",
+   "name": "贝特朗",
+   "aliases": [
+    "贝特兰",
+    "贝尔特兰"
+   ],
+   "jp": "ベルトラン",
+   "en": "",
+   "faction": "mane",
+   "portrait": "portrait/62.webp",
+   "avatar": "avatar/62.webp",
+   "likes": "锻造、腌肉、鱼酱、精良武器",
+   "hobbies": "",
+   "gifts": "鱼酱（garum） （其人设直接写明）",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "63",
+   "name": "塔利穆恩",
+   "aliases": [
+    "谭利穆恩"
+   ],
+   "jp": "タリムーン",
+   "en": "",
+   "faction": "moon",
+   "portrait": "portrait/63.webp",
+   "avatar": "avatar/63.webp",
+   "likes": "钱、冒险、肉桂、调情、随心而行",
+   "hobbies": "",
+   "gifts": "发酵饮料、咖啡、罕见书籍、棋盘游戏、绘画",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  },
+  {
+   "id": "64",
+   "name": "安娜",
+   "aliases": [],
+   "jp": "アンナ",
+   "en": "",
+   "faction": "free",
+   "portrait": "portrait/64.webp",
+   "avatar": "avatar/64.webp",
+   "likes": "八卦、做生意、占便宜",
+   "hobbies": "",
+   "gifts": "—",
+   "recruit": {
+    "kai": {
+     "kind": "none"
+    },
+    "dietrich": {
+     "kind": "none"
+    },
+    "theodora": {
+     "kind": "none"
+    },
+    "leda": {
+     "kind": "none"
+    }
+   }
+  }
+ ]
+}

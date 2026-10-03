@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, ring %}
+{% block main %}
+{{ page_hero("BLOOD SEALS", "血印", "角色与生俱来的 " ~ seals|length ~ " 枚血印，攻击时按机率发动。外圈刻度表示发动机率。", "var(--crimson)", sources) }}
+<div class="wrap">
+  <div class="seal-grid">
+    {% for s in seals %}
+    <article class="panel seal ornate" id="s-{{ s.id }}">
+      <div class="medal">{{ ring(s.chance or 0, s.color) }}<img src="{{ root }}assets/{{ s.icon }}" alt="" width="64" height="64"></div>
+      <h3 class="gold-text">{{ s.name }}</h3>
+      <div class="chance">TRIGGER <b>{{ s.chance }}%</b></div>
+      <p class="effect">{{ s.effect }}</p>
+      <div class="holders">
+        {% for h in s.holder_chars %}
+          {% if h.id %}<a class="holder" href="characters.html#c-{{ h.id }}"><img src="{{ root }}assets/{{ h.avatar }}" alt="" loading="lazy" width="26" height="26">{{ h.name }}</a>
+          {% else %}<span class="holder" style="padding-left: 10px">{{ h.name }}</span>{% endif %}
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+[
+ {
+  "name": "02-兵种职业信息",
+  "page": "classes.html",
+  "page_label": "兵种职业",
+  "status": "已收录（经姊妹站转录）",
+  "builtin": true
+ },
+ {
+  "name": "03-全外传信息",
+  "page": "paralogues.html",
+  "page_label": "外传",
+  "status": "已收录（经姊妹站转录）",
+  "builtin": true
+ },
+ {
+  "name": "血印",
+  "page": "seals.html",
+  "page_label": "血印",
+  "status": "已收录（经姊妹站转录）",
+  "builtin": true
+ },
+ {
+  "name": "神之加护",
+  "page": "blessings.html",
+  "page_label": "神之加护",
+  "status": "已收录（姊妹站手册）",
+  "builtin": true
+ },
+ {
+  "name": "挖角名声 · 送礼",
+  "page": "characters.html",
+  "page_label": "角色名鉴",
+  "status": "以姊妹站招募表、送礼表呈现",
+  "builtin": true
+ },
+ {
+  "name": "特技 · 战技 · 武器 · 道具",
+  "page": null,
+  "page_label": "",
+  "status": "待接入共创表"
+ },
+ {
+  "name": "军团兵 · 骑乘",
+  "page": null,
+  "page_label": "",
+  "status": "待接入共创表"
+ },
+ {
+  "name": "钓鱼 · 栽种 · 茶会 · 支援",
+  "page": null,
+  "page_label": "",
+  "status": "待接入共创表"
+ }
+]

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, filterbar %}
+{% block main %}
+{{ page_hero("PARALOGUES", "外传", "已整理的 " ~ paras|length ~ " 篇人物外传：接取地点、各路线的开放章节与游戏内日期、报酬，以及会影响哪些同伴的挖角。", "var(--amber)", sources) }}
+<div class="wrap" data-filter-scope data-url-params="route">
+  <section class="panel calendar ornate" aria-labelledby="cal-h">
+    <h2 id="cal-h" class="serif">接取窗口日历</h2>
+    <p class="hint">横轴为游戏内日期（{{ cal.first }} – {{ cal.last }}），每格一周；四种颜色代表四条路线的接取窗口。</p>
+    <div class="gantt" style="--days: {{ cal.days }}">
+      <span></span>
+      <div class="axis">{% for t in cal.ticks %}<span style="left: {{ t.pct }}%">{{ t.label }}</span>{% endfor %}</div>
+      {% for p in paras %}
+      <a class="who" href="#p-{{ p.id }}">{% if p.avatar %}<img src="{{ root }}assets/{{ p.avatar }}" alt="" loading="lazy" width="28" height="28">{% endif %}<span>{{ p.person }}</span></a>
+      <div class="lane">
+        {% for b in p.bars %}<span class="bar" data-row="{{ b.row }}" style="--c: {{ b.color }}; left: {{ b.left }}%; width: {{ b.width }}%" title="{{ b.title }}"></span>{% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="legend">{% for r in routes %}<span style="--c: {{ r.color }}"><i></i>{{ r.name }}</span>{% endfor %}</div>
+  </section>
+
+  {{ filterbar("搜索人物、外传名、地点、报酬……", paras|length, [
+      {"key": "route", "label": "路线", "options": route_options},
+  ]) }}
+
+  <div class="para-list">
+    {% for p in paras %}
+    <article class="para" id="p-{{ p.id }}" data-item data-route="{{ p.route_keys | join(' ') }}" data-text="{{ p.search }}">
+      <div class="side" style="--c: {{ p.color }}">{% if p.portrait %}<img src="{{ root }}assets/{{ p.portrait }}" alt="{{ p.person }}" loading="lazy" width="400" height="533">{% endif %}</div>
+      <div class="body">
+        <div class="who">{{ p.person }}的外传</div>
+        <h3 class="gold-text">{{ p.title }}</h3>
+        <div class="windows">
+          {% for r in routes %}{% set ws = p.routes.get(r.key) %}
+            {% if ws %}{% for w in ws %}<span class="win" style="--c: {{ r.color }}"><b>{{ r.short }}</b><span class="d">第 {{ w.chapter }} 章 · {{ w.start }}{% if w.end and w.end != w.start %} – {{ w.end }}{% endif %}</span></span>{% endfor %}
+            {% else %}<span class="win off" style="--c: {{ r.color }}"><b>{{ r.short }}</b><span class="d">未开放</span></span>{% endif %}
+          {% endfor %}
+        </div>
+        <div class="facts">
+          {% if p.place %}<div><span>接取地点</span>{{ p.place }}</div>{% endif %}
+          {% if p.reward %}<div><span>报酬</span>{{ p.reward }}</div>{% endif %}
+          {% if p.people %}<div><span>关联挖角</span>{{ p.people }}</div>{% endif %}
+        </div>
+        {% if p.steps %}<p class="note">{{ p.steps }}</p>{% endif %}
+        {% if p.consequence %}<p class="note">{{ p.consequence }}</p>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <div class="empty" data-filter-empty><span class="serif">没有符合的外传</span>换个关键词，或改选路线。</div>
+</div>
+{% endblock %}

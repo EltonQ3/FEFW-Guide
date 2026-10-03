@@ -1,0 +1,115 @@
+{
+ "_source": [
+  {
+   "label": "共創表 · 血印分頁（經姊妹站轉錄）",
+   "url": "https://docs.qq.com/sheet/DV0N0VUZLSXRmUWFq"
+  }
+ ],
+ "items": [
+  {
+   "id": "prophet",
+   "name": "预言者之冠",
+   "chance": 5,
+   "effect": "命中 +100",
+   "holders": [
+    "伊修玛尔"
+   ],
+   "icon": "seal/prophet.webp"
+  },
+  {
+   "id": "apostle",
+   "name": "使徒之天冠",
+   "chance": 20,
+   "effect": "命中 +20",
+   "holders": [
+    "凯伊",
+    "奥尔赫尔"
+   ],
+   "icon": "seal/apostle.webp"
+  },
+  {
+   "id": "eternity",
+   "name": "永远之天冠",
+   "chance": 10,
+   "effect": "中幅回复自己的 HP",
+   "holders": [
+    "迪托利希"
+   ],
+   "icon": "seal/eternity.webp"
+  },
+  {
+   "id": "soul",
+   "name": "魂魄之天冠",
+   "chance": 25,
+   "effect": "攻击力 +3",
+   "holders": [
+    "赛奥朵拉",
+    "凯伊",
+    "奥尔赫尔",
+    "塔利穆恩",
+    "波鲁波亚"
+   ],
+   "icon": "seal/soul.webp"
+  },
+  {
+   "id": "earth",
+   "name": "大地之天冠",
+   "chance": 3,
+   "effect": "攻击力 +7",
+   "holders": [
+    "蕾达"
+   ],
+   "icon": "seal/earth.webp"
+  },
+  {
+   "id": "courage",
+   "name": "勇气之天冠",
+   "chance": 3,
+   "effect": "造成的伤害变为 1.5 倍",
+   "holders": [
+    "艾丝梅拉尔达"
+   ],
+   "icon": "seal/courage.webp"
+  },
+  {
+   "id": "libra",
+   "name": "天秤之天冠",
+   "chance": 3,
+   "effect": "不会受到反击",
+   "holders": [
+    "西提司"
+   ],
+   "icon": "seal/libra.webp"
+  },
+  {
+   "id": "solitude",
+   "name": "孤高之天冠",
+   "chance": 10,
+   "effect": "命中 +30",
+   "holders": [
+    "妮涅"
+   ],
+   "icon": "seal/solitude.webp"
+  },
+  {
+   "id": "bind",
+   "name": "束缚之天冠",
+   "chance": 5,
+   "effect": "造成的伤害变为 1.2 倍",
+   "holders": [
+    "乌修拉"
+   ],
+   "icon": "seal/bind.webp"
+  },
+  {
+   "id": "rebirth",
+   "name": "再生之天冠",
+   "chance": 20,
+   "effect": "小幅回复自己的 HP",
+   "holders": [
+    "菲亚娜"
+   ],
+   "icon": "seal/rebirth.webp"
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, filterbar %}
+{% block main %}
+{{ page_hero("CLASS LADDER", "兵种职业", "从平民到神将，" ~ classes|length ~ " 种兵种按阶级排成阶梯。每张卡片列出移动、考试条件、训练加成、兵种特技与精通技能。", "var(--azure)", sources) }}
+<div class="wrap view-cards" data-filter-scope data-view-scope="classes">
+  {{ filterbar("搜索兵种、特技、武器……（例：剑术、乘降术）", classes|length, [
+      {"key": "tier", "label": "阶级", "options": tier_options},
+      {"key": "family", "label": "系统", "options": family_options},
+      {"key": "kind", "label": "类型", "options": kind_options},
+  ], view_toggle=True) }}
+
+  <div class="only-cards">
+  {% for t in tiers_present %}
+  <section class="group" data-filter-section>
+    <div class="group-head">
+      <span class="num"><span>{{ t.numeral }}</span></span>
+      <div><h2>{{ t.name }}</h2><span class="sub">{{ t.note }}</span></div>
+      <span class="rule"></span>
+    </div>
+    <div class="class-grid">
+      {% for k in t.members %}
+      <article class="class-card" id="k-{{ k.id }}" style="--c: {{ k.color }}" data-item data-tier="{{ k.tier_key }}" data-family="{{ k.family }}" data-kind="{{ k.kind }}" data-text="{{ k.search }}">
+        <div class="sprite">{% if k.icon %}<img src="{{ root }}assets/{{ k.icon }}" alt="" loading="lazy" width="68" height="68">{% endif %}</div>
+        <div>
+          <div class="head"><span class="name">{{ k.name }}</span><span class="mv">移动 <b>{{ k.movement }}</b></span></div>
+          <div class="line">{{ k.family }}{% if k.kind %} · {{ k.kind }}{% endif %}{% if k.restriction %} · {{ k.restriction }}{% endif %}</div>
+          {% if k.skills %}<div class="tags">{% for s in k.skills %}<span class="tag skill" style="--c: {{ k.color }}">{{ s }}</span>{% endfor %}</div>{% endif %}
+        </div>
+        <dl class="exam">
+          <dt>考试</dt><dd>{{ k.exam or "—" }}</dd>
+          {% if k.unlock %}<dt>解锁</dt><dd>{{ k.unlock }}</dd>{% endif %}
+          {% if k.training and k.training != "无" %}<dt>训练</dt><dd>{{ k.training }}</dd>{% endif %}
+          {% if k.mastery_name %}<dt>精通</dt><dd><span class="serif">{{ k.mastery_name }}</span>{% if k.mastery_exp %}<span class="mv">（{{ k.mastery_exp }}）</span>{% endif %}</dd>{% endif %}
+        </dl>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  </div>
+
+  <div class="only-table table-wrap">
+    <table class="data">
+      <thead><tr><th>兵种</th><th>移动</th><th>系统 · 类型</th><th>考试条件</th><th>训练加成</th><th>兵种特技</th><th>精通</th></tr></thead>
+      <tbody>
+      {% for t in tiers_present %}
+        <tr class="tier-row" data-filter-section-row="{{ t.key }}"><td colspan="7">{{ t.numeral }} · {{ t.name }}</td></tr>
+        {% for k in t.members %}
+        <tr data-item data-tier="{{ k.tier_key }}" data-family="{{ k.family }}" data-kind="{{ k.kind }}" data-text="{{ k.search }}">
+          <td class="first"><span class="mini">{% if k.icon %}<img src="{{ root }}assets/{{ k.icon }}" alt="" loading="lazy" width="36" height="36">{% endif %}{{ k.name }}</span></td>
+          <td>{{ k.movement }}</td>
+          <td>{{ k.family }}{% if k.kind %} · {{ k.kind }}{% endif %}</td>
+          <td>{{ k.exam or "—" }}{% if k.unlock %}<br><small>{{ k.unlock }}</small>{% endif %}</td>
+          <td>{{ k.training }}</td>
+          <td>{{ k.skills | join("、") }}</td>
+          <td>{{ k.mastery_name }}{% if k.mastery_exp %}（{{ k.mastery_exp }}）{% endif %}</td>
+        </tr>
+        {% endfor %}
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="empty" data-filter-empty><span class="serif">没有符合的兵种</span>换个关键词，或清除筛选条件。</div>
+</div>
+{% endblock %}

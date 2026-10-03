@@ -1,0 +1,24 @@
+{
+ "_說明": "簡體（共創表／社群譯名）→ 繁體（港台官方繁體中文版）對照。建置繁體頁時先套用本表，其餘字形交給 OpenCC s2tw。status：official＝任天堂官方資料；ingame-tc＝多個繁中玩家站一致引用的遊戲內繁中名；converted＝只做字形轉換。",
+ "terms": [
+  {"zhs": "火焰纹章 万缕千丝", "zht": "Fire Emblem 萬縷千絲", "jp": "ファイアーエムブレム 万紫千紅", "en": "Fire Emblem: Fortune's Weave", "status": "official", "src": "https://www.nintendo.com/hk/topics/article/6TmiV6zUXU8YEQzNj5NvgQ"},
+  {"zhs": "凯伊", "zht": "凱伊", "jp": "カイ", "en": "Cai", "status": "official"},
+  {"zhs": "迪托利希", "zht": "迪托利希", "jp": "ディートリヒ", "en": "Dietrich", "status": "official"},
+  {"zhs": "赛奥朵拉", "zht": "賽奧朵拉", "jp": "セオドラ", "en": "Theodora", "status": "official"},
+  {"zhs": "蕾达", "zht": "蕾達", "jp": "レダ", "en": "Leda", "status": "official"},
+  {"zhs": "伊修玛尔", "zht": "伊修瑪爾", "jp": "イシュマール", "en": "Eshmel", "status": "official"},
+  {"zhs": "鞑古扎帝国", "zht": "韃古扎帝國", "jp": "ダグザ帝国", "en": "Dagda Empire", "status": "official"},
+  {"zhs": "鞑古席翁", "zht": "韃古席翁", "jp": "ダグザシオン", "status": "official"},
+  {"zhs": "利贝拉村", "zht": "利貝拉村", "jp": "リベイラ", "en": "Ribeira", "status": "official"},
+  {"zhs": "蒂亚拉", "zht": "媞雅拉", "jp": "ティアラ", "status": "ingame-tc", "src": "https://www.entertainment14.net/blog/post/111011677"},
+  {"zhs": "彼得", "zht": "皮特魯", "jp": "ピーテル", "status": "ingame-tc", "src": "https://www.entertainment14.net/blog/post/111011677"},
+  {"zhs": "法比奥", "zht": "法畢歐", "jp": "ファビオ", "en": "Fabio", "status": "ingame-tc"},
+  {"zhs": "塔利穆恩", "zht": "譚利穆恩", "jp": "タリムーン", "status": "ingame-tc"},
+  {"zhs": "阿纳托莉娅", "zht": "愛娜特莉亞", "jp": "アナトリア", "status": "ingame-tc"},
+  {"zhs": "奥尔赫尔", "zht": "歐露赫露", "jp": "オルヘル", "status": "ingame-tc"},
+  {"zhs": "贝特朗", "zht": "貝爾特蘭", "jp": "ベルトラン", "status": "ingame-tc"},
+  {"zhs": "月之谎", "zht": "月之謊言", "status": "ingame-tc", "src": "https://www.entertainment14.net/blog/post/111011677"},
+  {"zhs": "利纳利亚朝露", "zht": "姬金魚草的朝露", "status": "ingame-tc", "src": "https://www.entertainment14.net/blog/post/111011677"},
+  {"zhs": "拉弥努家族", "zht": "拉彌努家族", "status": "ingame-tc", "src": "https://www.entertainment14.net/blog/post/111011677"}
+ ]
+}

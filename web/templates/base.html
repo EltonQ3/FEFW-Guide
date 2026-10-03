@@ -1,0 +1,64 @@
+{% from "_macros.html" import emblem, flourish, icon %}<!doctype html>
+<html lang="{{ html_lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% if page_title %}{{ page_title }} · {% endif %}万缕千丝 · 资料织锦</title>
+<meta name="description" content="{{ description }}">
+<meta name="theme-color" content="#0b0911" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f3ecdd" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if page_title %}{{ page_title }} · {% endif %}万缕千丝 · 资料织锦">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="{{ site.base_url }}/assets/og.jpg">
+<link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="zh-Hant" href="{{ site.base_url }}/{{ page }}">
+<link rel="alternate" hreflang="zh-Hans" href="{{ site.base_url }}/hans/{{ page }}">
+<link rel="preload" href="{{ root }}static/fonts/latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ root }}static/fonts-{{ font_key }}.css?v={{ v.fonts }}">
+<link rel="stylesheet" href="{{ root }}static/site.css?v={{ v.css }}">
+<script>(function(){var d=document.documentElement,t=null;try{t=localStorage.getItem("fw.theme")}catch(e){}if(!t)t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";d.dataset.theme=t;})();</script>
+<script defer src="{{ root }}static/site.js?v={{ v.js }}"></script>
+</head>
+<body class="p-{{ page_key }}" data-root="{{ root }}" data-lang="{{ lang }}">
+<a class="skip" href="#main">跳到正文</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="万缕千丝 · 资料织锦 首页">{{ emblem("hd") }}<span class="brand-name"><b class="gold-text">万缕千丝</b><small>FORTUNE'S WEAVE CODEX</small></span></a>
+    <nav class="nav" id="site-nav" aria-label="主导航">
+      {% for item in nav %}<a href="{{ item.file }}"{% if item.file == page %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+    </nav>
+    <div class="tools">
+      <button class="icon-btn search-btn" type="button" data-open-finder aria-label="全站搜索">{{ icon("search") }}<span class="label">搜索</span><kbd>/</kbd></button>
+      <div class="lang-switch" role="group" aria-label="文字">
+        {% if lang == "hant" %}<span aria-current="true"><!--noconv-->繁<!--/noconv--></span><a href="{{ alt_href }}" data-lang-link hreflang="zh-Hans" lang="zh-Hans" title="切换为简体中文"><!--noconv-->简<!--/noconv--></a>
+        {% else %}<a href="{{ alt_href }}" data-lang-link hreflang="zh-Hant" lang="zh-Hant" title="切換為繁體中文"><!--noconv-->繁<!--/noconv--></a><span aria-current="true">简</span>{% endif %}
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="切换明暗">{{ icon("sun") }}{{ icon("moon") }}</button>
+      <button class="icon-btn menu-btn" type="button" data-menu aria-controls="site-nav" aria-expanded="false" aria-label="打开目录">{{ icon("menu") }}</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<footer class="footer">
+  <div class="wrap">
+    {{ flourish() }}
+    <p><b class="serif">万缕千丝 · 资料织锦</b> — 以社群《火焰纹章 万缕千丝》共创资料表为本，重新编排的玩家资料站。</p>
+    <p>资料来源：<a href="{{ site.sheet_url }}" rel="noopener" target="_blank">腾讯文档共创表</a>（社群协作，持续更新）· 部分条目经 <a href="https://fe-guide.pages.dev/" rel="noopener" target="_blank">万缕千丝 · 战术手帖</a> 转录 · <a href="about.html">来源与译名说明</a></p>
+    <p>游戏图像与名称版权属于 Nintendo / INTELLIGENT SYSTEMS。本站为非官方玩家整理，与任天堂无关。资料快照 {{ site.updated }}。</p>
+  </div>
+</footer>
+<button class="icon-btn to-top" type="button" data-to-top aria-label="回到顶部">{{ icon("up") }}</button>
+<dialog class="finder" id="finder" aria-label="全站搜索">
+  <form method="dialog" class="search-field">{{ icon("search") }}<input type="search" data-finder-input placeholder="搜索角色、兵种、外传、血印、神祇……" autocomplete="off" enterkeyhint="go" aria-label="搜索关键词"></form>
+  <ul data-finder-list role="listbox" data-none="没有找到符合的条目"></ul>
+  <div class="foot"><span>↑↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+</dialog>
+<dialog class="sheet" id="detail" aria-label="详细资料">
+  <button class="icon-btn sheet-close" type="button" data-close aria-label="关闭">{{ icon("close") }}</button>
+  <div class="sheet-scroll" data-detail-body></div>
+</dialog>
+</body>
+</html>

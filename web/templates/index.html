@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% from "_macros.html" import flourish, icon, emblem %}
+{% block main %}
+<section class="hero">
+  <canvas data-weave aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="kicker">FIRE EMBLEM · FORTUNE'S WEAVE</span>
+      <h1 class="gold-text">万缕千丝</h1>
+      <div class="subtitle">THE&nbsp;WOVEN&nbsp;CODEX</div>
+      <p class="lead">把社群共创资料表重新织成一部图鉴——角色、兵种、外传、血印与神之加护，按你想查的方式排好，手机与电脑都好读。</p>
+      <div class="actions">
+        <a class="btn primary" href="characters.html">翻阅角色名鉴 {{ icon("arrow") }}</a>
+        <button class="btn" type="button" data-open-finder>{{ icon("search") }} 全站搜索</button>
+      </div>
+    </div>
+    <div class="banners" aria-label="四位主角">
+      {% for r in routes %}{% set c = char_by_id[r.cid] %}
+      <a class="banner" href="characters.html#c-{{ c.id }}" style="--c: {{ r.color }}">
+        <div class="rod"></div>
+        <div class="cloth"><img src="{{ root }}assets/{{ c.portrait }}" alt="{{ c.name }}" width="400" height="533" fetchpriority="{{ 'high' if loop.first else 'auto' }}"></div>
+        <div class="label"><b>{{ c.name }}</b><small>{{ c.en | upper }}</small></div>
+        <div class="tassel"></div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="ribbon wrap">
+  <div class="panel ornate">
+    {% for v, l in home_stats %}<div class="stat"><b class="gold-text">{{ v }}</b><span>{{ l }}</span></div>{% endfor %}
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">CONTENTS</span>
+      <h2 class="gold-text">资料目录</h2>
+      {{ flourish() }}
+      <p>共创表的每个分页都对应一个专门的版面：用卡片看人物、用阶梯看兵种、用日历看外传。</p>
+    </div>
+    <div class="tiles">
+      {% for t in tiles %}
+      <a class="tile reveal" href="{{ t.file }}" style="--c: {{ t.color }}">
+        <span class="ico">{{ icon(t.icon) }}</span>
+        <span class="en">{{ t.en }}</span>
+        <h3>{{ t.label }}</h3>
+        <p>{{ t.desc }}</p>
+        <span class="go">{{ t.go }} →</span>
+        <span class="big" aria-hidden="true">{{ t.count }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">FOUR THREADS OF FATE</span>
+      <h2 class="gold-text">四条命运之线</h2>
+      {{ flourish() }}
+      <p>第一部由四位主角各自展开。点选路线，查看在这条线上能以挖角或剧情招入的同伴。</p>
+    </div>
+    <div class="routes">
+      {% for r in routes %}{% set c = char_by_id[r.cid] %}
+      <a class="route-card reveal" href="characters.html?route={{ r.key }}" style="--c: {{ r.color }}">
+        <img src="{{ root }}assets/{{ c.portrait }}" alt="" loading="lazy" width="400" height="533">
+        <div class="body">
+          <span class="en">{{ r.en }}</span>
+          <h3>{{ r.name }}</h3>
+          <p>{{ r.faction_name }} · 可招入 {{ r.recruitable }} 人</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="panel note-band reveal">
+      <span class="seal-ico">{{ emblem("nb") }}</span>
+      <div>
+        <h3 class="serif">关于资料来源</h3>
+        <p>本站内容以社群维护的腾讯文档共创表为本；兵种、外传与血印分页经「万缕千丝 · 战术手帖」转录核对。繁体版优先采用港台官方译名，未公布者以社群译名转写，详见<a href="about.html">来源与译名说明</a>。</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

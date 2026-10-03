@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, filterbar %}
+{% block main %}
+{{ page_hero(tab.en or "FROM THE SHEET", tab.title, tab.intro, tab.color, tab.sources) }}
+<div class="wrap view-cards" data-filter-scope data-view-scope="sheet-{{ tab.slug }}">
+  {{ filterbar("在「" ~ tab.title ~ "」中搜索……", tab.rows|length, tab.filter_groups, view_toggle=True) }}
+
+  <div class="only-cards">
+  {% for g in tab.groups %}
+  <section class="group" data-filter-section>
+    {% if g.name %}
+    <div class="group-head">
+      <span class="num"><span>{{ loop.index }}</span></span>
+      <div><h2>{{ g.name }}</h2><span class="sub">{{ g.rows|length }} 项</span></div>
+      <span class="rule"></span>
+    </div>
+    {% endif %}
+    <div class="sheet-grid">
+      {% for r in g.rows %}
+      <article class="sheet-card" id="{{ tab.slug }}-{{ r.n }}" style="--c: {{ r.color or tab.color }}" data-item {% for k, v in r.facets.items() %}data-{{ k }}="{{ v }}" {% endfor %}data-text="{{ r.search }}">
+        <h3 class="serif">{{ r.title }}</h3>
+        {% if r.badges %}<div class="tags">{% for b in r.badges %}<span class="tag">{{ b }}</span>{% endfor %}</div>{% endif %}
+        <dl class="kv">
+          {% for k, v in r.fields %}<dt>{{ k }}</dt><dd>{{ v }}</dd>{% endfor %}
+        </dl>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  </div>
+
+  <div class="only-table table-wrap">
+    <table class="data">
+      <thead><tr>{% for c in tab.columns %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+      <tbody>
+      {% for g in tab.groups %}
+        {% if g.name %}<tr class="tier-row" data-filter-section-row="{{ loop.index }}"><td colspan="{{ tab.columns|length }}">{{ g.name }}</td></tr>{% endif %}
+        {% for r in g.rows %}
+        <tr data-item {% for k, v in r.facets.items() %}data-{{ k }}="{{ v }}" {% endfor %}data-text="{{ r.search }}">
+          {% for v in r.cells %}<td{% if loop.first %} class="first"{% endif %}>{{ v }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="empty" data-filter-empty><span class="serif">没有符合的条目</span>换个关键词，或清除筛选条件。</div>
+</div>
+{% endblock %}

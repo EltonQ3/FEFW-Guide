@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero %}
+{% block main %}
+{{ page_hero("ABOUT THIS CODEX", "来源与译名", "本站资料从哪里来、哪些分页已经收录，以及繁体版的译名怎么定。", None, None) }}
+<div class="wrap prose">
+  <h2 class="serif">资料来源</h2>
+  <div class="panel">
+    <p>主要依据社群协作维护的<a href="{{ site.sheet_url }}" rel="noopener" target="_blank">腾讯文档共创表</a>（持续更新，非官方公布）。表格原本以多个分页呈现，本站把每个分页改成适合阅读的版面：可搜索、可筛选，手机上自动改成卡片。</p>
+    <p>目前收录的分页，部分经姊妹站<a href="https://fe-guide.pages.dev/" rel="noopener" target="_blank">万缕千丝 · 战术手帖</a>转录并与日文攻略站交叉核对；角色的挖角与送礼资料来自该站的招募表与送礼表。共创表本身更新时，以共创表为准。</p>
+  </div>
+
+  <h2 class="serif">分页收录情况</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th>共创表分页</th><th>本站页面</th><th>状态</th></tr></thead>
+      <tbody>
+      {% for t in sheet_tabs %}
+        <tr><td class="first">{{ t.name }}</td><td>{% if t.page %}<a href="{{ t.page }}">{{ t.page_label }}</a>{% else %}—{% endif %}</td><td>{{ t.status }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="serif">繁体版的译名</h2>
+  <div class="panel">
+    <p>共创表与多数中文攻略使用简体社群译名；游戏本身另有港台官方繁体中文版，部分人名与阵营名并不相同（例如<!--noconv-->「蒂亚拉」<!--/noconv-->在繁中版是<!--noconv-->「媞雅拉」<!--/noconv-->）。繁体页面按以下顺序决定写法：</p>
+    <ul>
+      <li>任天堂官方公布的名称（香港／台湾官网、eShop）优先。</li>
+      <li>官方未公布的，采用多个繁中玩家攻略一致引用的游戏内繁中名。</li>
+      <li>仍无法确认的，保留社群译名，只做简繁字形转换。</li>
+    </ul>
+    <p>简体页面保留共创表的原写法。下表是繁体版采用的官方与游戏内译名：</p>
+  </div>
+  <div class="table-wrap" style="margin-top: 16px">
+    <table class="data term-table">
+      <thead><tr><th>简体（共创表）</th><th>日文</th><th>繁体（本站）</th><th>依据</th></tr></thead>
+      <tbody>
+      {% for g in glossary %}
+        <tr><td class="first"><!--noconv-->{{ g.zhs }}<!--/noconv--></td><td lang="ja">{{ g.jp or "—" }}</td><td><!--noconv-->{{ g.zht }}<!--/noconv--></td><td><span class="status {{ g.status }}">{{ g.status_label }}</span></td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="serif">美术与版权</h2>
+  <div class="panel">
+    <p>人物立绘、头像、兵种与血印图示继承自姊妹站素材库；标题标志为任天堂官方日文版原图。游戏内容与图像版权属于 Nintendo / INTELLIGENT SYSTEMS。标题字体使用思源宋体（Noto Serif TC / SC），西文使用 Cinzel，两者均为 SIL Open Font License，按页面用字裁切后自托管。</p>
+    <p>本站为非官方玩家整理，不代表任天堂或共创表作者的立场。资料如有错误，以游戏内实际为准。</p>
+  </div>
+</div>
+{% endblock %}
