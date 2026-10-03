@@ -23,7 +23,7 @@
         <div class="sprite">{% if k.icon %}<img src="{{ root }}assets/{{ k.icon }}" alt="" loading="lazy" width="68" height="68">{% endif %}</div>
         <div>
           <div class="head"><span class="name">{{ k.name }}</span><span class="mv">移动 <b>{{ k.movement }}</b></span></div>
-          <div class="line">{{ k.family }}{% if k.kind %} · {{ k.kind }}{% endif %}{% if k.restriction %} · {{ k.restriction }}{% endif %}</div>
+          <div class="line">{{ k.family }}{% if k.kind_label %} · {{ k.kind_label }}{% endif %}{% if k.restriction %} · {{ k.restriction }}{% endif %}</div>
           {% if k.skills %}<div class="tags">{% for s in k.skills %}<span class="tag skill" style="--c: {{ k.color }}">{{ s }}</span>{% endfor %}</div>{% endif %}
         </div>
         <dl class="exam">
@@ -49,7 +49,7 @@
         <tr data-item data-tier="{{ k.tier_key }}" data-family="{{ k.family }}" data-kind="{{ k.kind }}" data-text="{{ k.search }}">
           <td class="first"><span class="mini">{% if k.icon %}<img src="{{ root }}assets/{{ k.icon }}" alt="" loading="lazy" width="36" height="36">{% endif %}{{ k.name }}</span></td>
           <td>{{ k.movement }}</td>
-          <td>{{ k.family }}{% if k.kind %} · {{ k.kind }}{% endif %}</td>
+          <td>{{ k.family }}{% if k.kind_label %} · {{ k.kind_label }}{% endif %}</td>
           <td>{{ k.exam or "—" }}{% if k.unlock %}<br><small>{{ k.unlock }}</small>{% endif %}</td>
           <td>{{ k.training }}</td>
           <td>{{ k.skills | join("、") }}</td>

@@ -142,10 +142,13 @@ def prepare() -> dict:
     for k in classes:
         head, _, rest = k["features"].partition("，")
         parts = [p.strip() for p in head.split("·")]
-        if len(parts) == 1:  # 「步兵」這類只寫類型的
-            k["family"], k["kind"] = "通用", parts[0]
+        unit_kinds = ("步兵", "骑兵", "重装", "飞行")
+        if parts[0] in unit_kinds:  # 「步兵」「重装 · 骑兵」這類只寫類型、沒有系統的
+            k["family"], kinds = "通用", parts
         else:
-            k["family"], k["kind"] = parts[0], parts[1]
+            k["family"], kinds = parts[0], parts[1:]
+        k["kind"] = " ".join(kinds)          # 篩選用，空格分隔可同時符合多個類型
+        k["kind_label"] = " · ".join(kinds)
         k["skills"] = re.findall(r"【([^】]+)】", rest)
         m = re.match(r"【([^】]+)】\s*[（(](\d+)[)）]", k.get("mastery", ""))
         k["mastery_name"], k["mastery_exp"] = (m.group(1), m.group(2)) if m else (k.get("mastery", "").strip("【】"), "")
@@ -161,7 +164,7 @@ def prepare() -> dict:
             tiers_present.append({"name": name, "key": key, "numeral": numeral, "note": f"{note} · {phase}" if phase else note,
                                   "members": members})
     families = sorted({k["family"] for k in classes}, key=lambda f: list(FAMILY_COLORS).index(f) if f in FAMILY_COLORS else 99)
-    kinds = [x for x in ("步兵", "骑兵", "重装", "飞行") if any(k["kind"] == x for k in classes)]
+    kinds = [x for x in ("步兵", "骑兵", "重装", "飞行") if any(x in k["kind"].split() for k in classes)]
 
     # 外傳
     starts, ends = [], []
