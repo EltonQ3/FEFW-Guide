@@ -180,7 +180,7 @@ def main() -> None:
     chars.sort(key=lambda x: (order.get(x["id"], 9), int(x["id"]) if x["id"].isdigit() else 999))
     write(SRC / "characters.json", {
         "_source": [
-            {"label": "姊妹站角色資料（招募表、送禮表）", "url": "https://github.com/EltonQ3/fe-guide-wanlvqiansi"},
+            {"label": "姊妹站角色资料（招募表、送礼表）", "url": "https://github.com/EltonQ3/fe-guide-wanlvqiansi"},
         ],
         "items": chars,
     })
@@ -210,7 +210,7 @@ def main() -> None:
         }
         out.append(item)
     write(SRC / "classes.json", {
-        "_source": [{"label": "共創表 · 02-兵种职业信息（經姊妹站轉錄）", "url": SHEET_URL}],
+        "_source": [{"label": "共创表 · 02-兵种职业信息（经姊妹站转录）", "url": SHEET_URL}],
         "items": out,
     })
 
@@ -231,7 +231,7 @@ def main() -> None:
             "consequence": p.get("consequence", ""),
         })
     write(SRC / "paralogues.json", {
-        "_source": [{"label": "共創表 · 03-全外传信息（經姊妹站轉錄）", "url": SHEET_URL}],
+        "_source": [{"label": "共创表 · 03-全外传信息（经姊妹站转录）", "url": SHEET_URL}],
         "items": out,
     })
 
@@ -253,7 +253,7 @@ def main() -> None:
             "icon": icon,
         })
     write(SRC / "seals.json", {
-        "_source": [{"label": "共創表 · 血印分頁（經姊妹站轉錄）", "url": SHEET_URL}],
+        "_source": [{"label": "共创表 · 血印分页（经姊妹站转录）", "url": SHEET_URL}],
         "items": seals,
     })
 
@@ -273,7 +273,7 @@ def main() -> None:
             "note": "剧情解锁，不可侍奉" if key == "fortuna" else "",
         })
     write(SRC / "blessings.json", {
-        "_source": [{"label": "姊妹站手冊 3.2 七神加護效果全表", "url": "https://fe-guide.pages.dev/"}],
+        "_source": [{"label": "姊妹站手册 3.2 七神加护效果全表", "url": "https://fe-guide.pages.dev/"}],
         "items": gods,
     })
 

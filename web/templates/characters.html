@@ -42,7 +42,7 @@
     <div class="info">
       <div class="fac-line"><span class="tag" style="--c: {{ f.color }}">{{ f.name }}</span></div>
       <h2 class="gold-text">{{ c.name }}</h2>
-      <div class="names"><span lang="ja">{{ c.jp }}</span>{% if c.en %}<span class="latin">{{ c.en }}</span>{% endif %}{% set al = c.aliases_hant if lang == "hant" else c.aliases %}{% if al %}<span>别名：{{ al | join("、") }}</span>{% endif %}</div>
+      <div class="names"><span lang="ja">{{ c.jp }}</span>{% if c.en %}<span class="latin">{{ c.en }}</span>{% endif %}{% set al = c.aliases_hant if lang == "hant" else c.aliases_hans %}{% if al %}<span>别名：{{ al | join("、") }}</span>{% endif %}</div>
 
       <h3>挖角与加入</h3>
       <div class="recruit">

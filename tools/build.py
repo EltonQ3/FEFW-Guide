@@ -18,6 +18,9 @@ from jinja2 import Environment, FileSystemLoader
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from textconv import html_to_hant, text_to_hant, glossary_pairs  # noqa: E402
 import fonts  # noqa: E402
+import opencc  # noqa: E402
+
+_t2s = opencc.OpenCC("t2s")
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "source"
@@ -120,6 +123,7 @@ def prepare() -> dict:
     for c in chars:
         # 別名轉成繁體後若與本名相同（例如蒂亚拉／媞雅拉），不再重複列出
         c["aliases_hant"] = [a for a in c.get("aliases", []) if text_to_hant(a) != text_to_hant(c["name"])]
+        c["aliases_hans"] = [a for a in c.get("aliases", []) if _t2s.convert(a) != c["name"]]
         c["routes_ok"] = [r["key"] for r in ROUTES if c["recruit"][r["key"]]["kind"] != "none"]
         c["is_lead"] = c["id"] in ("2", "3", "4", "5", "hero")
         c["lead_label"] = "真主角" if c["id"] == "hero" else "主角"
