@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, filterbar, tname, star with context %}
+{% block main %}
+{{ page_hero("THE ARMORY", "武器与魔法", weapons|length ~ " 件武器与魔法的威力、命中、必杀、射程、重量与耐久。名称多为暂译，旁附英文原名，方便对照英文攻略。", "var(--azure)", sources.weapons) }}
+<div class="wrap view-table" data-filter-scope data-view-scope="weapons" data-url-params="kind">
+  {{ filterbar("搜索名称、特性……（例：特效、战技、毒）", weapons|length, [
+      {"key": "kind", "label": "种类", "options": wkind_options},
+  ], view_toggle=["卡片", "表格"]) }}
+
+  <div class="only-table table-wrap">
+    <table class="data weapon-table" data-sortable>
+      <thead><tr><th class="first" data-sort-key="name">名称</th><th data-sort-key="kind">种类</th><th data-num data-sort-key="mt">威力</th><th data-num data-sort-key="hit">命中</th><th data-num data-sort-key="crit">必杀</th><th data-sort-key="rng">射程</th><th data-num data-sort-key="wt">重量</th><th data-num data-sort-key="uses">耐久</th><th data-sort-key="rank">技能等级</th><th>说明</th></tr></thead>
+      <tbody>
+      {% for w in weapons %}
+        <tr id="w-{{ w.id }}" data-item data-kind="{{ w.kind }}" data-text="{{ w.search }}" data-name="{{ w.name }}">
+          <td class="first">{{ tname(w) }}</td>
+          <td data-v="{{ loop.index }}">{{ w.kind_label }}</td>
+          <td data-v="{{ w.might or -1 }}">{{ w.might or "—" }}</td>
+          <td data-v="{{ w.hit or -1 }}">{{ w.hit or "—" }}</td>
+          <td data-v="{{ w.crit or -1 }}">{{ w.crit or "—" }}</td>
+          <td>{{ w.range or "—" }}</td>
+          <td data-v="{{ w.weight or -1 }}">{{ w.weight or "—" }}</td>
+          <td data-v="{{ w.uses or -1 }}">{{ w.uses or "—" }}</td>
+          <td>{{ w.rank or "—" }}</td>
+          <td class="desc">{{ w.desc }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="only-cards weapon-grid">
+    {% for w in weapons %}
+    <article class="wcard" data-item data-kind="{{ w.kind }}" data-text="{{ w.search }}">
+      <div class="wc-head"><b>{{ tname(w) }}</b><span class="tag">{{ w.kind_label }}</span></div>
+      <dl class="wstats">
+        <div><dt>威力</dt><dd>{{ w.might or "—" }}</dd></div><div><dt>命中</dt><dd>{{ w.hit or "—" }}</dd></div><div><dt>必杀</dt><dd>{{ w.crit or "—" }}</dd></div>
+        <div><dt>射程</dt><dd>{{ w.range or "—" }}</dd></div><div><dt>重量</dt><dd>{{ w.weight or "—" }}</dd></div><div><dt>耐久</dt><dd>{{ w.uses or "—" }}</dd></div>
+      </dl>
+      {% if w.rank %}<p class="rank-need">{{ w.rank }}</p>{% endif %}
+      {% if w.desc %}<p class="desc">{{ w.desc }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  <div class="empty" data-filter-empty><span class="serif">没有符合的武器</span>换个关键词，或改选种类。</div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, divider, icon, star with context %}
+{% block main %}
+{{ page_hero("RECRUITMENT PLANNER", "招募规划", "选一条路线，同伴按名声门槛由低到高排列。选好「我的名声」只显示目前够得着的人，勾选「已招募」会记在这台装置的浏览器里。", "var(--crimson)", [{"label": "共创表／战术手帖 · 跨路线招募表", "url": "https://github.com/EltonQ3/fe-guide-wanlvqiansi"}]) }}
+<div class="wrap planner" data-planner>
+  <div class="route-picker" role="tablist" aria-label="路线">
+    {% for r in recruit %}{% set c = by_id[r.cid] %}
+    <button type="button" role="tab" class="rp" data-route="{{ r.key }}" aria-selected="{{ 'true' if loop.first else 'false' }}" style="--c: {{ r.color }}">
+      <span class="disc">{% if c.avatar %}<img src="{{ root }}assets/{{ c.avatar }}" alt="" width="64" height="64">{% endif %}</span>
+      <span class="t"><b>{{ r.name }}</b><small>挖角 {{ r.scout }} · 自动 {{ r.auto }}</small></span>
+    </button>
+    {% endfor %}
+  </div>
+
+  <div class="planner-bar panel">
+    <label class="search-field"><span class="sr-only">搜索同伴或条件</span>{{ icon("search") }}<input type="search" data-planner-text placeholder="搜索同伴或交涉条件……（例：铁剑、外传）" autocomplete="off"></label>
+    <label class="renown"><span>我的名声</span><select data-renown><option value="99">不限</option>{% for n in range(1, 11) %}<option value="{{ n }}">Lv {{ n }} 以下</option>{% endfor %}</select></label>
+    <label class="toggle"><input type="checkbox" data-hide-done><span>隐藏已招募</span></label>
+    <span class="progress">已招募 <b data-done-count>0</b> / <span data-total-count>0</span></span>
+  </div>
+
+  {% for r in recruit %}
+  <section class="route-panel" data-route-panel="{{ r.key }}" role="tabpanel" style="--c: {{ r.color }}"{% if not loop.first %} hidden{% endif %}>
+    <div class="rtable">
+      <div class="rhead" aria-hidden="true"><span></span><span>同伴</span><span>方式</span><span>支援</span><span>名声</span><span>交涉与条件</span></div>
+      {% for row in r.rows %}{% set u = row.unit %}{% set rc = row.rc %}
+      <div class="rrow{% if rc.kind != 'scout' %} auto{% endif %}" data-row data-id="{{ u.id }}" data-renown="{{ row.renown or 0 }}" data-text="{{ u.name }} {{ u.fac.name }} {{ (rc.needs or []) | join(' ') }} {{ rc.text or '' }}">
+        <label class="done"><input type="checkbox" data-done="{{ r.key }}:{{ u.id }}"><span class="box">{{ icon("check") }}</span><span class="sr-only">已招募 {{ u.name }}</span></label>
+        <a class="who" href="{{ u.url }}" style="--c: {{ u.color }}">{% if u.avatar %}<img src="{{ root }}assets/{{ u.avatar }}" alt="" loading="lazy" width="44" height="44">{% else %}<i>{{ u.name[:1] }}</i>{% endif %}<span><b>{{ u.name }}</b><small>{{ u.fac.name }}</small></span></a>
+        <span class="how">{% if rc.kind == 'scout' %}<span class="tag" style="--c: var(--c)">挖角</span>{% elif rc.kind == 'lead' %}<span class="tag gold">主角</span>{% else %}<span class="tag">自动加入</span>{% endif %}</span>
+        <span class="num s">{% if row.support %}<b>{{ row.support }}</b><small>支援</small>{% else %}—{% endif %}</span>
+        <span class="num r">{% if row.renown %}<b>{{ row.renown }}</b><small>名声</small>{% else %}—{% endif %}</span>
+        <span class="cond">{% if rc.kind == 'scout' %}{% for n in rc.needs %}<span class="need">{{ n }}</span>{% else %}<span class="muted">无额外条件</span>{% endfor %}{% else %}<span class="muted">{{ rc.text }}</span>{% endif %}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="empty" data-planner-empty><span class="serif">这个名声等级还招不到人</span>提高「我的名声」，或清除搜索条件。</div>
+  </section>
+  {% endfor %}
+
+  <section class="later">
+    <h2 class="serif">{{ star() }}第二、三部加入的角色</h2>
+    <p class="hint">这些角色不在第一部的挖角名单里，依剧情或委托加入。</p>
+    <div class="later-grid">
+      {% for u in later %}
+      <a class="later-card" href="{{ u.url }}" style="--c: {{ u.color }}">{% if u.avatar %}<img src="{{ root }}assets/{{ u.avatar }}" alt="" loading="lazy" width="56" height="56">{% else %}<i>{{ u.name[:1] }}</i>{% endif %}<span><b>{{ u.name }}</b><small>{{ u.join }}</small></span></a>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock %}

@@ -1,32 +1,33 @@
-{% from "_macros.html" import emblem, flourish, icon %}<!doctype html>
+{% from "_macros.html" import emblem, divider, icon with context %}<!doctype html>
 <html lang="{{ html_lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{% if page_title %}{{ page_title }} · {% endif %}万缕千丝 · 资料织锦</title>
 <meta name="description" content="{{ description }}">
-<meta name="theme-color" content="#0b0911" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f3ecdd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0915" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5eee2" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{% if page_title %}{{ page_title }} · {% endif %}万缕千丝 · 资料织锦">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:image" content="{{ site.base_url }}/assets/og.jpg">
+<link rel="canonical" href="{{ site.base_url }}/{{ 'hans/' if lang == 'hans' else '' }}{{ '' if page == 'index.html' else page }}">
+<link rel="alternate" hreflang="zh-Hant" href="{{ site.base_url }}/{{ '' if page == 'index.html' else page }}">
+<link rel="alternate" hreflang="zh-Hans" href="{{ site.base_url }}/hans/{{ '' if page == 'index.html' else page }}">
 <link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
-<link rel="alternate" hreflang="zh-Hant" href="{{ site.base_url }}/{{ page }}">
-<link rel="alternate" hreflang="zh-Hans" href="{{ site.base_url }}/hans/{{ page }}">
 <link rel="preload" href="{{ root }}static/fonts/latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ root }}static/fonts-{{ font_key }}.css?v={{ v.fonts }}">
 <link rel="stylesheet" href="{{ root }}static/site.css?v={{ v.css }}">
 <script>(function(){var d=document.documentElement,t=null;try{t=localStorage.getItem("fw.theme")}catch(e){}if(!t)t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";d.dataset.theme=t;})();</script>
 <script defer src="{{ root }}static/site.js?v={{ v.js }}"></script>
 </head>
-<body class="p-{{ page_key }}" data-root="{{ root }}" data-lang="{{ lang }}">
+<body class="p-{{ page_key }}" data-root="{{ root }}" data-up="{{ up }}" data-lang="{{ lang }}">
 <a class="skip" href="#main">跳到正文</a>
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="万缕千丝 · 资料织锦 首页">{{ emblem("hd") }}<span class="brand-name"><b class="gold-text">万缕千丝</b><small>FORTUNE'S WEAVE CODEX</small></span></a>
+    <a class="brand" href="{{ up }}index.html" aria-label="万缕千丝 · 资料织锦 首页">{{ emblem("hd") }}<span class="brand-name"><b class="gold-text">万缕千丝</b><small>FORTUNE'S WEAVE CODEX</small></span></a>
     <nav class="nav" id="site-nav" aria-label="主导航">
-      {% for item in nav %}<a href="{{ item.file }}"{% if item.file == page %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+      {% for file, label in nav %}<a href="{{ up }}{{ file }}"{% if file == page or (page_key == 'unit' and file == 'units.html') or (page_key in ('weapons','gifts','seals','blaze','blessings','sheet') and file == 'codex.html') %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}
     </nav>
     <div class="tools">
       <button class="icon-btn search-btn" type="button" data-open-finder aria-label="全站搜索">{{ icon("search") }}<span class="label">搜索</span><kbd>/</kbd></button>
@@ -44,15 +45,15 @@
 </main>
 <footer class="footer">
   <div class="wrap">
-    {{ flourish() }}
-    <p><b class="serif">万缕千丝 · 资料织锦</b> — 以社群《火焰纹章 万缕千丝》共创资料表为本，重新编排的玩家资料站。</p>
-    <p>资料来源：<a href="{{ site.sheet_url }}" rel="noopener" target="_blank">腾讯文档共创表</a>（社群协作，持续更新）· 部分条目经 <a href="https://fe-guide.pages.dev/" rel="noopener" target="_blank">万缕千丝 · 战术手帖</a> 转录 · <a href="about.html">来源与译名说明</a></p>
-    <p>游戏图像与名称版权属于 Nintendo / INTELLIGENT SYSTEMS。本站为非官方玩家整理，与任天堂无关。资料快照 {{ site.updated }}。</p>
+    {{ divider() }}
+    <p><b class="serif">万缕千丝 · 资料织锦</b> — 以社群《火焰纹章 万缕千丝》共创资料表为本，补上 Game8 英文攻略的数值资料后重新编排的玩家图鉴。</p>
+    <p>资料来源：<a href="{{ site.sheet_url }}" rel="noopener" target="_blank">腾讯文档共创表</a> · <a href="https://github.com/EltonQ3/fe-guide-wanlvqiansi" rel="noopener" target="_blank">万缕千丝 · 战术手帖</a> · <a href="https://game8.co/games/Fire-Emblem-Fortunes-Weave" rel="noopener" target="_blank">Game8</a>（经 <a href="https://github.com/Rico0319/Fortunes-Weave-Helper" rel="noopener" target="_blank">Fortunes-Weave-Helper</a> 整理）· <a href="{{ up }}about.html">来源与译名说明</a></p>
+    <p>带虚线的名称为本站暂译，鼠标停留可看英文原名。游戏图像与名称版权属于 Nintendo / INTELLIGENT SYSTEMS；本站为非官方玩家整理。资料快照 {{ site.updated }}。</p>
   </div>
 </footer>
 <button class="icon-btn to-top" type="button" data-to-top aria-label="回到顶部">{{ icon("up") }}</button>
 <dialog class="finder" id="finder" aria-label="全站搜索">
-  <form method="dialog" class="search-field">{{ icon("search") }}<input type="search" data-finder-input placeholder="搜索角色、兵种、外传、血印、神祇……" autocomplete="off" enterkeyhint="go" aria-label="搜索关键词"></form>
+  <form method="dialog" class="search-field">{{ icon("search") }}<input type="search" data-finder-input placeholder="搜索角色、兵种、武器、礼物、外传……" autocomplete="off" enterkeyhint="go" aria-label="搜索关键词"></form>
   <ul data-finder-list role="listbox" data-none="没有找到符合的条目"></ul>
   <div class="foot"><span>↑↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
 </dialog>

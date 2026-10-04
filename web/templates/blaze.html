@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, star, tname with context %}
+{% block main %}
+{{ page_hero("BLAZE ARTS", "爆炎技", "主角与少数特殊角色的专属大招：消耗爆炎量表，射程与习得时机各不相同。", "var(--ember)", [{"label": "Game8 · 爆炎技一览（经 Fortunes-Weave-Helper 整理）", "url": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/620483"}]) }}
+<div class="wrap">
+  {% for b in blaze %}{% set u = b.unit %}
+  <section class="blaze-block" id="b-{{ u.id }}" style="--c: {{ u.color }}">
+    <a class="bb-who" href="{{ u.url }}">{% if u.portrait %}<span class="arch-mini"><img src="{{ root }}assets/{{ u.portrait }}" alt="" loading="lazy" width="400" height="533"></span>{% endif %}<span><b class="serif">{{ u.name }}</b><small>{{ u.fac.name }}</small></span></a>
+    <div class="arts">
+      {% for a in b.arts %}
+      <div class="art">
+        <div class="art-head"><b>{{ tname(a) }}</b><span class="art-meta">{% if a.cost %}<span>爆炎 <b>{{ a.cost }}</b></span>{% endif %}{% if a.range %}<span>射程 <b>{{ a.range }}</b></span>{% endif %}{% if a.learned %}<span>{{ a.learned }}</span>{% endif %}</span></div>
+        <p>{{ a.effect }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

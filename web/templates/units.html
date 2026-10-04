@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, filterbar, icon with context %}
+{% block main %}
+{{ page_hero("DRAMATIS PERSONAE", "角色", "共 " ~ units|length ~ " 位角色，按阵营排列。窗格看立绘，成长表可按任一项成长率排序；点进角色查看个人技能、支援、礼物与各路线加入条件。", "var(--violet)", sources.units) }}
+<div class="wrap view-cards" data-filter-scope data-view-scope="units" data-url-params="route faction">
+  {{ filterbar("搜索名字、喜好、礼物、技能……（例：咖啡、马术）", units|length, [
+      {"key": "faction", "label": "阵营", "options": faction_options},
+      {"key": "route", "label": "第一部可加入", "options": route_options},
+  ], view_toggle=["窗格", "成长表"]) }}
+
+  <div class="only-cards">
+  {% for f in factions_present %}
+  <section class="group" data-filter-section>
+    <div class="group-head" style="--c: {{ f.color }}">
+      <span class="crest"><span>{{ f.name[:1] }}</span></span>
+      <div><h2>{{ f.name }}</h2>{% if f.note %}<span class="sub">{{ f.note }}</span>{% endif %}</div>
+      <span class="rule"></span><span class="n">{{ f.members|length }}</span>
+    </div>
+    <div class="window-grid">
+      {% for u in f.members %}
+      <a class="window" id="u-{{ u.id }}" href="{{ u.url }}" style="--c: {{ u.color }}" data-item data-faction="{{ u.faction }}" data-route="{{ u.routes_ok | join(' ') }}" data-text="{{ u.search }}">
+        <span class="pane">{% if u.portrait %}<img src="{{ root }}assets/{{ u.portrait }}" alt="" loading="lazy" width="400" height="533">{% elif u.avatar %}<img class="small" src="{{ root }}assets/{{ u.avatar }}" alt="" loading="lazy">{% else %}<i class="blank">{{ u.name[:1] }}</i>{% endif %}</span>
+        {% if u.lead %}<span class="badge">{{ "真主角" if u.id == "eshmel" else "主角" }}</span>{% endif %}
+        <span class="sill">
+          <b class="name">{{ u.name }}</b>
+          <span class="sub" lang="ja">{{ u.jp }}{% if u.en %} · {{ u.en }}{% endif %}</span>
+          <span class="meta">{% if u.growth_total %}<span class="total" title="成长率总和">{{ u.growth_total }}</span>{% endif %}<span class="route-dots" aria-label="第一部可加入路线">{% for r in routes %}<i class="{% if r.key not in u.routes_ok %}off{% endif %}" style="--c: {{ r.color }}"></i>{% endfor %}</span></span>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  </div>
+
+  <div class="only-table table-wrap">
+    <table class="data growth-table" data-sortable>
+      <thead><tr><th data-sort-key="name" class="first">角色</th><th data-sort-key="faction">阵营</th>{% for k, zh in stat_labels %}<th data-sort-key="{{ k }}" data-num>{{ zh }}</th>{% endfor %}<th data-sort-key="total" data-num>总和</th></tr></thead>
+      <tbody>
+      {% for u in units if u.growth %}
+        <tr data-item data-faction="{{ u.faction }}" data-route="{{ u.routes_ok | join(' ') }}" data-text="{{ u.search }}" data-name="{{ u.name }}" data-faction-order="{{ loop.index }}">
+          <td class="first"><a class="mini" href="{{ u.url }}">{% if u.avatar %}<img src="{{ root }}assets/{{ u.avatar }}" alt="" loading="lazy" width="36" height="36">{% endif %}{{ u.name }}</a></td>
+          <td><span class="tag" style="--c: {{ u.color }}">{{ u.fac.name }}</span></td>
+          {% for row in u.growth_rows %}<td class="heat{% if row.best %} best{% endif %}" data-v="{{ row.value }}" style="--h: {{ row.value / 80 }}">{{ row.value }}</td>{% endfor %}
+          <td class="tot" data-v="{{ u.growth_total }}">{{ u.growth_total }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="empty" data-filter-empty><span class="serif">没有符合的角色</span>换个关键词，或清除阵营与路线筛选。</div>
+</div>
+{% endblock %}

@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-{% from "_macros.html" import page_hero %}
+{% from "_macros.html" import page_hero, star with context %}
 {% block main %}
-{{ page_hero("DIVINE BLESSINGS", "神之加护", "鞑古席翁神殿街的七位神祇。侍奉解锁加护等级，战斗中消耗「天刻的白沙」启用，战前最多携带四个加护。", "var(--jade)", sources) }}
+{{ page_hero("DIVINE BLESSINGS", "神之加护", "鞑古席翁神殿街的七位神祇。侍奉解锁加护等级，战斗中消耗「天刻的白沙」启用，战前最多携带四个加护。", "var(--jade)", sources.blessings) }}
 <div class="wrap">
   <div class="gods">
     {% for g in gods %}
     <article class="panel god" id="g-{{ g.id }}" style="--c: {{ g.color }}">
       <div class="arch">
-        <svg viewBox="0 0 300 118" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">{% for i in range(9) %}<path d="M150 130 L{{ -20 + i * 42.5 }} 0" opacity="{{ 0.25 + (i % 3) * 0.12 }}"/>{% endfor %}<circle cx="150" cy="118" r="70"/><circle cx="150" cy="118" r="96" opacity=".5"/></svg>
+        <svg viewBox="0 0 300 140" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">{% for i in range(13) %}<path d="M150 150 L{{ -30 + i * 30 }} 0" opacity="{{ 0.2 + (i % 3) * 0.12 }}"/>{% endfor %}<circle cx="150" cy="140" r="64"/><circle cx="150" cy="140" r="92" opacity=".5"/></svg>
         <span class="glyph">{{ g.glyph }}</span>
       </div>
       <div class="title"><h3 class="gold-text">{{ g.name }}</h3><div class="jp" lang="ja">{{ g.jp }}</div></div>
@@ -15,7 +15,7 @@
         {% for lv in g.levels %}<li><span class="lv">LV {{ loop.index }}</span><span>{{ lv }}</span></li>{% endfor %}
       </ol>
       {% if g.cost %}<div class="cost"><span>白沙 · 普通<b>{{ g.cost.normal }}</b></span><span>困难<b>{{ g.cost.hard }}</b></span></div>{% endif %}
-      {% if g.note %}<div class="flag">◆ {{ g.note }}</div>{% endif %}
+      {% if g.note %}<div class="flag">{{ star() }}{{ g.note }}</div>{% endif %}
     </article>
     {% endfor %}
   </div>

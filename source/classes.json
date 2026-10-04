@@ -3,6 +3,10 @@
   {
    "label": "共创表 · 02-兵种职业信息（经姊妹站转录）",
    "url": "https://docs.qq.com/sheet/DV0N0VUZLSXRmUWFq"
+  },
+  {
+   "label": "Game8 · 兵种成长率（经 Fortunes-Weave-Helper 整理）",
+   "url": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/618974"
   }
  ],
  "items": [
@@ -18,7 +22,20 @@
    "mastery": "【战斗的基本】（15）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/01.webp"
+   "icon": "class/01.webp",
+   "en": "Commoner",
+   "name_status": "sheet",
+   "growth": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c02",
@@ -32,7 +49,20 @@
    "mastery": "【战斗的基本】（15）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/02.webp"
+   "icon": "class/02.webp",
+   "en": "Noble",
+   "name_status": "sheet",
+   "growth": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c03",
@@ -46,7 +76,37 @@
    "mastery": "【攻击的基本】（30）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/03.webp"
+   "icon": "class/03.webp",
+   "en": "Gladiator",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624054",
+   "growth": {
+    "HP": 10,
+    "Str": 10,
+    "Mag": 0,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 1,
+    "Mag": 0,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c04",
@@ -60,7 +120,36 @@
    "mastery": "【狩猎的基本】（30）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/04.webp"
+   "icon": "class/04.webp",
+   "en": "Hunter",
+   "name_status": "sheet",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624053",
+   "growth": {
+    "HP": 10,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 10,
+    "Dex": 10,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 1,
+    "Dex": 1,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c05",
@@ -74,7 +163,37 @@
    "mastery": "【防卫的基本】（30）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/05.webp"
+   "icon": "class/05.webp",
+   "en": "Soldier",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624052",
+   "growth": {
+    "HP": 10,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": -5,
+    "Dex": 5,
+    "Def": 10,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 1,
+    "Mag": 0,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 1,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c06",
@@ -88,7 +207,37 @@
    "mastery": "【攻势的基本】（30）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/06.webp"
+   "icon": "class/06.webp",
+   "en": "Ornius Rider",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624051",
+   "growth": {
+    "HP": 10,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 10,
+    "Dex": 5,
+    "Def": 0,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 3,
+    "Dex": 2,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 1,
+    "Cha": 0
+   }
   },
   {
    "id": "c07",
@@ -102,7 +251,39 @@
    "mastery": "【魔道的基本】（30）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/07.webp"
+   "icon": "class/07.webp",
+   "en": "Diviner",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "斧",
+    "白魔法",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624050",
+   "growth": {
+    "HP": 5,
+    "Str": -5,
+    "Mag": 15,
+    "Spd": 0,
+    "Dex": 5,
+    "Def": -5,
+    "Res": 10,
+    "Lck": 0,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 1,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 0,
+    "Res": 1,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c08",
@@ -116,7 +297,36 @@
    "mastery": "【技巧精湛】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/08.webp"
+   "icon": "class/08.webp",
+   "en": "Myrmidon",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624044",
+   "growth": {
+    "HP": 10,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 15,
+    "Dex": 10,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 2,
+    "Dex": 0,
+    "Def": 0,
+    "Res": -1,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c09",
@@ -130,7 +340,37 @@
    "mastery": "【重整态势】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/09.webp"
+   "icon": "class/09.webp",
+   "en": "Brigand",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624048",
+   "growth": {
+    "HP": 15,
+    "Str": 15,
+    "Mag": -5,
+    "Spd": 5,
+    "Dex": 0,
+    "Def": 5,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 3,
+    "Str": 2,
+    "Mag": 0,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 1,
+    "Res": -1,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c10",
@@ -144,7 +384,35 @@
    "mastery": "【攻击&远离】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/10.webp"
+   "icon": "class/10.webp",
+   "en": "Pugilist",
+   "name_status": "sheet",
+   "weapons": [
+    "护手"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624029",
+   "growth": {
+    "HP": 15,
+    "Str": 10,
+    "Mag": -5,
+    "Spd": 10,
+    "Dex": 5,
+    "Def": 10,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 2,
+    "Str": 1,
+    "Mag": 0,
+    "Spd": 1,
+    "Dex": 0,
+    "Def": 2,
+    "Res": -1,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c11",
@@ -158,7 +426,35 @@
    "mastery": "【状态不错】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/11.webp"
+   "icon": "class/11.webp",
+   "en": "Archer",
+   "name_status": "sheet",
+   "weapons": [
+    "弓"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624046",
+   "growth": {
+    "HP": 10,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 10,
+    "Dex": 10,
+    "Def": 5,
+    "Res": 0,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 2,
+    "Dex": 2,
+    "Def": 1,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c12",
@@ -172,7 +468,36 @@
    "mastery": "【暗影隐身】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/12.webp"
+   "icon": "class/12.webp",
+   "en": "Rogue",
+   "name_status": "sheet",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624043",
+   "growth": {
+    "HP": 10,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 15,
+    "Dex": 10,
+    "Def": 0,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 3,
+    "Dex": 1,
+    "Def": 0,
+    "Res": 1,
+    "Lck": 1,
+    "Cha": -1
+   }
   },
   {
    "id": "c13",
@@ -186,7 +511,37 @@
    "mastery": "【大反击】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/13.webp"
+   "icon": "class/13.webp",
+   "en": "Armored Knight",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624049",
+   "growth": {
+    "HP": 10,
+    "Str": 10,
+    "Mag": -5,
+    "Spd": -5,
+    "Dex": 5,
+    "Def": 25,
+    "Res": -5,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 2,
+    "Str": 1,
+    "Mag": 0,
+    "Spd": -2,
+    "Dex": 0,
+    "Def": 4,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c14",
@@ -200,7 +555,37 @@
    "mastery": "【体力强化】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/14.webp"
+   "icon": "class/14.webp",
+   "en": "Light Cavalry",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624045",
+   "growth": {
+    "HP": 10,
+    "Str": 5,
+    "Mag": -5,
+    "Spd": 5,
+    "Dex": 0,
+    "Def": 5,
+    "Res": 0,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 1,
+    "Mag": 0,
+    "Spd": 1,
+    "Dex": 0,
+    "Def": 2,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 1
+   }
   },
   {
    "id": "c15",
@@ -214,7 +599,35 @@
    "mastery": "【突击态势】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/15.webp"
+   "icon": "class/15.webp",
+   "en": "Charioteer",
+   "name_status": "sheet",
+   "weapons": [
+    "弓"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624047",
+   "growth": {
+    "HP": 10,
+    "Str": 5,
+    "Mag": -5,
+    "Spd": -5,
+    "Dex": 15,
+    "Def": 10,
+    "Res": 0,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 3,
+    "Str": 1,
+    "Mag": 0,
+    "Spd": -2,
+    "Dex": 3,
+    "Def": 3,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 1
+   }
   },
   {
    "id": "c16",
@@ -228,7 +641,37 @@
    "mastery": "【威胁察觉】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/16.webp"
+   "icon": "class/16.webp",
+   "en": "Armored Ornius Rider",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624041",
+   "growth": {
+    "HP": 10,
+    "Str": 0,
+    "Mag": -5,
+    "Spd": 10,
+    "Dex": 5,
+    "Def": 10,
+    "Res": 0,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 2,
+    "Dex": 0,
+    "Def": 2,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c17",
@@ -242,7 +685,36 @@
    "mastery": "【天马的护翼】（60）",
    "restriction": "女性角色专用。",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/17.webp"
+   "icon": "class/17.webp",
+   "en": "Wing Soldier",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624038",
+   "growth": {
+    "HP": 10,
+    "Str": 0,
+    "Mag": 5,
+    "Spd": 0,
+    "Dex": 5,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 4,
+    "Dex": 1,
+    "Def": 1,
+    "Res": 2,
+    "Lck": 0,
+    "Cha": 1
+   }
   },
   {
    "id": "c18",
@@ -256,7 +728,38 @@
    "mastery": "【技巧咒缚】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/18.webp"
+   "icon": "class/18.webp",
+   "en": "Shaman",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "白魔法",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624042",
+   "growth": {
+    "HP": 5,
+    "Str": -5,
+    "Mag": 15,
+    "Spd": 10,
+    "Dex": 10,
+    "Def": -10,
+    "Res": 10,
+    "Lck": 10,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 2,
+    "Spd": 1,
+    "Dex": 1,
+    "Def": 0,
+    "Res": 2,
+    "Lck": 0,
+    "Cha": -1
+   }
   },
   {
    "id": "c19",
@@ -270,7 +773,38 @@
    "mastery": "【信仰心】（60）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/19.webp"
+   "icon": "class/19.webp",
+   "en": "Priest",
+   "name_status": "sheet",
+   "weapons": [
+    "护手",
+    "斧",
+    "白魔法",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624039",
+   "growth": {
+    "HP": 5,
+    "Str": -5,
+    "Mag": 10,
+    "Spd": 5,
+    "Dex": 5,
+    "Def": -10,
+    "Res": 15,
+    "Lck": 15,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 1,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 0,
+    "Res": 3,
+    "Lck": 2,
+    "Cha": 1
+   }
   },
   {
    "id": "c20",
@@ -284,13 +818,42 @@
    "mastery": "【残心】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/20.webp"
+   "icon": "class/20.webp",
+   "en": "Shido",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624030",
+   "growth": {
+    "HP": 10,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 15,
+    "Dex": 10,
+    "Def": 0,
+    "Res": -5,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 3,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 7,
+    "Dex": 3,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c21",
    "name": "舞者",
    "tier": "上级与高级",
-   "movement": "待核对",
+   "movement": "5",
    "exam": "剑术／弓术任一项 B",
    "unlock": "蕾达篇第9章起完成「舞者的继承人」，使用舞姬的首饰。第一部为蕾达专用；救世篇开放给其他角色。",
    "training": "剑术+3、弓术+2、步兵术+4",
@@ -298,7 +861,39 @@
    "mastery": "【特别舞蹈】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/21.webp"
+   "icon": "class/21.webp",
+   "en": "Dancer",
+   "name_status": "sheet",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "filled_from_game8": [
+    "移动"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624375",
+   "growth": {
+    "HP": 15,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 25,
+    "Dex": 10,
+    "Def": 0,
+    "Res": 5,
+    "Lck": 10,
+    "Cha": 20
+   },
+   "bonus": {
+    "HP": 4,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 9,
+    "Dex": 5,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 5
+   }
   },
   {
    "id": "c22",
@@ -312,7 +907,37 @@
    "mastery": "【熟练之技】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/22.webp"
+   "icon": "class/22.webp",
+   "en": "Warrior",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624037",
+   "growth": {
+    "HP": 20,
+    "Str": 20,
+    "Mag": -5,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 5,
+    "Res": -5,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 4,
+    "Str": 4,
+    "Mag": 0,
+    "Spd": 1,
+    "Dex": 0,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c23",
@@ -326,7 +951,35 @@
    "mastery": "【射击专家】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/23.webp"
+   "icon": "class/23.webp",
+   "en": "Sniper",
+   "name_status": "sheet",
+   "weapons": [
+    "弓"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624036",
+   "growth": {
+    "HP": 10,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 10,
+    "Dex": 20,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 5,
+    "Dex": 5,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c24",
@@ -340,7 +993,36 @@
    "mastery": "【猎人之眼】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/24.webp"
+   "icon": "class/24.webp",
+   "en": "Forest Knight",
+   "name_status": "sheet",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624035",
+   "growth": {
+    "HP": 10,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 10,
+    "Dex": 10,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 5,
+    "Dex": 2,
+    "Def": 1,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c25",
@@ -354,7 +1036,36 @@
    "mastery": "【反击射击】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/25.webp"
+   "icon": "class/25.webp",
+   "en": "Ranger",
+   "name_status": "sheet",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624384",
+   "growth": {
+    "HP": 10,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 15,
+    "Dex": 15,
+    "Def": 0,
+    "Res": 10,
+    "Lck": 15,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 7,
+    "Dex": 4,
+    "Def": 0,
+    "Res": 1,
+    "Lck": 1,
+    "Cha": 1
+   }
   },
   {
    "id": "c26",
@@ -368,21 +1079,84 @@
    "mastery": "【集中反击】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/26.webp"
+   "icon": "class/26.webp",
+   "en": "Dreadnought",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624034",
+   "growth": {
+    "HP": 15,
+    "Str": 15,
+    "Mag": -5,
+    "Spd": -10,
+    "Dex": 5,
+    "Def": 30,
+    "Res": -10,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 3,
+    "Mag": 0,
+    "Spd": -5,
+    "Dex": 0,
+    "Def": 9,
+    "Res": -1,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c27",
    "name": "重装骑兵",
    "tier": "上级与高级",
-   "movement": "待核对",
+   "movement": "6",
    "exam": "枪术／斧术任一项 B、马术 D、重装术 F",
    "unlock": "赛奥朵拉篇对应战备增援。",
-   "training": "尚未收录",
+   "training": "剑术+1、枪术+2、斧术+2、马术+1、重装术+1",
    "features": "重装 · 骑兵，【乘降术】【战技装备+1】【后攻防守+3】",
    "mastery": "【大盾】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/27.webp"
+   "icon": "class/27.webp",
+   "en": "Cataphract",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "filled_from_game8": [
+    "移动",
+    "训练加成"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624275",
+   "growth": {
+    "HP": 15,
+    "Str": 15,
+    "Mag": -5,
+    "Spd": -10,
+    "Dex": 0,
+    "Def": 10,
+    "Res": -5,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 2,
+    "Mag": 0,
+    "Spd": -1,
+    "Dex": 0,
+    "Def": 5,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c28",
@@ -396,7 +1170,37 @@
    "mastery": "【圣盾】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/28.webp"
+   "icon": "class/28.webp",
+   "en": "Bardinger",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624033",
+   "growth": {
+    "HP": 10,
+    "Str": 10,
+    "Mag": -5,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": 5,
+    "Res": 10,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 3,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 1,
+    "Dex": 0,
+    "Def": 1,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 3
+   }
   },
   {
    "id": "c29",
@@ -410,7 +1214,38 @@
    "mastery": "【驰骋】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/29.webp"
+   "icon": "class/29.webp",
+   "en": "Caladrius",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624235",
+   "growth": {
+    "HP": 15,
+    "Str": 0,
+    "Mag": 10,
+    "Spd": 5,
+    "Dex": 10,
+    "Def": 10,
+    "Res": 10,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 2,
+    "Str": 0,
+    "Mag": 1,
+    "Spd": 3,
+    "Dex": 0,
+    "Def": 1,
+    "Res": 2,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c30",
@@ -424,7 +1259,37 @@
    "mastery": "【突破围城】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/30.webp"
+   "icon": "class/30.webp",
+   "en": "Dragoon",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624233",
+   "growth": {
+    "HP": 15,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 0,
+    "Dex": 5,
+    "Def": 10,
+    "Res": 10,
+    "Lck": 10,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 2,
+    "Str": 1,
+    "Mag": 0,
+    "Spd": 3,
+    "Dex": 1,
+    "Def": 1,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c31",
@@ -438,7 +1303,38 @@
    "mastery": "【速度咒缚】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/31.webp"
+   "icon": "class/31.webp",
+   "en": "Ovate",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "白魔法",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624032",
+   "growth": {
+    "HP": 10,
+    "Str": -5,
+    "Mag": 20,
+    "Spd": 5,
+    "Dex": 15,
+    "Def": -10,
+    "Res": 15,
+    "Lck": 10,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 0,
+    "Mag": 4,
+    "Spd": 3,
+    "Dex": 4,
+    "Def": 0,
+    "Res": 4,
+    "Lck": 0,
+    "Cha": -1
+   }
   },
   {
    "id": "c32",
@@ -452,7 +1348,38 @@
    "mastery": "【结界】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/32.webp"
+   "icon": "class/32.webp",
+   "en": "Bishop",
+   "name_status": "sheet",
+   "weapons": [
+    "护手",
+    "斧",
+    "白魔法",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624031",
+   "growth": {
+    "HP": 10,
+    "Str": -5,
+    "Mag": 15,
+    "Spd": 0,
+    "Dex": 0,
+    "Def": -10,
+    "Res": 20,
+    "Lck": 20,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 1,
+    "Str": 0,
+    "Mag": 3,
+    "Spd": 1,
+    "Dex": 0,
+    "Def": 0,
+    "Res": 5,
+    "Lck": 3,
+    "Cha": 3
+   }
   },
   {
    "id": "c33",
@@ -466,7 +1393,36 @@
    "mastery": "【勇气的咒歌】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/33.webp"
+   "icon": "class/33.webp",
+   "en": "Troubadour",
+   "name_status": "sheet",
+   "weapons": [
+    "白魔法",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624234",
+   "growth": {
+    "HP": 10,
+    "Str": 0,
+    "Mag": 15,
+    "Spd": 5,
+    "Dex": 0,
+    "Def": 5,
+    "Res": 15,
+    "Lck": 15,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 0,
+    "Str": 0,
+    "Mag": 1,
+    "Spd": 1,
+    "Dex": 1,
+    "Def": 1,
+    "Res": 2,
+    "Lck": 0,
+    "Cha": 3
+   }
   },
   {
    "id": "c34",
@@ -480,7 +1436,36 @@
    "mastery": "【紧绷神经】（100）",
    "restriction": "",
    "phase": "第一部；仍须开放考试并满足该职业的特殊解锁。",
-   "icon": "class/34.webp"
+   "icon": "class/34.webp",
+   "en": "Guardian",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "白魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624254",
+   "growth": {
+    "HP": 10,
+    "Str": 10,
+    "Mag": 0,
+    "Spd": 0,
+    "Dex": 5,
+    "Def": 10,
+    "Res": 15,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 3,
+    "Str": 1,
+    "Mag": 0,
+    "Spd": 1,
+    "Dex": 0,
+    "Def": 3,
+    "Res": 4,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c35",
@@ -489,12 +1474,46 @@
    "movement": "5",
    "exam": "剑术 A",
    "unlock": "第三部第二区分起，完成战神的委托。",
-   "training": "尚未收录",
+   "training": "剑术+4、枪术+1、步兵术+2",
    "features": "斗士系 · 步兵，【战技装备+3】【剑必杀+7】",
-   "mastery": "名称待核对（精通经验130）",
+   "mastery": "【流星】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/35.webp"
+   "icon": "class/35.webp",
+   "en": "Swordmaster",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑"
+   ],
+   "mastery_status": "provisional",
+   "filled_from_game8": [
+    "训练加成",
+    "精通"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624426",
+   "growth": {
+    "HP": 15,
+    "Str": 10,
+    "Mag": 0,
+    "Spd": 20,
+    "Dex": 15,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 2,
+    "Mag": 0,
+    "Spd": 7,
+    "Dex": 7,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c36",
@@ -508,7 +1527,37 @@
    "mastery": "【战鬼一击】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/36.webp"
+   "icon": "class/36.webp",
+   "en": "Battlemaster",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624357",
+   "growth": {
+    "HP": 25,
+    "Str": 25,
+    "Mag": -5,
+    "Spd": -5,
+    "Dex": 5,
+    "Def": 10,
+    "Res": -5,
+    "Lck": -5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 13,
+    "Str": 6,
+    "Mag": 0,
+    "Spd": 2,
+    "Dex": 0,
+    "Def": 4,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c37",
@@ -522,7 +1571,36 @@
    "mastery": "【强打&治愈】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/37.webp"
+   "icon": "class/37.webp",
+   "en": "War Monk",
+   "name_status": "sheet",
+   "weapons": [
+    "护手",
+    "白魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624444",
+   "growth": {
+    "HP": 15,
+    "Str": 10,
+    "Mag": 0,
+    "Spd": 15,
+    "Dex": 0,
+    "Def": 5,
+    "Res": 15,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 2,
+    "Mag": 0,
+    "Spd": 5,
+    "Dex": 2,
+    "Def": 2,
+    "Res": 4,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c38",
@@ -536,7 +1614,35 @@
    "mastery": "【飞空猎手】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/38.webp"
+   "icon": "class/38.webp",
+   "en": "Bow Adept",
+   "name_status": "sheet",
+   "weapons": [
+    "弓"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624362",
+   "growth": {
+    "HP": 15,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 15,
+    "Dex": 20,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 4,
+    "Str": 2,
+    "Mag": 0,
+    "Spd": 5,
+    "Dex": 9,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c39",
@@ -550,7 +1656,36 @@
    "mastery": "【落影之刃】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/39.webp"
+   "icon": "class/39.webp",
+   "en": "Shadow Seeker",
+   "name_status": "sheet",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624358",
+   "growth": {
+    "HP": 15,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 15,
+    "Dex": 25,
+    "Def": 0,
+    "Res": 10,
+    "Lck": 15,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 4,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 9,
+    "Dex": 7,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 2,
+    "Cha": -2
+   }
   },
   {
    "id": "c40",
@@ -564,7 +1699,36 @@
    "mastery": "【不退架势】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/40.webp"
+   "icon": "class/40.webp",
+   "en": "Sentinel",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "白魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624356",
+   "growth": {
+    "HP": 15,
+    "Str": 15,
+    "Mag": 0,
+    "Spd": 5,
+    "Dex": 5,
+    "Def": 10,
+    "Res": 15,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 4,
+    "Mag": 0,
+    "Spd": 2,
+    "Dex": 4,
+    "Def": 4,
+    "Res": 5,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c41",
@@ -578,7 +1742,36 @@
    "mastery": "【阻绝】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/41.webp"
+   "icon": "class/41.webp",
+   "en": "Castle Knight",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624363",
+   "growth": {
+    "HP": 25,
+    "Str": 20,
+    "Mag": -5,
+    "Spd": -15,
+    "Dex": 5,
+    "Def": 30,
+    "Res": -10,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 9,
+    "Str": 6,
+    "Mag": 0,
+    "Spd": -6,
+    "Dex": 4,
+    "Def": 13,
+    "Res": -2,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c42",
@@ -592,7 +1785,37 @@
    "mastery": "【骑士烈枪】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/42.webp"
+   "icon": "class/42.webp",
+   "en": "Orichaldia",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624359",
+   "growth": {
+    "HP": 15,
+    "Str": 15,
+    "Mag": -5,
+    "Spd": 0,
+    "Dex": 5,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 7,
+    "Str": 3,
+    "Mag": 0,
+    "Spd": 2,
+    "Dex": 3,
+    "Def": 2,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 2
+   }
   },
   {
    "id": "c43",
@@ -606,7 +1829,36 @@
    "mastery": "【迅雷风烈】（130）",
    "restriction": "女性角色专用。",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/43.webp"
+   "icon": "class/43.webp",
+   "en": "Celestial Trooper",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624361",
+   "growth": {
+    "HP": 15,
+    "Str": 5,
+    "Mag": -5,
+    "Spd": 10,
+    "Dex": 5,
+    "Def": 5,
+    "Res": 15,
+    "Lck": 15,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 3,
+    "Str": 0,
+    "Mag": 0,
+    "Spd": 5,
+    "Dex": 3,
+    "Def": 0,
+    "Res": 5,
+    "Lck": 0,
+    "Cha": 2
+   }
   },
   {
    "id": "c44",
@@ -620,7 +1872,37 @@
    "mastery": "【袭击】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/44.webp"
+   "icon": "class/44.webp",
+   "en": "Bau Lord",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624364",
+   "growth": {
+    "HP": 15,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": 5,
+    "Dex": 0,
+    "Def": 10,
+    "Res": 10,
+    "Lck": 10,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 2,
+    "Mag": 0,
+    "Spd": 3,
+    "Dex": 3,
+    "Def": 3,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
   },
   {
    "id": "c45",
@@ -634,7 +1916,37 @@
    "mastery": "【魔防咒缚】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/45.webp"
+   "icon": "class/45.webp",
+   "en": "Druid",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624360",
+   "growth": {
+    "HP": 10,
+    "Str": -5,
+    "Mag": 30,
+    "Spd": 15,
+    "Dex": 10,
+    "Def": -10,
+    "Res": 20,
+    "Lck": 10,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 4,
+    "Str": 0,
+    "Mag": 7,
+    "Spd": 4,
+    "Dex": 7,
+    "Def": 0,
+    "Res": 5,
+    "Lck": 0,
+    "Cha": -2
+   }
   },
   {
    "id": "c46",
@@ -648,7 +1960,37 @@
    "mastery": "【魔力掌控】（130）",
    "restriction": "",
    "phase": "第三部第二区分起；部分还需专属委托。",
-   "icon": "class/46.webp"
+   "icon": "class/46.webp",
+   "en": "Wiseman",
+   "name_status": "sheet",
+   "weapons": [
+    "护手",
+    "斧",
+    "白魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624355",
+   "growth": {
+    "HP": 10,
+    "Str": -5,
+    "Mag": 20,
+    "Spd": 0,
+    "Dex": 5,
+    "Def": -10,
+    "Res": 25,
+    "Lck": 20,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 4,
+    "Str": 0,
+    "Mag": 5,
+    "Spd": 2,
+    "Dex": 2,
+    "Def": 0,
+    "Res": 9,
+    "Lck": 4,
+    "Cha": 2
+   }
   },
   {
    "id": "c47",
@@ -662,7 +2004,36 @@
    "mastery": "【战神】（160）",
    "restriction": "",
    "phase": "第三部第四区分起；100%通过率、专用道具，每种限1人。",
-   "icon": "class/47.webp"
+   "icon": "class/47.webp",
+   "en": "The Blade",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/625255",
+   "growth": {
+    "HP": 15,
+    "Str": 10,
+    "Mag": 10,
+    "Spd": 20,
+    "Dex": 20,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 7,
+    "Str": 4,
+    "Mag": 4,
+    "Spd": 7,
+    "Dex": 7,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 2
+   }
   },
   {
    "id": "c48",
@@ -676,7 +2047,36 @@
    "mastery": "【神舞】（160）",
    "restriction": "",
    "phase": "第三部第四区分起；100%通过率、专用道具，每种限1人。",
-   "icon": "class/48.webp"
+   "icon": "class/48.webp",
+   "en": "The Apsara",
+   "name_status": "sheet",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/625301",
+   "growth": {
+    "HP": 15,
+    "Str": 5,
+    "Mag": 10,
+    "Spd": 25,
+    "Dex": 15,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 10,
+    "Cha": 30
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 2,
+    "Mag": 4,
+    "Spd": 7,
+    "Dex": 5,
+    "Def": 0,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 9
+   }
   },
   {
    "id": "c49",
@@ -690,7 +2090,37 @@
    "mastery": "【武神】（160）",
    "restriction": "",
    "phase": "第三部第四区分起；100%通过率、专用道具，每种限1人。",
-   "icon": "class/49.webp"
+   "icon": "class/49.webp",
+   "en": "The Eternal",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/625305",
+   "growth": {
+    "HP": 30,
+    "Str": 30,
+    "Mag": 0,
+    "Spd": 10,
+    "Dex": 0,
+    "Def": 15,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   },
+   "bonus": {
+    "HP": 12,
+    "Str": 6,
+    "Mag": 0,
+    "Spd": 2,
+    "Dex": 1,
+    "Def": 5,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 2
+   }
   },
   {
    "id": "c50",
@@ -704,7 +2134,36 @@
    "mastery": "【神装】（160）",
    "restriction": "",
    "phase": "第三部第四区分起；100%通过率、专用道具，每种限1人。",
-   "icon": "class/50.webp"
+   "icon": "class/50.webp",
+   "en": "The Godhand",
+   "name_status": "sheet",
+   "weapons": [
+    "护手",
+    "白魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/625306",
+   "growth": {
+    "HP": 15,
+    "Str": 10,
+    "Mag": 10,
+    "Spd": 15,
+    "Dex": 5,
+    "Def": 10,
+    "Res": 15,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 7,
+    "Str": 4,
+    "Mag": 4,
+    "Spd": 5,
+    "Dex": 2,
+    "Def": 4,
+    "Res": 5,
+    "Lck": 0,
+    "Cha": 2
+   }
   },
   {
    "id": "c51",
@@ -718,7 +2177,36 @@
    "mastery": "【神命】（160）",
    "restriction": "",
    "phase": "第三部第四区分起；100%通过率、专用道具，每种限1人。",
-   "icon": "class/51.webp"
+   "icon": "class/51.webp",
+   "en": "The Calamity",
+   "name_status": "sheet",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/625308",
+   "growth": {
+    "HP": 15,
+    "Str": 5,
+    "Mag": 15,
+    "Spd": 25,
+    "Dex": 20,
+    "Def": 5,
+    "Res": 15,
+    "Lck": 15,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 2,
+    "Mag": 4,
+    "Spd": 7,
+    "Dex": 5,
+    "Def": 0,
+    "Res": 4,
+    "Lck": 4,
+    "Cha": 0
+   }
   },
   {
    "id": "c52",
@@ -732,7 +2220,36 @@
    "mastery": "【神壁】（160）",
    "restriction": "",
    "phase": "第三部第四区分起；100%通过率、专用道具，每种限1人。",
-   "icon": "class/52.webp"
+   "icon": "class/52.webp",
+   "en": "The Trident",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "白魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/625309",
+   "growth": {
+    "HP": 15,
+    "Str": 15,
+    "Mag": 5,
+    "Spd": 10,
+    "Dex": 10,
+    "Def": 15,
+    "Res": 15,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 7,
+    "Str": 4,
+    "Mag": 4,
+    "Spd": 2,
+    "Dex": 4,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 0,
+    "Cha": 2
+   }
   },
   {
    "id": "c53",
@@ -746,7 +2263,37 @@
    "mastery": "【神技】（160）",
    "restriction": "",
    "phase": "第三部第四区分起；100%通过率、专用道具，每种限1人。",
-   "icon": "class/53.webp"
+   "icon": "class/53.webp",
+   "en": "The Cavalier",
+   "name_status": "sheet",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/625310",
+   "growth": {
+    "HP": 20,
+    "Str": 15,
+    "Mag": 5,
+    "Spd": 10,
+    "Dex": 10,
+    "Def": 15,
+    "Res": 10,
+    "Lck": 5,
+    "Cha": 15
+   },
+   "bonus": {
+    "HP": 11,
+    "Str": 3,
+    "Mag": 0,
+    "Spd": 4,
+    "Dex": 5,
+    "Def": 5,
+    "Res": 1,
+    "Lck": 0,
+    "Cha": 2
+   }
   },
   {
    "id": "c54",
@@ -760,7 +2307,307 @@
    "mastery": "【神法】（160）",
    "restriction": "",
    "phase": "第三部第四区分起；100%通过率、专用道具，每种限1人。",
-   "icon": "class/54.webp"
+   "icon": "class/54.webp",
+   "en": "The Avatar",
+   "name_status": "sheet",
+   "weapons": [
+    "剑",
+    "护手",
+    "斧",
+    "白魔法",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/625311",
+   "growth": {
+    "HP": 10,
+    "Str": -5,
+    "Mag": 30,
+    "Spd": 10,
+    "Dex": 5,
+    "Def": -5,
+    "Res": 30,
+    "Lck": 20,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 0,
+    "Mag": 9,
+    "Spd": 2,
+    "Dex": 2,
+    "Def": 0,
+    "Res": 9,
+    "Lck": 5,
+    "Cha": 2
+   }
+  },
+  {
+   "id": "c55",
+   "name": "铁匠",
+   "tier": "上级与高级",
+   "movement": "5",
+   "exam": "建议 Lv35、名声 Lv8",
+   "unlock": "",
+   "training": "斧术+3、黑魔术+1、步兵术+1",
+   "features": "步兵，【黑魔术的探究】",
+   "mastery": "【物尽其用】",
+   "mastery_status": "provisional",
+   "restriction": "",
+   "phase": "",
+   "icon": null,
+   "added_from": "game8",
+   "en": "Blacksmith",
+   "name_status": "provisional",
+   "weapons": [
+    "斧",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624388",
+   "growth": {
+    "HP": 15,
+    "Str": 10,
+    "Mag": 10,
+    "Spd": 0,
+    "Dex": 5,
+    "Def": 10,
+    "Res": 10,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 1,
+    "Mag": 1,
+    "Spd": 1,
+    "Dex": 0,
+    "Def": 3,
+    "Res": 1,
+    "Lck": 0,
+    "Cha": 0
+   }
+  },
+  {
+   "id": "c56",
+   "name": "战象兵",
+   "tier": "上级与高级",
+   "movement": "5",
+   "exam": "建议 Lv35",
+   "unlock": "",
+   "training": "马术+2",
+   "features": "骑兵，【战象之靴】",
+   "mastery": "【战象先锋】",
+   "mastery_status": "provisional",
+   "restriction": "",
+   "phase": "",
+   "icon": null,
+   "added_from": "game8",
+   "en": "Elephant Rider",
+   "name_status": "community",
+   "weapons": [],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/621166",
+   "growth": {
+    "HP": 20,
+    "Str": 10,
+    "Mag": -5,
+    "Spd": 20,
+    "Dex": -10,
+    "Def": 15,
+    "Res": -5,
+    "Lck": 5,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 10,
+    "Str": 2,
+    "Mag": 0,
+    "Spd": -5,
+    "Dex": 3,
+    "Def": 7,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 3
+   }
+  },
+  {
+   "id": "c57",
+   "name": "弓骑士",
+   "tier": "最上级",
+   "movement": "7",
+   "exam": "建议 Lv45",
+   "unlock": "",
+   "training": "剑术+1、弓术+3、马术+2",
+   "features": "骑兵，【战技装备+2】",
+   "mastery": "【猎人十字】",
+   "mastery_status": "provisional",
+   "restriction": "",
+   "phase": "",
+   "icon": null,
+   "added_from": "game8",
+   "en": "Bow Knight",
+   "name_status": "provisional",
+   "weapons": [
+    "弓",
+    "剑"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624449",
+   "growth": {
+    "HP": 10,
+    "Str": 10,
+    "Mag": 0,
+    "Spd": 15,
+    "Dex": 10,
+    "Def": 5,
+    "Res": 0,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 3,
+    "Str": 2,
+    "Mag": 0,
+    "Spd": 7,
+    "Dex": 5,
+    "Def": 2,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
+  },
+  {
+   "id": "c58",
+   "name": "重骑士",
+   "tier": "最上级",
+   "movement": "6",
+   "exam": "建议 Lv45",
+   "unlock": "",
+   "training": "剑术+1、枪术+2、斧术+3、马术+2、重装术+2",
+   "features": "骑兵 · 重装，【战技装备+2】",
+   "mastery": "【猛盾】",
+   "mastery_status": "provisional",
+   "restriction": "",
+   "phase": "",
+   "icon": null,
+   "added_from": "game8",
+   "en": "Great Knight",
+   "name_status": "provisional",
+   "weapons": [
+    "枪",
+    "剑",
+    "斧"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624451",
+   "growth": {
+    "HP": 20,
+    "Str": 20,
+    "Mag": -5,
+    "Spd": -10,
+    "Dex": 0,
+    "Def": 15,
+    "Res": -10,
+    "Lck": 0,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 12,
+    "Str": 5,
+    "Mag": 0,
+    "Spd": -4,
+    "Dex": 2,
+    "Def": 5,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
+  },
+  {
+   "id": "c59",
+   "name": "高阶墓志铭",
+   "tier": "最上级",
+   "movement": "7",
+   "exam": "建议 Lv45",
+   "unlock": "",
+   "training": "剑术+3、黑魔术+2、马术+2",
+   "features": "骑兵，【战技装备+2】",
+   "mastery": "【暗月】",
+   "mastery_status": "provisional",
+   "restriction": "",
+   "phase": "",
+   "icon": null,
+   "added_from": "game8",
+   "en": "High Savant",
+   "name_status": "community",
+   "weapons": [
+    "剑",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624445",
+   "growth": {
+    "HP": 10,
+    "Str": 15,
+    "Mag": 15,
+    "Spd": 10,
+    "Dex": 5,
+    "Def": 5,
+    "Res": 5,
+    "Lck": 5,
+    "Cha": 5
+   },
+   "bonus": {
+    "HP": 5,
+    "Str": 2,
+    "Mag": 2,
+    "Spd": 3,
+    "Dex": 3,
+    "Def": 2,
+    "Res": 0,
+    "Lck": 0,
+    "Cha": 0
+   }
+  },
+  {
+   "id": "c60",
+   "name": "女武神",
+   "tier": "最上级",
+   "movement": "7",
+   "exam": "建议 Lv45",
+   "unlock": "",
+   "training": "黑魔术+3、白魔术+2、马术+2",
+   "features": "骑兵，【乘降术】",
+   "mastery": "【平静之歌】",
+   "mastery_status": "provisional",
+   "restriction": "",
+   "phase": "",
+   "icon": null,
+   "added_from": "game8",
+   "en": "Valkyrium",
+   "name_status": "provisional",
+   "weapons": [
+    "白魔法",
+    "黑魔法"
+   ],
+   "source": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624450",
+   "growth": {
+    "HP": 10,
+    "Str": 0,
+    "Mag": 15,
+    "Spd": 5,
+    "Dex": 5,
+    "Def": 5,
+    "Res": 10,
+    "Lck": 15,
+    "Cha": 10
+   },
+   "bonus": {
+    "HP": 2,
+    "Str": 0,
+    "Mag": 2,
+    "Spd": 2,
+    "Dex": 3,
+    "Def": 2,
+    "Res": 3,
+    "Lck": 0,
+    "Cha": 2
+   }
   }
  ]
 }

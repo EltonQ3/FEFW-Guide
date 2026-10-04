@@ -1,0 +1,1591 @@
+{
+ "_source": [
+  {
+   "label": "Game8 · 礼物一览与各角色喜好（经 Fortunes-Weave-Helper 整理）",
+   "url": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/621535"
+  }
+ ],
+ "items": [
+  {
+   "id": "yarc-milk",
+   "name": "雅克奶",
+   "en": "Yarc Milk",
+   "status": "provisional",
+   "for": "孩子",
+   "desc": "雅克兽的奶，以营养丰富著称。",
+   "liked_by": [
+    "dadao",
+    "mu",
+    "peter",
+    "sofia",
+    "tialla"
+   ]
+  },
+  {
+   "id": "ginji-cervi",
+   "name": "银治 Cervi",
+   "en": "Ginji Cervi",
+   "status": "provisional",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "dadao",
+    "dietrich",
+    "peter",
+    "sofia",
+    "tialla"
+   ]
+  },
+  {
+   "id": "rustic-ghosh",
+   "name": "乡村 Ghosh",
+   "en": "Rustic Ghosh",
+   "status": "provisional",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "buccar",
+    "fabio",
+    "goliath",
+    "guzran",
+    "kiroc",
+    "leda",
+    "majide",
+    "mikaela",
+    "sirocco",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "strategy-manuscript",
+   "name": "兵法手稿",
+   "en": "Strategy Manuscript",
+   "status": "provisional",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "tialla",
+    "zarcone"
+   ]
+  },
+  {
+   "id": "wing-fletching",
+   "name": "翼羽箭羽",
+   "en": "Wing Fletching",
+   "status": "provisional",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "alexandra",
+    "benditz",
+    "goliath",
+    "guzran",
+    "inyoni",
+    "lilian",
+    "lysander",
+    "mikaela",
+    "nezha",
+    "noctula",
+    "nydine",
+    "peter",
+    "tobias",
+    "zarcone"
+   ]
+  },
+  {
+   "id": "strong-cervi",
+   "name": "浓郁 Cervi",
+   "en": "Strong Cervi",
+   "status": "provisional",
+   "for": "孩子",
+   "desc": "新鲜浓郁的 Cervi，又甜又酸，不太好入口。",
+   "liked_by": [
+    "dadao",
+    "peter",
+    "tialla"
+   ]
+  },
+  {
+   "id": "southern-ghosh",
+   "name": "南方 Ghosh",
+   "en": "Southern Ghosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "从莫萨进口的 Ghosh，风味非常浓烈醇厚。",
+   "liked_by": [
+    "fabio",
+    "goliath",
+    "guzran",
+    "leda",
+    "mikaela",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "home-recipe-book",
+   "name": "家常菜谱",
+   "en": "Home-Recipe Book",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "收录世界各地家常菜的食谱。",
+   "liked_by": [
+    "alexandra",
+    "esmeralda",
+    "lilian",
+    "ludia",
+    "mikaela",
+    "seteth",
+    "tialla",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "rare-spices",
+   "name": "珍稀香料",
+   "en": "Rare Spices",
+   "status": "provisional",
+   "for": "爱吃辣的人",
+   "desc": "装在豪华礼盒里的极稀有香料。",
+   "liked_by": [
+    "bonaventure",
+    "buccar",
+    "fianna",
+    "jasmine",
+    "mikaela"
+   ]
+  },
+  {
+   "id": "kitten-figurine",
+   "name": "小猫木雕",
+   "en": "Kitten Figurine",
+   "status": "provisional",
+   "for": "爱动物的人",
+   "desc": "仿照斯米尔诺斯的黑猫雕刻的精美木雕。",
+   "liked_by": [
+    "alexandra",
+    "catania",
+    "dietrich",
+    "esmeralda",
+    "io",
+    "jasmine",
+    "leda",
+    "nuzzuo",
+    "nydine",
+    "peppe",
+    "peter",
+    "sofia",
+    "tobias",
+    "ursula",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "flexible-fishing-rod",
+   "name": "柔软钓竿",
+   "en": "Flexible Fishing Rod",
+   "status": "sheet",
+   "for": "爱钓鱼的人",
+   "desc": "坚固又有韧性的铁制钓竿，再大的鱼也钓得上来。",
+   "liked_by": [
+    "esmeralda",
+    "seteth",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "honey-milk",
+   "name": "蜂蜜牛奶",
+   "en": "Honey Milk",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "雅克奶与蜂蜜的完美调和，更加诱人。",
+   "liked_by": [
+    "dadao",
+    "dietrich",
+    "loretta",
+    "sofia"
+   ]
+  },
+  {
+   "id": "eastern-black-silk",
+   "name": "东方黑丝绸",
+   "en": "Eastern Black Silk",
+   "status": "sheet",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "bonaventure",
+    "fabio",
+    "inyoni",
+    "ninae",
+    "theodora",
+    "tobias"
+   ]
+  },
+  {
+   "id": "jamel-milk",
+   "name": "贾梅尔奶",
+   "en": "Jamel Milk",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "百吃不腻、随手可享的烘焙点心组合。",
+   "liked_by": [
+    "dadao",
+    "jasmine",
+    "mu",
+    "peter",
+    "sofia",
+    "tialla"
+   ]
+  },
+  {
+   "id": "mane-ornament",
+   "name": "鬃毛装饰",
+   "en": "Mane Ornament",
+   "status": "sheet",
+   "for": "爱马的人",
+   "desc": "以彩色毛线编成的华丽马鬃饰品。",
+   "liked_by": [
+    "alexandra",
+    "io",
+    "lysander",
+    "ursula"
+   ]
+  },
+  {
+   "id": "red-rose-bouquet",
+   "name": "红玫瑰花束",
+   "en": "Red-Rose Bouquet",
+   "status": "provisional",
+   "for": "爱花的人",
+   "desc": "由大朵鲜红玫瑰扎成的花束。",
+   "liked_by": []
+  },
+  {
+   "id": "potted-vegetables",
+   "name": "盆栽蔬菜",
+   "en": "Potted Vegetables",
+   "status": "sheet",
+   "for": "爱吃蔬菜的人",
+   "desc": "一年四季都能采收的盆栽蔬菜。",
+   "liked_by": [
+    "dadao",
+    "fabio",
+    "halvin",
+    "zarcone"
+   ]
+  },
+  {
+   "id": "pastry-cookbook",
+   "name": "糕点食谱",
+   "en": "Pastry Cookbook",
+   "status": "sheet",
+   "for": "爱吃甜食的人",
+   "desc": "收录孩子会喜欢的营养甜点的食谱。",
+   "liked_by": [
+    "alexandra",
+    "bonaventure",
+    "dadao",
+    "dietrich",
+    "esmeralda",
+    "jasmine",
+    "lilian",
+    "loretta",
+    "ludia",
+    "mikaela",
+    "peppe",
+    "peter",
+    "seteth",
+    "sha-lan",
+    "sofia",
+    "tialla",
+    "tobias",
+    "ultand",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "protection-figurine",
+   "name": "守护人偶",
+   "en": "Protection Figurine",
+   "status": "provisional",
+   "for": "相信灵性的人",
+   "desc": "来自布里吉德的人偶，据说精灵会守护持有者。",
+   "liked_by": [
+    "diego",
+    "dietrich",
+    "io",
+    "jasmine",
+    "noctula",
+    "nuzzuo",
+    "peppe",
+    "simon",
+    "sofia"
+   ]
+  },
+  {
+   "id": "the-works-of-dante",
+   "name": "但丁的著作",
+   "en": "The Works of Dante",
+   "status": "sheet",
+   "for": "爱读书的人",
+   "desc": "名作家但丁代表剧作的第一卷。",
+   "liked_by": [
+    "bonaventure",
+    "dante",
+    "peppe",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "eastern-love-story",
+   "name": "东方爱情故事",
+   "en": "Eastern Love Story",
+   "status": "sheet",
+   "for": "爱读书的人",
+   "desc": "赛伊之地流传的神与凡人的悲恋故事。",
+   "liked_by": [
+    "benditz",
+    "nydine",
+    "sirocco",
+    "tialla",
+    "ultand",
+    "ursula"
+   ]
+  },
+  {
+   "id": "training-weights",
+   "name": "训练重物",
+   "en": "Training Weights",
+   "status": "sheet",
+   "for": "热衷训练的人",
+   "desc": "灌了铅的手环与脚环，训练用。",
+   "liked_by": [
+    "diego",
+    "dietrich",
+    "gaitz",
+    "io",
+    "jasmine",
+    "kiroc",
+    "loretta",
+    "majide",
+    "nuzzuo",
+    "nydine",
+    "peppe"
+   ]
+  },
+  {
+   "id": "weak-cervi",
+   "name": "虚弱 Cervi",
+   "en": "Weak Cervi",
+   "status": "sheet",
+   "for": "孩子",
+   "desc": "一般会兑水饮用的 Cervi。",
+   "liked_by": [
+    "dadao",
+    "mu",
+    "peter",
+    "tialla"
+   ]
+  },
+  {
+   "id": "young-ghosh",
+   "name": "幼小 Ghosh",
+   "en": "Young Ghosh",
+   "status": "sheet",
+   "for": "爱喝发酵饮料的人",
+   "desc": "刚酿好的 Ghosh，带有鲜明的果香。",
+   "liked_by": [
+    "buccar",
+    "fabio",
+    "goliath",
+    "guzran",
+    "kiroc",
+    "leda",
+    "majide",
+    "mikaela",
+    "sirocco",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "young-shosh",
+   "name": "幼小 Shosh",
+   "en": "Young Shosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "刚酿好的 Shosh，以独特的蓝色闻名。",
+   "liked_by": [
+    "buccar",
+    "guzran",
+    "kiroc",
+    "majide",
+    "sirocco"
+   ]
+  },
+  {
+   "id": "mature-shosh",
+   "name": "成熟 Shosh",
+   "en": "Mature Shosh",
+   "status": "sheet",
+   "for": "爱喝发酵饮料的人",
+   "desc": "陈酿已久的 Shosh，风味深沉醇和。",
+   "liked_by": [
+    "buccar",
+    "fabio",
+    "goliath",
+    "guzran",
+    "kiroc",
+    "leda",
+    "majide",
+    "mikaela",
+    "sirocco",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "village-recipes",
+   "name": "乡村食谱",
+   "en": "Village Recipes",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "收录鞑古扎东部料理的食谱。",
+   "liked_by": [
+    "alexandra",
+    "bonaventure",
+    "buccar",
+    "esmeralda",
+    "halvin",
+    "lilian",
+    "ludia",
+    "mikaela",
+    "seteth",
+    "tialla",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "sturdy-rucksack",
+   "name": "结实背包",
+   "en": "Sturdy Rucksack",
+   "status": "sheet",
+   "for": "爱旅行的人",
+   "desc": "耐用的皮包，装得比想象中多得多。",
+   "liked_by": [
+    "alexandra",
+    "goliath",
+    "inyoni",
+    "io",
+    "jasmine",
+    "ludia",
+    "nezha",
+    "noctula",
+    "nuzzuo",
+    "nydine",
+    "peppe",
+    "seteth",
+    "tobias"
+   ]
+  },
+  {
+   "id": "trader-s-handbook",
+   "name": "商人手册",
+   "en": "Trader's Handbook",
+   "status": "provisional",
+   "for": "爱读书的人",
+   "desc": "从谈判技巧到前车之鉴，讲述经商之道的书。",
+   "liked_by": []
+  },
+  {
+   "id": "full-sewing-kit",
+   "name": "全套针线盒",
+   "en": "Full Sewing Kit",
+   "status": "provisional",
+   "for": "爱打扮的人",
+   "desc": "极其好用的全套缝纫用具。",
+   "liked_by": []
+  },
+  {
+   "id": "gaudy-bangle",
+   "name": "俗艳手镯",
+   "en": "Gaudy Bangle",
+   "status": "sheet",
+   "for": "爱打扮的人",
+   "desc": "镶有宝石与雕饰、闪闪发亮的手镯。",
+   "liked_by": [
+    "alexandra",
+    "benditz",
+    "catania",
+    "esmeralda",
+    "halvin",
+    "leda",
+    "lilian",
+    "ludia",
+    "olympia",
+    "zarcone"
+   ]
+  },
+  {
+   "id": "pack-of-pastels",
+   "name": "粉彩画具",
+   "en": "Pack of Pastels",
+   "status": "provisional",
+   "for": "爱做手工的人",
+   "desc": "以细致颜料制成的画具，能画出柔和美丽的色彩。",
+   "liked_by": [
+    "catania",
+    "dante",
+    "fabio",
+    "jasmine",
+    "leda",
+    "peppe",
+    "sirocco",
+    "sofia",
+    "ursula"
+   ]
+  },
+  {
+   "id": "fodlan-tea",
+   "name": "芙朵拉红茶",
+   "en": "Fodlan Tea",
+   "status": "provisional",
+   "for": "爱喝饮料的人",
+   "desc": "从芙朵拉进口、以玫瑰花瓣熏香的红茶。",
+   "liked_by": []
+  },
+  {
+   "id": "dual-fish-knives",
+   "name": "双刃鱼刀",
+   "en": "Dual Fish Knives",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "两把形状不同的刀，什么鱼都能切开。",
+   "liked_by": [
+    "jasmine",
+    "jester",
+    "majide",
+    "simon"
+   ]
+  },
+  {
+   "id": "skin-balm",
+   "name": "护肤膏",
+   "en": "Skin Balm",
+   "status": "provisional",
+   "for": "爱打扮的人",
+   "desc": "来自凯卢斯的高级乳霜，传说女神们也在用。",
+   "liked_by": [
+    "fianna",
+    "halvin",
+    "ludia",
+    "olympia",
+    "sirocco"
+   ]
+  },
+  {
+   "id": "exquisite-ring",
+   "name": "精美戒指",
+   "en": "Exquisite Ring",
+   "status": "provisional",
+   "for": "爱打扮的人",
+   "desc": "镶有大颗宝石、装饰醒目的美丽戒指。",
+   "liked_by": [
+    "halvin"
+   ]
+  },
+  {
+   "id": "simple-pastries",
+   "name": "朴素糕点",
+   "en": "Simple Pastries",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "百吃不腻、随手可享的烘焙点心组合。",
+   "liked_by": [
+    "dadao",
+    "esmeralda",
+    "halvin",
+    "peter"
+   ]
+  },
+  {
+   "id": "mellow-pastries",
+   "name": "醇甜糕点",
+   "en": "Mellow Pastries",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "以沙漠黍汁制成、微甜的烘焙点心。",
+   "liked_by": [
+    "dadao",
+    "esmeralda",
+    "loretta",
+    "peter"
+   ]
+  },
+  {
+   "id": "coffee-pastries",
+   "name": "咖啡糕点",
+   "en": "Coffee Pastries",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "以咖啡豆制成、酸甜交织的烘焙点心。",
+   "liked_by": [
+    "benditz",
+    "catania",
+    "dadao",
+    "esmeralda",
+    "fabio",
+    "ludia",
+    "olympia",
+    "peter",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "saraminian-sweets",
+   "name": "萨拉米斯甜点",
+   "en": "Saraminian Sweets",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "萨拉米斯的朴素烘焙点心。",
+   "liked_by": [
+    "dadao",
+    "esmeralda",
+    "peter"
+   ]
+  },
+  {
+   "id": "garum",
+   "name": "鱼酱",
+   "en": "Garum",
+   "status": "sheet",
+   "for": "爱下厨的人",
+   "desc": "水边城镇常见的咸鲜鱼酱。",
+   "liked_by": [
+    "alexandra",
+    "esmeralda",
+    "halvin",
+    "mikaela",
+    "tialla",
+    "tobias",
+    "ultand"
+   ]
+  },
+  {
+   "id": "alecto-garum",
+   "name": "阿雷克托鱼酱",
+   "en": "Alecto Garum",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "阿雷克托出产的高级鱼酱，风味浓郁独特。",
+   "liked_by": [
+    "alexandra",
+    "esmeralda",
+    "mikaela",
+    "tialla",
+    "tobias"
+   ]
+  },
+  {
+   "id": "sun-ghosh",
+   "name": "太阳 Ghosh",
+   "en": "Sun Ghosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "风味浓烈明快的 Ghosh，多产于干燥地区。",
+   "liked_by": [
+    "bonaventure",
+    "fabio",
+    "goliath",
+    "guzran",
+    "leda",
+    "mikaela",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "energizing-ghosh",
+   "name": "提神 Ghosh",
+   "en": "Energizing Ghosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "萨拉米斯出产、带有浓烈辛香的 Ghosh。",
+   "liked_by": [
+    "sha-lan"
+   ]
+  },
+  {
+   "id": "secret-ghosh",
+   "name": "秘传 Ghosh",
+   "en": "Secret Ghosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "按美味到必须保密的秘方酿造的 Ghosh。",
+   "liked_by": [
+    "bonaventure",
+    "fabio",
+    "goliath",
+    "guzran",
+    "leda",
+    "mikaela",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "aromatic-shosh",
+   "name": "芳香 Shosh",
+   "en": "Aromatic Shosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "以秘技酿造、风味罕见的稀有 Shosh。",
+   "liked_by": [
+    "fabio",
+    "goliath",
+    "guzran",
+    "leda",
+    "mikaela",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "common-coffee",
+   "name": "普通咖啡",
+   "en": "Common Coffee",
+   "status": "provisional",
+   "for": "爱喝咖啡的人",
+   "desc": "以劣质咖啡豆烘焙、平平无奇的咖啡。",
+   "liked_by": [
+    "benditz",
+    "catania",
+    "dante",
+    "fabio",
+    "fianna",
+    "gaitz",
+    "guzran",
+    "io",
+    "kiroc",
+    "ludia",
+    "mikaela",
+    "nuzzuo",
+    "olympia",
+    "peppe",
+    "seteth",
+    "sha-lan",
+    "sofia",
+    "ursula",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "select-coffee",
+   "name": "精选咖啡",
+   "en": "Select Coffee",
+   "status": "provisional",
+   "for": "爱喝咖啡的人",
+   "desc": "以精心挑选的大颗咖啡豆冲泡的咖啡。",
+   "liked_by": [
+    "benditz",
+    "catania",
+    "dante",
+    "fabio",
+    "fianna",
+    "guzran",
+    "kiroc",
+    "ludia",
+    "mikaela",
+    "nuzzuo",
+    "olympia",
+    "seteth",
+    "sha-lan",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "southern-coffee",
+   "name": "南方咖啡",
+   "en": "Southern Coffee",
+   "status": "provisional",
+   "for": "爱喝咖啡的人",
+   "desc": "以南方咖啡豆冲泡、香气浓郁的高级咖啡。",
+   "liked_by": [
+    "benditz",
+    "catania",
+    "fabio",
+    "fianna",
+    "guzran",
+    "kiroc",
+    "ludia",
+    "mikaela",
+    "olympia",
+    "seteth",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "huge-fish-eyeball",
+   "name": "巨鱼眼",
+   "en": "Huge Fish Eyeball",
+   "status": "sheet",
+   "for": "爱吃鱼的人",
+   "desc": "在阿雷克托港捕获的南方巨鱼的盐渍鱼眼。",
+   "liked_by": [
+    "dadao",
+    "esmeralda",
+    "fabio",
+    "guzran",
+    "inyoni",
+    "leda",
+    "mikaela",
+    "seteth",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "shield-portrait",
+   "name": "鞑古之盾画像",
+   "en": "Shield Portrait",
+   "status": "provisional",
+   "for": "爱画的人",
+   "desc": "描绘格拉尼亚战争的画作，萨拉米斯「鞑古扎之盾」的名声由此而来。",
+   "liked_by": []
+  },
+  {
+   "id": "tales-of-adventure",
+   "name": "冒险物语",
+   "en": "Tales of Adventure",
+   "status": "provisional",
+   "for": "爱读书的人",
+   "desc": "记述一名水手在南鞑古扎历险的书。",
+   "liked_by": [
+    "tialla",
+    "zarcone"
+   ]
+  },
+  {
+   "id": "herbal-recipe-guide",
+   "name": "药膳食谱",
+   "en": "Herbal Recipe Guide",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "介绍药膳与食谱的专门书。",
+   "liked_by": [
+    "alexandra",
+    "esmeralda",
+    "lilian",
+    "ludia",
+    "mikaela",
+    "seteth",
+    "tialla",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "sharp-fishhook",
+   "name": "锐利鱼钩",
+   "en": "Sharp Fishhook",
+   "status": "sheet",
+   "for": "爱钓鱼的人",
+   "desc": "以厚贝壳雕成、锐利的优质鱼钩。",
+   "liked_by": [
+    "cai",
+    "esmeralda",
+    "inyoni",
+    "kiroc",
+    "ludia",
+    "peppe",
+    "seteth",
+    "sofia",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "mature-ghosh",
+   "name": "成熟 Ghosh",
+   "en": "Mature Ghosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "陈酿已久、香气与风味深厚的 Ghosh。",
+   "liked_by": [
+    "buccar",
+    "fabio",
+    "goliath",
+    "guzran",
+    "kiroc",
+    "leda",
+    "majide",
+    "mikaela",
+    "sirocco",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "light-shosh",
+   "name": "清淡 Shosh",
+   "en": "Light Shosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "只在某个村子酿造、口感清淡的 Shosh。",
+   "liked_by": [
+    "buccar",
+    "fabio",
+    "goliath",
+    "guzran",
+    "kiroc",
+    "leda",
+    "majide",
+    "mikaela",
+    "sirocco",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "jade-ghosh",
+   "name": "翡翠 Ghosh",
+   "en": "Jade Ghosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "只在特定地区出产的稀有翡翠色 Ghosh。",
+   "liked_by": [
+    "bonaventure",
+    "fabio",
+    "goliath",
+    "guzran",
+    "leda",
+    "mikaela",
+    "tobias",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "pickled-vegetables",
+   "name": "腌菜",
+   "en": "Pickled Vegetables",
+   "status": "provisional",
+   "for": "爱吃蔬菜的人",
+   "desc": "在盐水中发酵数月的蔬菜。",
+   "liked_by": [
+    "mu",
+    "nuzzuo",
+    "sofia"
+   ]
+  },
+  {
+   "id": "candly-crystals",
+   "name": "冰糖",
+   "en": "Candly Crystals",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "将沙漠黍结晶成糖制成的高级糖果。",
+   "liked_by": []
+  },
+  {
+   "id": "strong-seasonings",
+   "name": "浓味调料",
+   "en": "Strong Seasonings",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "混合香料与海鲜制成、味道浓烈奇特的调味料。",
+   "liked_by": [
+    "alexandra",
+    "bonaventure",
+    "esmeralda",
+    "guzran",
+    "lilian",
+    "mikaela",
+    "tialla",
+    "tobias"
+   ]
+  },
+  {
+   "id": "dagda-beard-grass",
+   "name": "胡须草",
+   "en": "Dagda Beard Grass",
+   "status": "sheet",
+   "for": "爱马的人",
+   "desc": "香气独特、能安抚马匹的草。",
+   "liked_by": [
+    "alexandra",
+    "catania",
+    "esmeralda",
+    "fabio",
+    "leda",
+    "lysander",
+    "peter",
+    "theodora",
+    "tobias"
+   ]
+  },
+  {
+   "id": "training-bracelet",
+   "name": "训练手环",
+   "en": "Training Bracelet",
+   "status": "provisional",
+   "for": "热衷训练的人",
+   "desc": "沉重但美观的训练用饰品。",
+   "liked_by": [
+    "alexandra",
+    "esmeralda",
+    "goliath",
+    "inyoni",
+    "leda",
+    "lilian",
+    "ludia",
+    "nezha",
+    "noctula",
+    "nuzzuo",
+    "nydine",
+    "tobias"
+   ]
+  },
+  {
+   "id": "mature-dried-cervi",
+   "name": "熟成干 Cervi",
+   "en": "Mature Dried Cervi",
+   "status": "provisional",
+   "for": "孩子",
+   "desc": "Cervi 的干燥沉淀物，清淡而营养的保存食品。",
+   "liked_by": [
+    "dadao",
+    "peter",
+    "tialla"
+   ]
+  },
+  {
+   "id": "volcano-ghosh",
+   "name": "火山 Ghosh",
+   "en": "Volcano Ghosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "在火山附近酿造、常用于仪式的 Ghosh。",
+   "liked_by": [
+    "buccar",
+    "majide"
+   ]
+  },
+  {
+   "id": "orgus-coffee",
+   "name": "奥尔古斯咖啡",
+   "en": "Orgus Coffee",
+   "status": "provisional",
+   "for": "爱喝咖啡的人",
+   "desc": "奥尔古斯山出产的稀有浓咖啡。",
+   "liked_by": [
+    "benditz",
+    "catania",
+    "fabio",
+    "gaitz",
+    "guzran",
+    "ludia",
+    "mikaela",
+    "seteth",
+    "yang-jie"
+   ]
+  },
+  {
+   "id": "fragrant-pastries",
+   "name": "香烤糕点",
+   "en": "Fragrant Pastries",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "常以高温窑烤制的香甜点心。",
+   "liked_by": [
+    "dadao",
+    "esmeralda",
+    "peter"
+   ]
+  },
+  {
+   "id": "candy-crystals",
+   "name": "冰糖",
+   "en": "Candy Crystals",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "将沙漠黍结晶成糖制成的高级糖果。",
+   "liked_by": [
+    "mu"
+   ]
+  },
+  {
+   "id": "rancid-garum",
+   "name": "腐臭鱼酱",
+   "en": "Rancid Garum",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "由某位贵族特制、臭气熏天的鱼酱。",
+   "liked_by": []
+  },
+  {
+   "id": "blue-shosh",
+   "name": "蓝色 Shosh",
+   "en": "Blue Shosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "以独特天蓝色闻名、清爽淡雅的 Shosh。",
+   "liked_by": []
+  },
+  {
+   "id": "solomon-coffee",
+   "name": "所罗门咖啡",
+   "en": "Solomon Coffee",
+   "status": "provisional",
+   "for": "爱喝咖啡的人",
+   "desc": "传说中的所罗门咖啡，香气与风味独一无二。",
+   "liked_by": []
+  },
+  {
+   "id": "brined-fish-guts",
+   "name": "腌鱼肠",
+   "en": "Brined Fish Guts",
+   "status": "sheet",
+   "for": "爱吃鱼的人",
+   "desc": "以发酵鱼内脏、酵母与盐制成的咸鲜保存食品。",
+   "liked_by": [
+    "fabio",
+    "leda"
+   ]
+  },
+  {
+   "id": "rare-southern-seeds",
+   "name": "南方珍稀种子",
+   "en": "Rare Southern Seeds",
+   "status": "provisional",
+   "for": "爱务农的人",
+   "desc": "据说只在南鞑古扎才找得到的稀有植物。",
+   "liked_by": []
+  },
+  {
+   "id": "outdoor-cooking-set",
+   "name": "户外烹饪套装",
+   "en": "Outdoor Cooking Set",
+   "status": "sheet",
+   "for": "爱下厨的人",
+   "desc": "为户外使用设计的全套烹饪器具。",
+   "liked_by": [
+    "buccar",
+    "jasmine",
+    "mu",
+    "nuzzuo",
+    "peppe",
+    "sha-lan",
+    "sofia",
+    "ultand"
+   ]
+  },
+  {
+   "id": "morfis-tea",
+   "name": "莫菲斯红茶",
+   "en": "Morfis Tea",
+   "status": "provisional",
+   "for": "爱喝饮料的人",
+   "desc": "莫菲斯出产、以特殊工序熟成的醇厚红茶。",
+   "liked_by": []
+  },
+  {
+   "id": "horse-grooming-kit",
+   "name": "马匹美容套装",
+   "en": "Horse-Grooming Kit",
+   "status": "sheet",
+   "for": "爱马的人",
+   "desc": "一整套照顾马匹的用具。",
+   "liked_by": [
+    "alexandra",
+    "catania",
+    "esmeralda",
+    "gaitz",
+    "io",
+    "leda",
+    "lysander",
+    "theodora",
+    "tobias"
+   ]
+  },
+  {
+   "id": "crafting-knives",
+   "name": "工艺刻刀",
+   "en": "Crafting Knives",
+   "status": "provisional",
+   "for": "爱做手工的人",
+   "desc": "达·米纳出产、顺手好用的雕刻刀组。",
+   "liked_by": []
+  },
+  {
+   "id": "joint-relief-gloves",
+   "name": "关节舒缓手套",
+   "en": "Joint-Relief Gloves",
+   "status": "sheet",
+   "for": "弓手",
+   "desc": "射箭时保护手臂的高级皮手套。",
+   "liked_by": [
+    "diego",
+    "dietrich",
+    "fianna",
+    "gaitz",
+    "io",
+    "jasmine",
+    "jester",
+    "kiroc",
+    "loretta",
+    "majide",
+    "nuzzuo",
+    "peppe",
+    "sirocco"
+   ]
+  },
+  {
+   "id": "decorative-arrows",
+   "name": "装饰箭",
+   "en": "Decorative Arrows",
+   "status": "sheet",
+   "for": "弓手",
+   "desc": "美得连贵族都会赞叹的三支装饰箭。",
+   "liked_by": []
+  },
+  {
+   "id": "eastern-board-games",
+   "name": "东方棋盘游戏",
+   "en": "Eastern Board Games",
+   "status": "provisional",
+   "for": "爱下棋的人",
+   "desc": "从遥远东方带来的精美摆设。",
+   "liked_by": []
+  },
+  {
+   "id": "blue-rose-bouquet",
+   "name": "蓝玫瑰花束",
+   "en": "Blue-Rose Bouquet",
+   "status": "sheet",
+   "for": "爱花的人",
+   "desc": "市面上难得一见的美丽玫瑰花束。",
+   "liked_by": [
+    "ultand"
+   ]
+  },
+  {
+   "id": "portrait-of-yu-phas",
+   "name": "尤法斯肖像画",
+   "en": "Portrait of Yu Phas",
+   "status": "sheet",
+   "for": "爱美的人",
+   "desc": "描绘女神尤法斯、极为罕见的画作。",
+   "liked_by": []
+  },
+  {
+   "id": "everyday-scenes",
+   "name": "日常风景",
+   "en": "Everyday Scenes",
+   "status": "provisional",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "ludia"
+   ]
+  },
+  {
+   "id": "magic-trick-set",
+   "name": "魔术道具组",
+   "en": "Magic-Trick Set",
+   "status": "provisional",
+   "for": "相信灵性的人",
+   "desc": "孩子们常用来变简单魔术的道具组。",
+   "liked_by": [
+    "catania",
+    "dante",
+    "halvin",
+    "jasmine",
+    "leda",
+    "ludia",
+    "peppe",
+    "sofia"
+   ]
+  },
+  {
+   "id": "honey-pastries",
+   "name": "蜂蜜糕点",
+   "en": "Honey Pastries",
+   "status": "provisional",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "dadao",
+    "dietrich",
+    "jasmine",
+    "loretta",
+    "mu",
+    "sofia"
+   ]
+  },
+  {
+   "id": "smooth-garum",
+   "name": "顺滑鱼酱",
+   "en": "Smooth Garum",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "经多次过滤、味道格外清爽的鱼酱。",
+   "liked_by": [
+    "alexandra",
+    "esmeralda",
+    "tialla",
+    "tobias"
+   ]
+  },
+  {
+   "id": "eastern-tea-leaves",
+   "name": "东方茶叶",
+   "en": "Eastern Tea Leaves",
+   "status": "provisional",
+   "for": "爱喝饮料的人",
+   "desc": "赛伊之地的茶叶，稀有的高级限定品。",
+   "liked_by": [
+    "esmeralda",
+    "fabio",
+    "goliath",
+    "guzran",
+    "halvin",
+    "inyoni",
+    "leda",
+    "lysander",
+    "mikaela",
+    "nezha",
+    "ninae",
+    "noctula",
+    "nydine",
+    "peter",
+    "seteth",
+    "theodora",
+    "tialla",
+    "tobias"
+   ]
+  },
+  {
+   "id": "eastern-earrings",
+   "name": "东方耳环",
+   "en": "Eastern Earrings",
+   "status": "sheet",
+   "for": "爱打扮的人",
+   "desc": "镶有深绿珠子的东方金耳环。",
+   "liked_by": [
+    "zarcone"
+   ]
+  },
+  {
+   "id": "pickled-bulbs",
+   "name": "醋渍鳞茎",
+   "en": "Pickled Bulbs",
+   "status": "provisional",
+   "for": "爱吃蔬菜的人",
+   "desc": "以醋腌渍鳞茎蔬菜制成的酸味保存食品。",
+   "liked_by": [
+    "nezha",
+    "tialla",
+    "zarcone"
+   ]
+  },
+  {
+   "id": "poems-of-the-greats",
+   "name": "名家诗集",
+   "en": "Poems of the Greats",
+   "status": "provisional",
+   "for": "爱读书的人",
+   "desc": "收录海外诗作、展现异国文化之美的诗集。",
+   "liked_by": []
+  },
+  {
+   "id": "crimson-ghosh",
+   "name": "深红 Ghosh",
+   "en": "Crimson Ghosh",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "红得惊艳、作为神殿供品而闻名的 Ghosh。",
+   "liked_by": [
+    "cai",
+    "dante",
+    "diego",
+    "dietrich",
+    "fianna",
+    "gaitz",
+    "halvin",
+    "io",
+    "jasmine",
+    "jester",
+    "loretta",
+    "majide",
+    "ninae",
+    "nuzzuo",
+    "peppe",
+    "simon",
+    "sofia",
+    "ultand",
+    "ursula"
+   ]
+  },
+  {
+   "id": "niiza-garum",
+   "name": "尼扎鱼酱",
+   "en": "Niiza Garum",
+   "status": "provisional",
+   "for": "爱下厨的人",
+   "desc": "尼扎港出产的鱼酱，常用于与芙朵拉的贸易。",
+   "liked_by": [
+    "buccar",
+    "jasmine",
+    "nuzzuo",
+    "sha-lan",
+    "sofia"
+   ]
+  },
+  {
+   "id": "spirit-board-game",
+   "name": "精灵棋",
+   "en": "Spirit Board Game",
+   "status": "provisional",
+   "for": "爱下棋的人",
+   "desc": "来自布里吉德、以精灵为棋子主题的棋盘游戏。",
+   "liked_by": [
+    "dietrich",
+    "io",
+    "jester",
+    "peppe"
+   ]
+  },
+  {
+   "id": "thick-foreign-tome",
+   "name": "厚重外国典籍",
+   "en": "Thick Foreign Tome",
+   "status": "provisional",
+   "for": "爱读书的人",
+   "desc": "来自芙朵拉、讲述灵魔法的书。",
+   "liked_by": [
+    "bonaventure"
+   ]
+  },
+  {
+   "id": "pure-white-cervi",
+   "name": "纯白 Cervi",
+   "en": "Pure-White Cervi",
+   "status": "provisional",
+   "for": "爱吃甜食的人",
+   "desc": "几乎没有杂质、清爽的 Cervi。",
+   "liked_by": [
+    "dietrich",
+    "jasmine",
+    "loretta",
+    "mu",
+    "sofia"
+   ]
+  },
+  {
+   "id": "divination-bagua",
+   "name": "八卦占卜套装",
+   "en": "Divination Bagua",
+   "status": "sheet",
+   "for": "占卜师",
+   "desc": "来自赛伊、以八卦占卜吉凶的道具。",
+   "liked_by": []
+  },
+  {
+   "id": "special-medicine",
+   "name": "特制「良药」",
+   "en": "Special “Medicine”",
+   "status": "provisional",
+   "for": "爱喝发酵饮料的人",
+   "desc": "据说一杯 Ghosh 就能治好任何小病。",
+   "liked_by": []
+  },
+  {
+   "id": "arrowhead-gem",
+   "name": "箭头宝石",
+   "en": "Arrowhead Gem",
+   "status": "provisional",
+   "for": "爱打扮的人",
+   "desc": "形似箭头的美丽大宝石。",
+   "liked_by": [
+    "buccar",
+    "cai",
+    "dante",
+    "dietrich",
+    "gaitz",
+    "io",
+    "jasmine",
+    "kiroc",
+    "loretta",
+    "mu",
+    "ninae",
+    "sofia",
+    "ursula"
+   ]
+  },
+  {
+   "id": "board-game-tactics",
+   "name": "棋局战术书",
+   "en": "Board Game Tactics",
+   "status": "provisional",
+   "for": "爱下棋的人",
+   "desc": "名家整理的各类棋盘游戏技巧书。",
+   "liked_by": []
+  },
+  {
+   "id": "tales-of-the-arena",
+   "name": "斗技场物语",
+   "en": "Tales of the Arena",
+   "status": "provisional",
+   "for": "爱读书的人",
+   "desc": "收录众多角斗士事迹的故事集。",
+   "liked_by": [
+    "bonaventure"
+   ]
+  },
+  {
+   "id": "ceremonial-spear",
+   "name": "仪式用枪",
+   "en": "Ceremonial Spear",
+   "status": "sheet",
+   "for": "爱武器的人",
+   "desc": "装饰华美的枪，不够坚固，无法实战。",
+   "liked_by": [
+    "bonaventure"
+   ]
+  },
+  {
+   "id": "jade-panther-figure",
+   "name": "翡翠豹雕像",
+   "en": "Jade Panther Figure",
+   "status": "provisional",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "halvin"
+   ]
+  },
+  {
+   "id": "training-pillar",
+   "name": "训练柱",
+   "en": "Training Pillar",
+   "status": "sheet",
+   "for": "",
+   "desc": "",
+   "liked_by": [
+    "diego",
+    "dietrich",
+    "gaitz",
+    "io",
+    "jasmine",
+    "kiroc",
+    "loretta",
+    "majide",
+    "nuzzuo",
+    "peppe"
+   ]
+  }
+ ]
+}

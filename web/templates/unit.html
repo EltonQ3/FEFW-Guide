@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% from "_macros.html" import divider, icon, star, tname, avatar with context %}
+{% block main %}
+<article class="dossier" style="--c: {{ u.color }}">
+  <header class="dossier-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="位置"><a href="{{ up }}units.html">角色</a><span>／</span><a href="{{ up }}units.html?faction={{ u.faction }}">{{ u.fac.name }}</a></nav>
+      <div class="dh-grid">
+        <figure class="arch-portrait">
+          <span class="frame">{% if u.portrait %}<img src="{{ root }}assets/{{ u.portrait }}" alt="{{ u.name }}" width="400" height="533">{% elif u.avatar %}<img class="small" src="{{ root }}assets/{{ u.avatar }}" alt="{{ u.name }}">{% else %}<i class="blank">{{ u.name[:1] }}</i>{% endif %}</span>
+        </figure>
+        <div class="dh-info">
+          <span class="tag fac" style="--c: {{ u.color }}">{{ u.fac.name }}</span>{% if u.lead %}<span class="tag gold">{{ "真主角" if u.id == "eshmel" else "主角" }}</span>{% endif %}
+          <h1 class="gold-text">{{ u.name }}</h1>
+          <div class="names">{% if u.jp %}<span lang="ja">{{ u.jp }}</span>{% endif %}{% if u.en %}<span class="latin">{{ u.en }}</span>{% endif %}{% set al = u.aliases_hant if lang == "hant" else u.aliases_hans %}{% if al %}<span>别名：{{ al | join("、") }}</span>{% endif %}{% if u.name_status in ('community', 'provisional') %}<span class="tname is-{{ u.name_status }}">中文名为{{ STATUS[u.name_status] }}</span>{% endif %}</div>
+          {% if u.desc %}<p class="desc">{{ u.desc }}</p>{% endif %}
+          {% if u.ability %}
+          <div class="ability">
+            <span class="k">个人技能</span>
+            <b>{{ tname(u.ability) }}</b>
+            <p>{{ u.ability.effect }}</p>
+          </div>
+          {% endif %}
+          {% if u.prefs.preferred or u.prefs.non_ideal %}
+          <dl class="prefs">
+            {% if u.prefs.preferred %}<dt>擅长</dt><dd>{% for s in u.prefs.preferred %}<span class="tag good">{{ s }}</span>{% endfor %}</dd>{% endif %}
+            {% if u.prefs.non_ideal %}<dt>不擅长</dt><dd>{% for s in u.prefs.non_ideal %}<span class="tag bad">{{ s }}</span>{% endfor %}</dd>{% endif %}
+          </dl>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap dossier-body">
+    <nav class="toc" aria-label="本页目录">
+      <a href="#join">加入</a>{% if u.growth %}<a href="#growth">成长率</a>{% endif %}{% if u.blaze %}<a href="#blaze">爆炎技</a>{% endif %}{% if u.seal_list %}<a href="#seal">血印</a>{% endif %}{% if u.spell_rows %}<a href="#magic">魔法</a>{% endif %}{% if u.support_list %}<a href="#support">支援</a>{% endif %}<a href="#gifts">喜好与礼物</a>{% if u.para_list or u.para_unlocks %}<a href="#para">外传</a>{% endif %}
+    </nav>
+
+    <section class="dsec" id="join">
+      <h2>{{ star() }}加入方式</h2>
+      {% if u.recruit %}
+      <div class="recruit">
+        {% for r in routes %}{% set rc = u.recruit[r.key] %}
+        <div class="rc{% if rc.kind == 'none' %} none{% endif %}" style="--c: {{ r.color }}">
+          <div class="r"><span>{{ r.name }}</span>{% if rc.kind == 'scout' %}<span class="tag" style="--c: {{ r.color }}">挖角</span>{% elif rc.kind in ('auto', 'lead') %}<span class="tag" style="--c: {{ r.color }}">自动</span>{% endif %}</div>
+          {% if rc.kind == "scout" %}
+            <div class="gauge"><span><b>{{ rc.support }}</b>支援Lv</span><span><b>{{ rc.renown }}</b>名声Lv</span></div>
+            {% if rc.needs %}<div class="needs">{% for n in rc.needs %}<span class="need">{{ n }}</span>{% endfor %}</div>{% endif %}
+          {% elif rc.kind == "none" %}<div class="plain">此线未列招募</div>
+          {% else %}<div class="plain">{{ rc.text }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <p class="hint">挖角三要素：对方在本章登场、支援与名声达标、完成交涉（交物品、付金币或完成委托）。<a href="{{ up }}recruit.html">按路线查看全部 →</a></p>
+      {% endif %}
+      {% if u.join %}<p class="join-note">{{ u.join }}</p>{% endif %}
+      {% if not u.recruit and not u.join %}<p class="hint">尚无加入资料。</p>{% endif %}
+    </section>
+
+    {% if u.growth %}
+    <section class="dsec" id="growth">
+      <h2>{{ star() }}成长率 <small>不含兵种加成</small></h2>
+      <div class="growth">
+        {{ u.radar }}
+        <div class="bars">
+          {% for row in u.growth_rows %}
+          <div class="bar-row{% if row.best %} best{% endif %}"><span class="l">{{ row.label }}</span><span class="track"><i style="width: {{ row.value / 80 * 100 }}%"></i></span><b>{{ row.value }}%</b></div>
+          {% endfor %}
+          <div class="bar-total"><span>总和</span><b>{{ u.growth_total }}</b><span class="rk">全角色第 {{ u.total_rank }} 名</span></div>
+          <a class="btn small" href="{{ up }}classes.html?unit={{ u.id }}#calc">搭配兵种模拟成长 {{ icon("arrow") }}</a>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    {% if u.blaze %}
+    <section class="dsec" id="blaze">
+      <h2>{{ star() }}爆炎技</h2>
+      <div class="arts">
+        {% for a in u.blaze %}
+        <div class="art">
+          <div class="art-head"><b>{{ tname(a) }}</b><span class="art-meta">{% if a.cost %}<span>爆炎 <b>{{ a.cost }}</b></span>{% endif %}{% if a.range %}<span>射程 <b>{{ a.range }}</b></span>{% endif %}{% if a.learned %}<span>{{ a.learned }}</span>{% endif %}</span></div>
+          <p>{{ a.effect }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if u.seal_list %}
+    <section class="dsec" id="seal">
+      <h2>{{ star() }}血印</h2>
+      <div class="seal-mini">
+        {% for s in u.seal_list %}
+        <a class="sm" href="{{ up }}seals.html#s-{{ s.id }}">{% if s.icon %}<img src="{{ root }}assets/{{ s.icon }}" alt="" width="40" height="40">{% else %}{{ star() }}{% endif %}<span><b>{{ tname(s, False) }}</b><small>攻击时 {{ s.chance }}% 发动 · {{ s.effect }}</small></span></a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if u.spell_rows %}
+    <section class="dsec" id="magic">
+      <h2>{{ star() }}习得魔法</h2>
+      <div class="table-wrap"><table class="data spells">
+        <thead><tr><th>技能等级</th><th>黑魔法</th><th>白魔法</th></tr></thead>
+        <tbody>{% for lv, sp in u.spell_rows %}<tr><td class="first">{{ lv }}</td><td>{% for s in sp.black %}{{ tname(s, False) }}{% if not loop.last %}、{% endif %}{% else %}—{% endfor %}</td><td>{% for s in sp.white %}{{ tname(s, False) }}{% if not loop.last %}、{% endif %}{% else %}—{% endfor %}</td></tr>{% endfor %}</tbody>
+      </table></div>
+    </section>
+    {% endif %}
+
+    {% if u.support_list %}
+    <section class="dsec" id="support">
+      <h2>{{ star() }}支援 <small>{{ u.support_list|length }} 人</small></h2>
+      {% for rk, members in u.support_groups if members %}
+      <div class="sup-row"><span class="rank r{{ rk }}">{{ rk }}</span><div class="avas">{% for m in members %}{{ avatar(m) }}{% endfor %}</div></div>
+      {% endfor %}
+      <p class="hint">字母为两人能达到的最高支援等级。<a href="{{ up }}bonds.html?unit={{ u.id }}">在羁绊页查看 →</a></p>
+    </section>
+    {% endif %}
+
+    <section class="dsec" id="gifts">
+      <h2>{{ star() }}喜好与礼物</h2>
+      <dl class="kv">
+        {% if u.likes %}<dt>喜欢</dt><dd>{{ u.likes }}</dd>{% elif u.likes_en %}<dt>喜欢</dt><dd lang="en">{{ u.likes_en }}</dd>{% endif %}
+        {% if u.hobbies %}<dt>兴趣</dt><dd>{{ u.hobbies }}</dd>{% elif u.hobbies_en %}<dt>兴趣</dt><dd lang="en">{{ u.hobbies_en }}</dd>{% endif %}
+        {% if u.gift_note %}<dt>推荐礼物</dt><dd>{{ u.gift_note }}</dd>{% endif %}
+        {% if u.gifts %}<dt>特别喜欢</dt><dd class="gift-chips">{% for g in u.gifts %}<a class="tag gift" href="{{ up }}gifts.html#g-{{ g.id }}">{{ tname(g, False) }}</a>{% endfor %}</dd>{% endif %}
+      </dl>
+      {% if not (u.likes or u.likes_en or u.gifts or u.gift_note) %}<p class="hint">尚无送礼资料。</p>{% endif %}
+    </section>
+
+    {% if u.para_list or u.para_unlocks %}
+    <section class="dsec" id="para">
+      <h2>{{ star() }}外传</h2>
+      <div class="tags">
+        {% for p in u.para_list %}<a class="tag skill" href="{{ up }}paralogues.html#p-{{ p.id }}">{{ p.person }}外传 · {{ p.title }}</a>{% endfor %}
+        {% for p in u.para_unlocks %}<a class="tag" href="{{ up }}paralogues.html#p-{{ p.id }}">挖角关联 · {{ p.person }}外传</a>{% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if u.prev %}
+    <nav class="pager" aria-label="同阵营角色">
+      <a href="{{ up }}{{ u.prev.url }}" class="prev">{{ icon("left") }}<span><small>上一位</small>{{ u.prev.name }}</span></a>
+      <a href="{{ up }}units.html?faction={{ u.faction }}" class="mid">{{ u.fac.name }}</a>
+      <a href="{{ up }}{{ u.next.url }}" class="next"><span><small>下一位</small>{{ u.next.name }}</span>{{ icon("right") }}</a>
+    </nav>
+    {% endif %}
+    <p class="source-line left"><span>资料来源</span>{% if u.recruit %}<a href="https://github.com/EltonQ3/fe-guide-wanlvqiansi" rel="noopener" target="_blank">共创表／战术手帖（招募、喜好）</a>{% endif %}{% if u.source %}<a href="{{ u.source }}" rel="noopener" target="_blank">Game8 角色页（成长率、技能、支援）</a>{% endif %}</p>
+  </div>
+</article>
+{% endblock %}

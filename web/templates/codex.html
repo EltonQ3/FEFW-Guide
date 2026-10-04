@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, icon, section_head with context %}
+{% block main %}
+{{ page_hero("THE CODEX", "图鉴", "武器与魔法、礼物、血印、爆炎技与神之加护。每件都附上数值与说明，暂译名称以虚线标示。", "var(--jade)") }}
+<div class="wrap">
+  <div class="lancets">
+    {% for s in codex_items %}
+    <a class="lancet" href="{{ s.file }}" style="--c: {{ s.color }}">
+      <span class="glass" aria-hidden="true"></span>
+      <span class="ico">{{ icon(s.icon) }}</span>
+      <span class="en">{{ s.en }}</span>
+      <h3>{{ s.label }}</h3>
+      <p>{{ s.desc }}</p>
+      <span class="num">{{ s.count }}</span>
+    </a>
+    {% endfor %}
+  </div>
+
+  <section class="section">
+    {{ section_head("FORMULAS", "计算公式", "共创表的计算公式分页仍在收集中，先列出英文攻略已整理、可以直接套用的部分。") }}
+    <div class="formulas">
+      <div class="formula panel">
+        <h3 class="serif">攻速</h3>
+        <p class="eq">攻速 ＝ 速度 －（武器重量 － 体格）</p>
+        <p>武器重量不超过体格时不扣攻速。例：迪托利希速度 12、体格 2，武器重量 4，攻速为 12 －（4 － 2）＝ 10。</p>
+        <p class="src">Game8 · Attack Speed Guide</p>
+      </div>
+      <div class="formula panel">
+        <h3 class="serif">追击</h3>
+        <p class="eq">攻速差 ≥ 4 时追击</p>
+        <p>自身攻速比对手高 4 以上，就会发动追击（个人技能与兵种特技可能另有例外）。</p>
+        <p class="src">Game8 · Attack Speed Guide</p>
+      </div>
+      <div class="formula panel">
+        <h3 class="serif">成长率</h3>
+        <p class="eq">实际成长率 ＝ 个人成长率 ＋ 兵种加成</p>
+        <p>升级时每项能力按成长率判定是否 +1；基础兵种不加成。<a href="classes.html#calc">打开成长模拟 →</a></p>
+        <p class="src">Game8 · Growth Rates Explained</p>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

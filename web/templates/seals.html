@@ -1,23 +1,25 @@
 {% extends "base.html" %}
-{% from "_macros.html" import page_hero, ring %}
+{% from "_macros.html" import page_hero, ring, star, tname with context %}
 {% block main %}
-{{ page_hero("BLOOD SEALS", "血印", "角色与生俱来的 " ~ seals|length ~ " 枚血印，攻击时按机率发动。外圈刻度表示发动机率。", "var(--crimson)", sources) }}
+{{ page_hero("BLOOD SEALS", "血印", "与生俱来的 " ~ seals|length ~ " 枚天冠血印，攻击时按机率发动。外圈刻度表示发动率。", "var(--crimson)", sources.seals) }}
 <div class="wrap">
   <div class="seal-grid">
     {% for s in seals %}
-    <article class="panel seal ornate" id="s-{{ s.id }}">
-      <div class="medal">{{ ring(s.chance or 0, s.color) }}<img src="{{ root }}assets/{{ s.icon }}" alt="" width="64" height="64"></div>
-      <h3 class="gold-text">{{ s.name }}</h3>
-      <div class="chance">TRIGGER <b>{{ s.chance }}%</b></div>
+    <article class="panel seal" id="s-{{ s.id }}">
+      <div class="medal">{{ ring(s.chance or 0) }}{% if s.icon %}<img src="{{ root }}assets/{{ s.icon }}" alt="" width="64" height="64">{% else %}{{ star("big") }}{% endif %}</div>
+      <h3 class="gold-text">{{ tname(s, False) }}</h3>
+      {% if s.en %}<div class="en-name" lang="en">{{ s.en }}</div>{% endif %}
+      <div class="chance">发动率 <b>{{ s.chance }}%</b></div>
       <p class="effect">{{ s.effect }}</p>
       <div class="holders">
-        {% for h in s.holder_chars %}
-          {% if h.id %}<a class="holder" href="characters.html#c-{{ h.id }}"><img src="{{ root }}assets/{{ h.avatar }}" alt="" loading="lazy" width="26" height="26">{{ h.name }}</a>
-          {% else %}<span class="holder" style="padding-left: 10px">{{ h.name }}</span>{% endif %}
+        {% for h in s.holder_units %}
+          {% if h.url %}<a class="holder" href="{{ h.url }}" style="--c: {{ h.color }}">{% if h.avatar %}<img src="{{ root }}assets/{{ h.avatar }}" alt="" loading="lazy" width="26" height="26">{% endif %}{{ h.name }}{% if h.name not in s.holders_sheet and s.holders_sheet %}<sup title="仅见于 Game8">G</sup>{% endif %}</a>
+          {% else %}<span class="holder plain">{{ h.name }}{% if h.name not in s.holders_sheet and s.holders_sheet %}<sup title="仅见于 Game8">G</sup>{% endif %}</span>{% endif %}
         {% endfor %}
       </div>
     </article>
     {% endfor %}
   </div>
+  <p class="hint center">持有者以共创表为准；标 <sup>G</sup> 者只见于 Game8 的血印表，尚待游戏内核对。</p>
 </div>
 {% endblock %}

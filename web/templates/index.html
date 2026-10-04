@@ -1,55 +1,44 @@
 {% extends "base.html" %}
-{% from "_macros.html" import flourish, icon, emblem %}
+{% from "_macros.html" import divider, icon, star, section_head with context %}
 {% block main %}
+{% set glass = ["var(--violet)", "var(--crimson)", "var(--azure)", "var(--amber)"] %}
 <section class="hero">
-  <canvas data-weave aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="hero-copy">
       <span class="kicker">FIRE EMBLEM · FORTUNE'S WEAVE</span>
       <h1 class="gold-text">万缕千丝</h1>
-      <div class="subtitle">THE&nbsp;WOVEN&nbsp;CODEX</div>
-      <p class="lead">把社群共创资料表重新织成一部图鉴——角色、兵种、外传、血印与神之加护，按你想查的方式排好，手机与电脑都好读。</p>
-      <div class="actions">
-        <a class="btn primary" href="characters.html">翻阅角色名鉴 {{ icon("arrow") }}</a>
-        <button class="btn" type="button" data-open-finder>{{ icon("search") }} 全站搜索</button>
+      <div class="subtitle">资料织锦 <span class="latin">THE WOVEN CODEX</span></div>
+      <p class="lead">把社群共创资料表与英文攻略的数值资料，织成一部可以查、可以比、可以规划的图鉴。</p>
+      <button class="hero-search" type="button" data-open-finder>{{ icon("search") }}<span>搜索角色、兵种、武器、礼物……</span><kbd>/</kbd></button>
+      <div class="quick">
+        <span>常查：</span>
+        <a href="recruit.html">招募门槛</a><a href="classes.html#calc">成长模拟</a><a href="bonds.html">支援对象</a><a href="paralogues.html">外传日历</a><a href="gifts.html">礼物</a>
       </div>
     </div>
-    <div class="banners" aria-label="四位主角">
-      {% for r in routes %}{% set c = char_by_id[r.cid] %}
-      <a class="banner" href="characters.html#c-{{ c.id }}" style="--c: {{ r.color }}">
-        <div class="rod"></div>
-        <div class="cloth"><img src="{{ root }}assets/{{ c.portrait }}" alt="{{ c.name }}" width="400" height="533" fetchpriority="{{ 'high' if loop.first else 'auto' }}"></div>
-        <div class="label"><b>{{ c.name }}</b><small>{{ c.en | upper }}</small></div>
-        <div class="tassel"></div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<div class="ribbon wrap">
-  <div class="panel ornate">
-    {% for v, l in home_stats %}<div class="stat"><b class="gold-text">{{ v }}</b><span>{{ l }}</span></div>{% endfor %}
-  </div>
-</div>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="kicker">CONTENTS</span>
-      <h2 class="gold-text">资料目录</h2>
-      {{ flourish() }}
-      <p>共创表的每个分页都对应一个专门的版面：用卡片看人物、用阶梯看兵种、用日历看外传。</p>
-    </div>
-    <div class="tiles">
-      {% for t in tiles %}
-      <a class="tile reveal" href="{{ t.file }}" style="--c: {{ t.color }}">
-        <span class="ico">{{ icon(t.icon) }}</span>
-        <span class="en">{{ t.en }}</span>
-        <h3>{{ t.label }}</h3>
-        <p>{{ t.desc }}</p>
-        <span class="go">{{ t.go }} →</span>
-        <span class="big" aria-hidden="true">{{ t.count }}</span>
+    <div class="rose" aria-label="四位主角">
+      <svg class="rose-svg" viewBox="0 0 600 600" aria-hidden="true">
+        <defs>
+          {% for c in glass %}<radialGradient id="glass{{ loop.index0 }}" cx="50%" cy="30%" r="80%"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".35" style="stop-color: {{ c }}" stop-opacity=".95"/><stop offset="1" style="stop-color: {{ c }}" stop-opacity=".55"/></radialGradient>{% endfor %}
+          <linearGradient id="lead" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7e4a8"/><stop offset=".5" stop-color="#c99a4a"/><stop offset="1" stop-color="#8a6527"/></linearGradient>
+        </defs>
+        <circle cx="300" cy="300" r="292" class="rw-rim"/>
+        <g class="rw-outer">
+          {% for i in range(24) %}<circle cx="300" cy="18" r="7" transform="rotate({{ i * 15 }} 300 300)" class="rw-pearl"/>{% endfor %}
+          {% for i in range(16) %}<path d="M283 104 L283 68 Q283 50 300 36 Q317 50 317 68 L317 104 Z" transform="rotate({{ i * 22.5 }} 300 300)" fill="url(#glass{{ i % 4 }})" class="rw-pane"/>{% endfor %}
+        </g>
+        <circle cx="300" cy="300" r="198" class="rw-ring"/>
+        <g class="rw-inner">
+          {% for i in range(16) %}<line x1="300" y1="210" x2="300" y2="102" transform="rotate({{ i * 22.5 + 11.25 }} 300 300)" class="rw-spoke"/>{% endfor %}
+          {% for i in range(4) %}<circle cx="300" cy="150" r="26" transform="rotate({{ 45 + i * 90 }} 300 300)" fill="url(#glass{{ (i + 2) % 4 }})" class="rw-pane"/>{% endfor %}
+        </g>
+        <circle cx="300" cy="300" r="78" class="rw-core"/>
+        {% for i in range(8) %}<path d="M300 236 L311 280 L300 290 L289 280 Z" transform="rotate({{ i * 45 }} 300 300)" class="rw-star"/>{% endfor %}
+        <circle cx="300" cy="300" r="15" class="rw-boss"/>
+      </svg>
+      {% for r in routes %}{% set c = by_id[r.cid] %}
+      <a class="medal m{{ loop.index0 }}" href="{{ c.url }}" style="--c: {{ r.color }}">
+        <span class="disc"><img src="{{ root }}assets/{{ c.portrait }}" alt="{{ c.name }}" width="400" height="533"></span>
+        <span class="cap"><b>{{ c.name }}</b><small>{{ c.en | upper }}</small></span>
       </a>
       {% endfor %}
     </div>
@@ -58,21 +47,30 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="kicker">FOUR THREADS OF FATE</span>
-      <h2 class="gold-text">四条命运之线</h2>
-      {{ flourish() }}
-      <p>第一部由四位主角各自展开。点选路线，查看在这条线上能以挖角或剧情招入的同伴。</p>
+    {{ section_head("WHERE TO BEGIN", "从这里开始", "共创表的每个分页对应一个版面；英文攻略补上的成长率、支援与武器数值也织了进来。") }}
+    <div class="lancets">
+      {% for s in sections %}
+      <a class="lancet reveal" href="{{ s.file }}" style="--c: {{ s.color }}">
+        <span class="glass" aria-hidden="true"></span>
+        <span class="ico">{{ icon(s.icon) }}</span>
+        <span class="en">{{ s.en }}</span>
+        <h3>{{ s.label }}</h3>
+        <p>{{ s.desc }}</p>
+        <span class="num">{{ s.count }}</span>
+      </a>
+      {% endfor %}
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {{ section_head("FOUR THREADS OF FATE", "四条命运之线", "第一部由四位主角各自展开，能招入的同伴各不相同。点一条路线，直接打开该线的招募规划。") }}
     <div class="routes">
-      {% for r in routes %}{% set c = char_by_id[r.cid] %}
-      <a class="route-card reveal" href="characters.html?route={{ r.key }}" style="--c: {{ r.color }}">
-        <img src="{{ root }}assets/{{ c.portrait }}" alt="" loading="lazy" width="400" height="533">
-        <div class="body">
-          <span class="en">{{ r.en }}</span>
-          <h3>{{ r.name }}</h3>
-          <p>{{ r.faction_name }} · 可招入 {{ r.recruitable }} 人</p>
-        </div>
+      {% for r in routes %}{% set c = by_id[r.cid] %}{% set rr = recruit[loop.index0] %}
+      <a class="route reveal" href="recruit.html?route={{ r.key }}" style="--c: {{ r.color }}">
+        <span class="arch"><img src="{{ root }}assets/{{ c.portrait }}" alt="" loading="lazy" width="400" height="533"></span>
+        <span class="body"><span class="en">{{ r.en }}</span><b>{{ r.name }}</b><small>{{ c.fac.name }} · 挖角 {{ rr.scout }} 人 · 自动加入 {{ rr.auto }} 人</small></span>
       </a>
       {% endfor %}
     </div>
@@ -81,13 +79,29 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="panel note-band reveal">
-      <span class="seal-ico">{{ emblem("nb") }}</span>
-      <div>
-        <h3 class="serif">关于资料来源</h3>
-        <p>本站内容以社群维护的腾讯文档共创表为本；兵种、外传与血印分页经「万缕千丝 · 战术手帖」转录核对。繁体版优先采用港台官方译名，未公布者以社群译名转写，详见<a href="about.html">来源与译名说明</a>。</p>
-      </div>
+    {{ section_head("PEAKS OF GROWTH", "成长之最", "九项个人成长率各自最高的角色（不含兵种加成）。") }}
+    <div class="peaks">
+      {% for h in highlights %}
+      <a class="peak reveal" href="{{ h.unit.url }}" style="--c: {{ h.unit.color }}">
+        <span class="stat-name">{{ h.label }}</span>
+        <span class="ava-lg">{% if h.unit.avatar %}<img src="{{ root }}assets/{{ h.unit.avatar }}" alt="" loading="lazy" width="80" height="80">{% endif %}</span>
+        <b>{{ h.value }}<small>%</small></b>
+        <span class="who">{{ h.unit.name }}</span>
+      </a>
+      {% endfor %}
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {{ section_head("STATE OF THE CODEX", "资料完成度", "共创表本身目前无法直接读取，表中待完善的数值先以 Game8 英文攻略补上；名称有官方或共创表译名的优先采用。") }}
+    <div class="coverage panel">
+      {% for c in coverage %}
+      <div class="cov"><b>{{ c.value }}<small>{{ c.unit }}</small></b><span class="l">{{ c.label }}</span><span class="n">{{ c.note }}</span></div>
+      {% endfor %}
+    </div>
+    <p class="cov-foot">名称来源：官方 {{ status_counts.get('official', 0) }} · 共创表 {{ status_counts.get('sheet', 0) }} · 社群 {{ status_counts.get('community', 0) }} · 本站暂译 {{ status_counts.get('provisional', 0) }}。暂译名称以虚线标示，详见<a href="about.html">来源与译名</a>。</p>
   </div>
 </section>
 {% endblock %}

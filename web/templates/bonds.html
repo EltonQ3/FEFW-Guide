@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, divider, star, icon, section_head, avatar with context %}
+{% block main %}
+{{ page_hero("BONDS OF SUPPORT", "羁绊", "选一位角色，看能和谁结下支援：内圈是可达 A 级的伙伴，外圈依次是 B、C。全游戏共 " ~ coverage[2].value ~ " 组支援关系。", "var(--rose-pale)", [{"label": "Game8 · 各角色支援对象（经 Fortunes-Weave-Helper 整理）", "url": "https://github.com/Rico0319/Fortunes-Weave-Helper"}]) }}
+<div class="wrap bonds" data-bonds>
+  <div class="bond-stage panel">
+    <div class="wheel" data-wheel aria-live="polite">
+      <svg class="wheel-rings" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="22"/><circle cx="50" cy="50" r="34"/><circle cx="50" cy="50" r="46"/></svg>
+      <div class="wheel-lines" data-wheel-lines aria-hidden="true"></div>
+      <div class="wheel-nodes" data-wheel-nodes></div>
+    </div>
+    <div class="bond-side" data-bond-side>
+      <p class="hint">在下方点选一位角色。</p>
+    </div>
+  </div>
+
+  <div class="bond-picker">
+    <label class="search-field"><span class="sr-only">搜索角色</span>{{ icon("search") }}<input type="search" data-bond-filter placeholder="搜索角色……" autocomplete="off"></label>
+    {% for f in factions_present %}
+    <div class="bp-group" style="--c: {{ f.color }}">
+      <span class="bp-label">{{ f.name }}</span>
+      <div class="bp-list">
+        {% for u in f.members if u.supports %}
+        <button type="button" class="bp" data-pick="{{ u.id }}" data-name="{{ u.name }}" style="--c: {{ u.color }}" aria-pressed="false">{% if u.avatar %}<img src="{{ root }}assets/{{ u.avatar }}" alt="" loading="lazy" width="44" height="44">{% else %}<i>{{ u.name[:1] }}</i>{% endif %}<span>{{ u.name }}</span><small>{{ u.supports|length }}</small></button>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <section class="section">
+    {{ section_head("MOST CONNECTED", "羁绊最多的角色", "能结下支援的对象最多的八位。") }}
+    <div class="peaks">
+      {% for u in support_rank %}
+      <a class="peak" href="bonds.html?unit={{ u.id }}" data-pick-link="{{ u.id }}" style="--c: {{ u.color }}">
+        <span class="ava-lg">{% if u.avatar %}<img src="{{ root }}assets/{{ u.avatar }}" alt="" loading="lazy" width="80" height="80">{% endif %}</span>
+        <b>{{ u.supports|length }}<small>人</small></b><span class="who">{{ u.name }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  <script type="application/json" id="bond-data">{{ support_data | json }}</script>
+</div>
+{% endblock %}

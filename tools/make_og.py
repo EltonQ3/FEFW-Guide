@@ -17,17 +17,18 @@ DOCS = ROOT / "docs"
 HTML = """<!doctype html><html lang="zh-Hant" data-theme="dark"><head><meta charset="utf-8">
 <link rel="stylesheet" href="static/fonts-tc.css"><link rel="stylesheet" href="static/site.css">
 <style>
-body{margin:0;width:1200px;height:630px;overflow:hidden;display:grid;grid-template-columns:580px 1fr;align-items:center}
-.l{padding:0 0 0 70px}.l h1{font-size:104px;letter-spacing:.08em;margin:6px 0;white-space:nowrap}
+body{margin:0;width:1200px;height:630px;overflow:hidden;display:grid;grid-template-columns:600px 1fr;align-items:center}
+.l{padding:0 0 0 72px}.l h1{font-size:104px;letter-spacing:.08em;margin:6px 0;white-space:nowrap}
 .l .k{font-family:var(--latin);letter-spacing:.32em;font-size:17px;color:var(--gold-ink)}
-.l p{font-size:25px;color:var(--ink-2);margin-top:22px;letter-spacing:.08em}
-.r{display:flex;gap:16px;padding-right:60px}.r .banner{width:136px}
+.l p{font-size:25px;color:var(--ink-2);margin-top:20px;letter-spacing:.12em}
+.r{display:grid;grid-template-columns:repeat(4,118px);gap:14px;padding-right:56px}
+.r .window:nth-child(even){margin-top:46px}
 </style></head><body><div class="l"><div class="k">FIRE EMBLEM · FORTUNE'S WEAVE</div><h1 class="gold-text">萬縷千絲</h1>
-<p>社群共創資料表 · 圖鑑版</p></div><div class="r">
-<div class="banner" style="--c:var(--azure)"><div class="rod"></div><div class="cloth"><img src="assets/portrait/2.webp"></div></div>
-<div class="banner" style="--c:var(--violet);margin-top:40px"><div class="rod"></div><div class="cloth"><img src="assets/portrait/3.webp"></div></div>
-<div class="banner" style="--c:var(--amber);margin-top:12px"><div class="rod"></div><div class="cloth"><img src="assets/portrait/4.webp"></div></div>
-<div class="banner" style="--c:var(--crimson);margin-top:52px"><div class="rod"></div><div class="cloth"><img src="assets/portrait/5.webp"></div></div>
+<p>資料織錦 · 角色　招募　兵種　羈絆</p></div><div class="r">
+<span class="window" style="--c:var(--azure)"><span class="pane"><img src="assets/portrait/2.webp"></span></span>
+<span class="window" style="--c:var(--violet)"><span class="pane"><img src="assets/portrait/3.webp"></span></span>
+<span class="window" style="--c:var(--amber)"><span class="pane"><img src="assets/portrait/4.webp"></span></span>
+<span class="window" style="--c:var(--crimson)"><span class="pane"><img src="assets/portrait/5.webp"></span></span>
 </div></body></html>"""
 
 

@@ -1,9 +1,14 @@
-{% macro emblem(uid="e") -%}
-<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g-{{ uid }}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe9b4"/><stop offset=".55" stop-color="#d8b46c"/><stop offset="1" stop-color="#9e7a3a"/></linearGradient></defs><g fill="none" stroke="url(#g-{{ uid }})" stroke-width="1.6"><path d="M24 2.5 45.5 24 24 45.5 2.5 24Z"/><path d="M24 9 39 24 24 39 9 24Z" stroke-width="1" opacity=".55"/><path d="M6 20.5c8 3 28 3 36 0M6 27.5c8-3 28-3 36 0" stroke-width="1" opacity=".7"/></g><path d="M24 11c1.5 8 5 11.5 13 13-8 1.5-11.5 5-13 13-1.5-8-5-11.5-13-13 8-1.5 11.5-5 13-13Z" fill="url(#g-{{ uid }})"/><circle cx="24" cy="24" r="2.4" fill="#120e18"/></svg>
+{# ── 裝飾：八芒星、玫瑰窗、拱窗 ─────────────────────────── #}
+{% macro star(cls="") -%}
+<svg class="star8 {{ cls }}" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l4.2 9.8L34 6l-4.2 10.2L40 20l-10.2 3.8L34 34l-9.8-4.2L20 40l-4.2-10.2L6 34l4.2-10.2L0 20l10.2-3.8L6 6l9.8 5.8z" fill="currentColor"/><circle cx="20" cy="20" r="5.2" fill="var(--bg)"/><circle cx="20" cy="20" r="2.4" fill="currentColor"/></svg>
 {%- endmacro %}
 
-{% macro flourish(cls="") -%}
-<div class="flourish {{ cls }}" aria-hidden="true"><svg viewBox="0 0 64 18" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 9h14M48 9h14"/><path d="M16 9c4-6 9-6 12 0-3 6-8 6-12 0ZM48 9c-4-6-9-6-12 0 3 6 8 6 12 0Z" opacity=".75"/><path d="M32 3l6 6-6 6-6-6Z" fill="currentColor"/></svg></div>
+{% macro emblem(uid="e") -%}
+<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g-{{ uid }}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe9b4"/><stop offset=".55" stop-color="#d8b46c"/><stop offset="1" stop-color="#9e7a3a"/></linearGradient></defs><g fill="none" stroke="url(#g-{{ uid }})" stroke-width="1.5"><circle cx="24" cy="24" r="21.5"/><circle cx="24" cy="24" r="17" opacity=".55"/>{% for a in range(0, 360, 45) %}<path d="M24 7 26.6 13.4 24 17 21.4 13.4Z" transform="rotate({{ a }} 24 24)"/>{% endfor %}</g><path d="M24 15.5l2 5.2 5.5-1.7-3.4 4.6 3.4 4.6-5.5-1.7-2 5.2-2-5.2-5.5 1.7 3.4-4.6-3.4-4.6 5.5 1.7z" fill="url(#g-{{ uid }})"/></svg>
+{%- endmacro %}
+
+{% macro divider() -%}
+<div class="divider" aria-hidden="true"><span></span>{{ star() }}<span></span></div>
 {%- endmacro %}
 
 {% macro icon(name) -%}
@@ -15,13 +20,21 @@
 {%- elif name == "grid" -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>
 {%- elif name == "table" -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M3.5 14.5h17M9 9.5v10"/></svg>
 {%- elif name == "arrow" -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+{%- elif name == "left" -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+{%- elif name == "right" -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
 {%- elif name == "up" -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
-{%- elif name == "characters" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="16" r="7"/><path d="M10 41c1.5-9 7-14 14-14s12.5 5 14 14"/><path d="M24 2.5 27 6l-3 3.5L21 6Z" fill="currentColor"/><path d="M6 14l3 2-3 2M42 14l-3 2 3 2" opacity=".6"/></svg>
-{%- elif name == "classes" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6h12v12L20 40l-6-6Z"/><path d="M12 28l8 8M8 36l4 4M10 38l-4 4"/><path d="M36 12 18 30" opacity=".55"/></svg>
+{%- elif name == "check" -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+{%- elif name == "characters" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M10 44V20a14 14 0 0 1 28 0v24"/><circle cx="24" cy="21" r="5.5"/><path d="M15 44c1-7 4.5-11 9-11s8 4 9 11"/></svg>
+{%- elif name == "recruit" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V12l16-6 16 6v28"/><path d="M8 40h32M18 40V28h12v12"/><path d="M24 12v8M20 16h8"/></svg>
+{%- elif name == "classes" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6h12v12L20 40l-6-6Z"/><path d="M12 28l8 8M8 36l4 4M10 38l-4 4"/></svg>
+{%- elif name == "bonds" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="17" cy="24" r="10"/><circle cx="31" cy="24" r="10"/><path d="M24 6v4M24 38v4" opacity=".6"/></svg>
 {%- elif name == "paralogues" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 8h26a4 4 0 0 1 0 8H12"/><path d="M12 8a4 4 0 0 0 0 8v20a4 4 0 0 0 4 4h22a4 4 0 0 0 0-8H18"/><path d="M18 22h14M18 27h10" opacity=".6"/></svg>
-{%- elif name == "seals" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M8 34 6 14l10 8 8-14 8 14 10-8-2 20Z"/><path d="M8 40h32" /><circle cx="24" cy="28" r="3" fill="currentColor"/></svg>
+{%- elif name == "codex" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M24 12c-5-4-11-4-17-2v28c6-2 12-2 17 2 5-4 11-4 17-2V10c-6-2-12-2-17 2Z"/><path d="M24 12v28"/></svg>
+{%- elif name == "about" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 21v12M24 15v1" stroke-linecap="round" stroke-width="2.2"/></svg>
+{%- elif name == "seals" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M8 34 6 14l10 8 8-14 8 14 10-8-2 20Z"/><path d="M8 40h32"/><circle cx="24" cy="28" r="3" fill="currentColor"/></svg>
+{%- elif name == "blaze" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M24 42c-8 0-13-5-13-12 0-8 7-11 8-19 4 3 6 7 6 11 2-2 3-5 3-7 5 4 8 9 8 15 0 7-5 12-12 12Z"/><path d="M24 42c-3 0-5-2-5-5 0-4 4-6 5-9 2 3 5 5 5 9 0 3-2 5-5 5Z" opacity=".6"/></svg>
 {%- elif name == "blessings" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 42h32M11 42V22M37 42V22M19 42V24M29 42V24"/><path d="M6 20 24 8l18 12Z" stroke-linejoin="round"/><circle cx="24" cy="15" r="2.2" fill="currentColor"/></svg>
-{%- elif name == "about" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M24 12c-5-4-11-4-17-2v28c6-2 12-2 17 2 5-4 11-4 17-2V10c-6-2-12-2-17 2Z"/><path d="M24 12v28"/></svg>
+{%- elif name == "gift" -%}<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="18" width="32" height="22" rx="2"/><path d="M6 18h36v-6H6zM24 12v28"/><path d="M24 12c-3-6-11-6-10-1 1 3 6 2 10 1Zm0 0c3-6 11-6 10-1-1 3-6 2-10 1Z"/></svg>
 {%- elif name == "external" -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
 {%- endif -%}
 {%- endmacro %}
@@ -30,25 +43,41 @@
 <svg class="ring" viewBox="0 0 128 128" aria-hidden="true"><circle cx="64" cy="64" r="56" fill="none" stroke="var(--line-2)" stroke-width="1"/><circle cx="64" cy="64" r="49" fill="none" stroke="var(--line)" stroke-width="6"/><circle cx="64" cy="64" r="49" fill="none" stroke="{{ c }}" stroke-width="6" stroke-linecap="round" pathLength="100" stroke-dasharray="{{ pct }} 100" transform="rotate(-90 64 64)"/>{% for a in range(0, 360, 30) %}<path d="M64 4.5v4" stroke="var(--line-3)" stroke-width="1.2" transform="rotate({{ a }} 64 64)"/>{% endfor %}</svg>
 {%- endmacro %}
 
-{% macro page_hero(kicker, title, lead, accent=None, sources=None, stats=None) -%}
+{# 名稱旁的譯名狀態：暫譯、社群譯名、原文 #}
+{% macro tname(x, show_en=True) -%}
+<span class="tname{% if x.status in ('provisional', 'community', 'untranslated') %} is-{{ x.status }}{% endif %}"{% if x.status in ('provisional', 'community') %} title="{{ STATUS[x.status] }}：{{ x.en }}"{% endif %}>{{ x.name }}</span>{% if show_en and x.en and x.en != x.name %}<span class="en-name" lang="en">{{ x.en }}</span>{% endif %}
+{%- endmacro %}
+
+{% macro page_hero(kicker, title, lead=None, accent=None, sources=None, stats=None) -%}
 <header class="page-hero"{% if accent %} style="--accent: {{ accent }}"{% endif %}>
   <div class="wrap">
+    <div class="hero-arch" aria-hidden="true"></div>
     <span class="kicker">{{ kicker }}</span>
     <h1 class="gold-text">{{ title }}</h1>
-    {{ flourish() }}
+    {{ divider() }}
     {% if lead %}<p class="lead">{{ lead }}</p>{% endif %}
-    {% if stats %}<div class="stat-row">{% for v, l in stats %}<div class="stat"><b class="gold-text">{{ v }}</b><span>{{ l }}</span></div>{% endfor %}</div>{% endif %}
+    {% if stats %}<div class="stat-row">{% for v, l in stats %}<div class="stat"><b>{{ v }}</b><span>{{ l }}</span></div>{% endfor %}</div>{% endif %}
     {% if sources %}<p class="source-line"><span>资料来源</span>{% for s in sources %}<a href="{{ s.url }}" rel="noopener" target="_blank">{{ s.label }}</a>{% endfor %}</p>{% endif %}
   </div>
 </header>
 {%- endmacro %}
 
-{% macro filterbar(placeholder, total, groups=[], view_toggle=False) -%}
+{% macro section_head(kicker, title, lead=None) -%}
+<div class="section-head">
+  <span class="kicker">{{ kicker }}</span>
+  <h2>{{ title }}</h2>
+  {{ divider() }}
+  {% if lead %}<p>{{ lead }}</p>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro filterbar(placeholder, total, groups=[], view_toggle=False, sort=None) -%}
 <div class="filterbar" role="search">
   <div class="filter-top">
     <label class="search-field"><span class="sr-only">{{ placeholder }}</span>{{ icon("search") }}<input type="search" data-filter-text placeholder="{{ placeholder }}" autocomplete="off" enterkeyhint="search"></label>
     <span class="count" aria-live="polite"><b data-filter-count>{{ total }}</b> / {{ total }}</span>
-    {% if view_toggle %}<div class="view-toggle" role="group" aria-label="显示方式"><button type="button" data-view="cards" aria-pressed="true">{{ icon("grid") }}<span class="t">卡片</span></button><button type="button" data-view="table" aria-pressed="false">{{ icon("table") }}<span class="t">表格</span></button></div>{% endif %}
+    {% if sort %}<label class="sort"><span class="sr-only">排序</span><select data-sort>{% for o in sort %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}</select></label>{% endif %}
+    {% if view_toggle %}<div class="view-toggle" role="group" aria-label="显示方式"><button type="button" data-view="cards" aria-pressed="true">{{ icon("grid") }}<span class="t">{{ view_toggle[0] if view_toggle is not sameas true else "卡片" }}</span></button><button type="button" data-view="table" aria-pressed="false">{{ icon("table") }}<span class="t">{{ view_toggle[1] if view_toggle is not sameas true else "表格" }}</span></button></div>{% endif %}
   </div>
   {% for g in groups %}
   <div class="chip-row" data-filter-group="{{ g.key }}" role="group" aria-label="{{ g.label }}">
@@ -58,4 +87,8 @@
   </div>
   {% endfor %}
 </div>
+{%- endmacro %}
+
+{% macro avatar(u, size="", link=True) -%}
+{% if link %}<a class="ava {{ size }}" href="{{ up }}{{ u.url }}" style="--c: {{ u.color }}" title="{{ u.name }}">{% else %}<span class="ava {{ size }}" style="--c: {{ u.color }}">{% endif %}{% if u.avatar %}<img src="{{ root }}assets/{{ u.avatar }}" alt="" loading="lazy" width="80" height="80">{% else %}<i>{{ u.name[:1] }}</i>{% endif %}<span>{{ u.name }}</span>{% if link %}</a>{% else %}</span>{% endif %}
 {%- endmacro %}

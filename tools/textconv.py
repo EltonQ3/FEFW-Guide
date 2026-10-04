@@ -20,7 +20,8 @@ ROOT = Path(__file__).resolve().parent.parent
 GLOSSARY = ROOT / "source" / "glossary.json"
 
 _PROTECT = [
-    re.compile(r"<(script|style)\b[^>]*>.*?</\1>", re.S),
+    re.compile(r"<style\b[^>]*>.*?</style>", re.S),
+    re.compile(r"<script\b(?![^>]*application/json)[^>]*>.*?</script>", re.S),
     re.compile(r"<!--noconv-->.*?<!--/noconv-->", re.S),
     re.compile(r"<(span|small|em|b|i|p|div|dd|dt|td|th|li|h[1-6])\b[^>]*\blang=\"ja\"[^>]*>.*?</\1>", re.S),
     re.compile(r"\b(?:href|src|srcset|data-src|data-url|data-alt)=\"[^\"]*\""),

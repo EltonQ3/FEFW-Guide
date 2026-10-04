@@ -1,0 +1,91 @@
+{
+ "_说明": "Game8 英文资料 → 简体中文。status：official＝任天堂官方公布；sheet＝共创表／姊妹站已用的社群通行译名；community＝中文攻略站摘要中出现的译名（未逐页核对）；provisional＝本站暂译，待共创表或游戏内中文核对。",
+ "units": {
+  "Alexandra": ["亚历山德拉", "sheet"], "Anatolia": ["阿纳托莉娅", "sheet"], "Aswan": ["阿斯旺", "community"],
+  "Benditz": ["班迪兹", "sheet"], "Bertrand": ["贝特朗", "sheet"], "Bonaventure": ["波拿帕尔特", "sheet"],
+  "Buccar": ["巴卡尼亚", "sheet"], "Cai": ["凯伊", "official"], "Catania": ["卡塔妮雅", "sheet"],
+  "Centurio": ["盛托利翁", "sheet"], "Creek": ["齐利科", "community"], "Dadao": ["大刀", "sheet"],
+  "Dante": ["但丁", "official"], "Diego": ["迪雅各", "sheet"], "Dietrich": ["迪托利希", "official"],
+  "Eshmel": ["伊修玛尔", "official"], "Esmeralda": ["艾丝梅拉尔达", "sheet"], "Fabio": ["法比奥", "sheet"],
+  "Fianna": ["菲亚娜", "sheet"], "Gaitz": ["盖茨", "sheet"], "Goliath": ["歌利亚", "sheet"],
+  "Guzran": ["古扎岚", "sheet"], "Halvin": ["哈尔温", "sheet"], "Hong Hua": ["红花", "official"],
+  "Inyoni": ["易尼奥尼", "community"], "Io": ["伊欧", "sheet"], "Jasmine": ["贾斯敏", "sheet"],
+  "Jester": ["杰斯特", "sheet"], "Kiroc": ["基罗伊卡", "sheet"], "Leda": ["蕾达", "official"],
+  "Lilian": ["莉利安", "sheet"], "Loretta": ["洛蕾塔", "sheet"], "Ludia": ["鲁鲁迪娅", "sheet"],
+  "Lysander": ["莱桑达", "sheet"], "Majide": ["马吉迪", "sheet"], "Mikaela": ["米迦艾拉", "sheet"],
+  "Mu": ["穆", "sheet"], "Nathan": ["内森", "community"], "Nezha": ["哪吒", "official"],
+  "Ninae": ["妮涅", "sheet"], "Noctula": ["诺克裘拉", "sheet"], "Nuzzuo": ["努佐", "sheet"],
+  "Nydine": ["努蒂奴", "sheet"], "Olympia": ["奥林匹亚", "official"], "Orchel": ["奥尔赫尔", "sheet"],
+  "Peppe": ["佩佩", "sheet"], "Peter": ["彼得", "sheet"], "Seteth": ["西提司", "sheet"],
+  "Sha Lan": ["莎兰", "official"], "Simon": ["希蒙", "sheet"], "Sirocco": ["西洛可", "sheet"],
+  "Sofia": ["索绯雅", "sheet"], "Tahonia": ["塔霍妮娅", "community"], "Talimun": ["塔利穆恩", "sheet"],
+  "Theodora": ["赛奥朵拉", "official"], "Tialla": ["蒂亚拉", "sheet"], "Tobias": ["托比亚斯", "sheet"],
+  "Troy": ["特洛伊亚", "sheet"], "Ultand": ["乌尔坦德", "sheet"], "Ursula": ["乌修拉", "sheet"],
+  "Yang Jie": ["杨界", "sheet"], "Zarcone": ["札可捏", "sheet"],
+  "Anna": ["安娜", "sheet"], "Solel": ["索雷尔", "provisional"]
+ },
+ "unit_jp": {
+  "Orchel": "オルヘル", "Nathan": "ネイサン", "Creek": "キリーク", "Hong Hua": "コウカ", "Troy": "トロイア",
+  "Centurio": "セントリオン", "Inyoni": "イニオニ", "Aswan": "", "Tahonia": "", "Eshmel": "イシュマール"
+ },
+ "factions": {
+  "Ribeira Winds": ["利贝拉之风", "sheet", "ribeira"],
+  "House Lamine": ["拉弥努家族", "sheet", "lamine"],
+  "Megaira's Beacon": ["美盖拉的灯火", "sheet", "megaira"],
+  "Rose Tempest": ["蔷薇风暴", "sheet", "rose"],
+  "The Savior's Army": ["救世军", "official", "savior"],
+  "Bertrand's Army": ["炎之鬃", "sheet", "mane"],
+  "Tale of the Moon": ["月之谎", "sheet", "moon"],
+  "Linaria Dewdrops": ["利纳利亚朝露", "sheet", "linaria"],
+  "Pale Raven's Bridal Party": ["白鸦新娘团", "sheet", "crow"],
+  "Temple Army": ["奥罗拉神殿", "provisional", "temple"],
+  "Arago": ["阿拉戈精锐部队", "provisional", "arago"],
+  "Sisters of Braganca": ["布拉甘萨同胞团", "provisional", "braganca"],
+  "Bandits": ["盗贼", "provisional", "bandits"],
+  "The Har Hali": ["哈尔哈利", "provisional", "harhali"],
+  "Brigid Army": ["布里吉德军", "provisional", "brigid"],
+  "Neutral": ["无所属", "provisional", "free"]
+ },
+ "classes": {
+  "Commoner": ["平民", "sheet"], "Noble": ["贵族", "sheet"],
+  "Gladiator": ["斗士", "sheet"], "Hunter": ["猎兵", "sheet"], "Soldier": ["士兵", "sheet"],
+  "Ornius Rider": ["飞鸵兵", "sheet"], "Diviner": ["诅咒师", "sheet"],
+  "Myrmidon": ["剑客", "sheet"], "Brigand": ["土匪", "sheet"], "Pugilist": ["斗拳手", "sheet"],
+  "Archer": ["弓箭手", "sheet"], "Rogue": ["恶棍", "sheet"], "Armored Knight": ["重装步兵", "sheet"],
+  "Light Cavalry": ["轻骑兵", "sheet"], "Charioteer": ["战车兵", "sheet"], "Armored Ornius Rider": ["骑甲驼兵", "sheet"],
+  "Wing Soldier": ["天翼兵", "sheet"], "Shaman": ["萨满巫师", "sheet"], "Priest": ["牧师", "sheet"],
+  "Shido": ["侍道", "sheet"], "Dancer": ["舞者", "sheet"], "Warrior": ["勇士", "sheet"], "Sniper": ["狙击手", "sheet"],
+  "Forest Knight": ["森林骑士", "sheet"], "Ranger": ["游侠", "sheet"], "Dreadnought": ["巨型重甲兵", "sheet"],
+  "Cataphract": ["重装骑兵", "sheet"], "Bardinger": ["荣光骑士", "sheet"], "Caladrius": ["神鸵兵", "sheet"],
+  "Dragoon": ["驭龙兵", "sheet"], "Ovate": ["先知", "sheet"], "Bishop": ["主教", "sheet"],
+  "Troubadour": ["游唱诗人", "sheet"], "Guardian": ["卫士", "sheet"],
+  "Blacksmith": ["铁匠", "provisional"], "Elephant Rider": ["战象兵", "community"],
+  "Swordmaster": ["刀剑将领", "sheet"], "Battlemaster": ["战斗将领", "sheet"], "War Monk": ["武僧", "sheet"],
+  "Bow Adept": ["宗师射手", "sheet"], "Shadow Seeker": ["探影者", "sheet"], "Sentinel": ["圣枪师", "sheet"],
+  "Castle Knight": ["要塞", "sheet"], "Orichaldia": ["奥利哈铁骑", "sheet"], "Celestial Trooper": ["圣天翼兵", "sheet"],
+  "Bau Lord": ["飞龙将领", "sheet"], "Druid": ["德鲁伊", "sheet"], "Wiseman": ["贤者", "sheet"],
+  "Bow Knight": ["弓骑士", "provisional"], "Great Knight": ["重骑士", "provisional"],
+  "High Savant": ["高阶墓志铭", "community"], "Valkyrium": ["女武神", "provisional"],
+  "The Blade": ["刃辉神将", "sheet"], "The Apsara": ["神乐神将", "sheet"], "The Eternal": ["永霸神将", "sheet"],
+  "The Godhand": ["破拳神将", "sheet"], "The Calamity": ["绝祸神将", "sheet"], "The Trident": ["岚枪神将", "sheet"],
+  "The Cavalier": ["烈骏神将", "sheet"], "The Avatar": ["圣转神将", "sheet"]
+ },
+ "tiers": {
+  "Base": "基础", "Beginner": "初级", "Specialty": "中级", "Advanced": "上级", "Master": "最上级", "Divine": "神将"
+ },
+ "stats": {
+  "HP": "HP", "Str": "力量", "Mag": "魔力", "Spd": "速度", "Dex": "技巧", "Def": "守备", "Res": "魔防", "Lck": "幸运", "Cha": "魅力"
+ },
+ "skills": {
+  "Sword": "剑术", "Spear": "枪术", "Axe": "斧术", "Bow": "弓术", "Gauntlet": "格斗术",
+  "Black Magic": "黑魔术", "White Magic": "白魔术", "Riding": "马术", "Flying": "飞行术",
+  "Heavy Armor": "重装术", "Armor": "重装术", "Infantry": "步兵术", "Authority": "统率"
+ },
+ "weapon_kinds": {
+  "sword": "剑", "spear": "枪", "axe": "斧", "bow": "弓", "gauntlet": "护手", "black": "黑魔法", "white": "白魔法"
+ },
+ "unit_types": {
+  "Infantry": "步兵", "Cavalry": "骑兵", "Flier": "飞行", "Heavy Armor": "重装"
+ },
+ "ranks": {"A": "A", "B": "B", "C": "C"}
+}

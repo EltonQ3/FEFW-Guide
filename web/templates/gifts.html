@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "_macros.html" import page_hero, filterbar, tname, star, icon with context %}
+{% block main %}
+{{ page_hero("GIFTS", "礼物", gifts|length ~ " 件礼物按用途分类，每件附上「特别喜欢」它的角色。角色的完整喜好请看各角色页。", "var(--rose-pale)", sources.gifts) }}
+<div class="wrap" data-filter-scope data-url-params="cat">
+  {{ filterbar("搜索礼物或角色……（例：咖啡、蕾达）", gifts|length, [
+      {"key": "cat", "label": "用途", "options": gift_options},
+  ]) }}
+  {% for cat in gift_cats %}
+  <section class="group" data-filter-section>
+    <div class="group-head">
+      <span class="crest">{{ icon("gift") }}</span>
+      <div><h2>{{ cat }}</h2></div>
+      <span class="rule"></span><span class="n">{{ gift_groups[cat]|length }}</span>
+    </div>
+    <div class="gift-grid">
+      {% for g in gift_groups[cat] %}
+      <article class="gcard" id="g-{{ g.id }}" data-item data-cat="{{ g.cat_index }}" data-text="{{ g.search }}">
+        <div class="gc-head"><b>{{ tname(g) }}</b></div>
+        {% if g.desc %}<p class="desc">{{ g.desc }}</p>{% endif %}
+        {% if g.likers %}<div class="likers"><span class="k">特别喜欢</span>{% for u in g.likers %}<a href="{{ u.url }}" title="{{ u.name }}" style="--c: {{ u.color }}">{% if u.avatar %}<img src="{{ root }}assets/{{ u.avatar }}" alt="{{ u.name }}" loading="lazy" width="30" height="30">{% else %}<i>{{ u.name[:1] }}</i>{% endif %}</a>{% endfor %}</div>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  <div class="empty" data-filter-empty><span class="serif">没有符合的礼物</span>换个关键词，或改选用途。</div>
+</div>
+{% endblock %}

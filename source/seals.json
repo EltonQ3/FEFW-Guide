@@ -3,15 +3,25 @@
   {
    "label": "共创表 · 血印分页（经姊妹站转录）",
    "url": "https://docs.qq.com/sheet/DV0N0VUZLSXRmUWFq"
+  },
+  {
+   "label": "Game8 · 血印一览（经 Fortunes-Weave-Helper 整理）",
+   "url": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/624378"
   }
  ],
  "items": [
   {
    "id": "prophet",
    "name": "预言者之冠",
+   "en": "Diadem of the Auger",
+   "status": "sheet",
    "chance": 5,
    "effect": "命中 +100",
    "holders": [
+    "伊修玛尔",
+    "索雷尔"
+   ],
+   "holders_sheet": [
     "伊修玛尔"
    ],
    "icon": "seal/prophet.webp"
@@ -19,9 +29,15 @@
   {
    "id": "apostle",
    "name": "使徒之天冠",
+   "en": "Diadem of the Apostle",
+   "status": "sheet",
    "chance": 20,
    "effect": "命中 +20",
    "holders": [
+    "凯伊",
+    "奥尔赫尔"
+   ],
+   "holders_sheet": [
     "凯伊",
     "奥尔赫尔"
    ],
@@ -30,9 +46,14 @@
   {
    "id": "eternity",
    "name": "永远之天冠",
+   "en": "Diadem of the Endless",
+   "status": "sheet",
    "chance": 10,
    "effect": "中幅回复自己的 HP",
    "holders": [
+    "迪托利希"
+   ],
+   "holders_sheet": [
     "迪托利希"
    ],
    "icon": "seal/eternity.webp"
@@ -40,9 +61,19 @@
   {
    "id": "soul",
    "name": "魂魄之天冠",
+   "en": "Diadem of Duality",
+   "status": "sheet",
    "chance": 25,
    "effect": "攻击力 +3",
    "holders": [
+    "赛奥朵拉",
+    "凯伊",
+    "奥尔赫尔",
+    "塔利穆恩",
+    "波鲁波亚",
+    "贝特朗"
+   ],
+   "holders_sheet": [
     "赛奥朵拉",
     "凯伊",
     "奥尔赫尔",
@@ -54,9 +85,15 @@
   {
    "id": "earth",
    "name": "大地之天冠",
+   "en": "Diadem of the Earth",
+   "status": "sheet",
    "chance": 3,
    "effect": "攻击力 +7",
    "holders": [
+    "蕾达",
+    "阿斯旺"
+   ],
+   "holders_sheet": [
     "蕾达"
    ],
    "icon": "seal/earth.webp"
@@ -64,9 +101,14 @@
   {
    "id": "courage",
    "name": "勇气之天冠",
+   "en": "Diadem of Valor",
+   "status": "sheet",
    "chance": 3,
    "effect": "造成的伤害变为 1.5 倍",
    "holders": [
+    "艾丝梅拉尔达"
+   ],
+   "holders_sheet": [
     "艾丝梅拉尔达"
    ],
    "icon": "seal/courage.webp"
@@ -74,9 +116,14 @@
   {
    "id": "libra",
    "name": "天秤之天冠",
+   "en": "Diadem of Balance",
+   "status": "sheet",
    "chance": 3,
    "effect": "不会受到反击",
    "holders": [
+    "西提司"
+   ],
+   "holders_sheet": [
     "西提司"
    ],
    "icon": "seal/libra.webp"
@@ -84,9 +131,14 @@
   {
    "id": "solitude",
    "name": "孤高之天冠",
+   "en": "Diadem of Reflection",
+   "status": "sheet",
    "chance": 10,
    "effect": "命中 +30",
    "holders": [
+    "妮涅"
+   ],
+   "holders_sheet": [
     "妮涅"
    ],
    "icon": "seal/solitude.webp"
@@ -94,9 +146,14 @@
   {
    "id": "bind",
    "name": "束缚之天冠",
+   "en": "Diadem of Fetters",
+   "status": "sheet",
    "chance": 5,
    "effect": "造成的伤害变为 1.2 倍",
    "holders": [
+    "乌修拉"
+   ],
+   "holders_sheet": [
     "乌修拉"
    ],
    "icon": "seal/bind.webp"
@@ -104,12 +161,43 @@
   {
    "id": "rebirth",
    "name": "再生之天冠",
+   "en": "Diadem of Revival",
+   "status": "sheet",
    "chance": 20,
    "effect": "小幅回复自己的 HP",
    "holders": [
     "菲亚娜"
    ],
+   "holders_sheet": [
+    "菲亚娜"
+   ],
    "icon": "seal/rebirth.webp"
+  },
+  {
+   "id": "fanatic",
+   "name": "狂信之天冠",
+   "en": "Diadem of the Fanatic",
+   "status": "provisional",
+   "chance": 3,
+   "effect": "攻击时，攻击 +5、命中 +5",
+   "holders": [
+    "安娜"
+   ],
+   "holders_sheet": [],
+   "icon": null
+  },
+  {
+   "id": "victor",
+   "name": "胜者之天冠",
+   "en": "Diadem of the Victor",
+   "status": "provisional",
+   "chance": 10,
+   "effect": "攻击时，攻击 +5",
+   "holders": [
+    "贝特朗"
+   ],
+   "holders_sheet": [],
+   "icon": null
   }
  ]
 }

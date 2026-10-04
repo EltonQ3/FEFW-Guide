@@ -18,6 +18,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "source"
+BASE = SRC / "base"  # 共創表／姊妹站轉錄的原始資料；tools/import_game8.py 合併後寫回 source/
 ASSETS = ROOT / "assets"
 
 SHEET_URL = "https://docs.qq.com/sheet/DV0N0VUZLSXRmUWFq"
@@ -141,23 +142,24 @@ def main() -> None:
     chars = []
     for c in data["characters"]:
         cid = c["id"]
-        if not re.fullmatch(r"\d+|hero", cid):
-            continue  # 沒有圖像的文字條目不建立角色卡
+        has_img = bool(re.fullmatch(r"\d+|hero", cid))
         faction = c.get("faction", "")
         fkey = FACTION_KEYS.get(faction, "free")
         if faction == MIXED:
             fkey = "free"
         fkey = FACTION_OVERRIDE.get(cid, fkey)
         img_id = "hero" if cid == "hero" else cid
-        portrait_src = sdocs / (c.get("portrait") or f"assets/avatar/hero_m.jpg")
-        avatar_src = sdocs / c["avatar"]
-        portrait = f"portrait/{img_id}.webp"
-        avatar = f"avatar/{img_id}.webp"
-        if portrait_src.exists():
-            save_webp(portrait_src, ASSETS / portrait)
-        else:
-            portrait = None
-        save_webp(avatar_src, ASSETS / avatar, (160, 160))
+        portrait = avatar = None
+        if has_img:
+            portrait_src = sdocs / (c.get("portrait") or "assets/avatar/hero_m.jpg")
+            avatar_src = sdocs / c["avatar"]
+            portrait = f"portrait/{img_id}.webp"
+            avatar = f"avatar/{img_id}.webp"
+            if portrait_src.exists():
+                save_webp(portrait_src, ASSETS / portrait)
+            else:
+                portrait = None
+            save_webp(avatar_src, ASSETS / avatar, (160, 160))
         gifts = c.get("gifts") or {}
         recruit = {key: parse_recruit((c.get("recruit") or {}).get(label, "")) for key, label in ROUTES}
         chars.append({
@@ -178,7 +180,7 @@ def main() -> None:
     # 主角排在最前，依官方介紹順序
     order = {"2": 0, "3": 1, "4": 2, "5": 3, "hero": 4}
     chars.sort(key=lambda x: (order.get(x["id"], 9), int(x["id"]) if x["id"].isdigit() else 999))
-    write(SRC / "characters.json", {
+    write(BASE / "characters.json", {
         "_source": [
             {"label": "姊妹站角色资料（招募表、送礼表）", "url": "https://github.com/EltonQ3/fe-guide-wanlvqiansi"},
         ],
@@ -209,7 +211,7 @@ def main() -> None:
             "icon": icon,
         }
         out.append(item)
-    write(SRC / "classes.json", {
+    write(BASE / "classes.json", {
         "_source": [{"label": "共创表 · 02-兵种职业信息（经姊妹站转录）", "url": SHEET_URL}],
         "items": out,
     })
@@ -230,7 +232,7 @@ def main() -> None:
             "steps": p.get("steps", ""),
             "consequence": p.get("consequence", ""),
         })
-    write(SRC / "paralogues.json", {
+    write(BASE / "paralogues.json", {
         "_source": [{"label": "共创表 · 03-全外传信息（经姊妹站转录）", "url": SHEET_URL}],
         "items": out,
     })
@@ -252,7 +254,7 @@ def main() -> None:
             "holders": [h.strip() for h in holders.split("、") if h.strip()],
             "icon": icon,
         })
-    write(SRC / "seals.json", {
+    write(BASE / "seals.json", {
         "_source": [{"label": "共创表 · 血印分页（经姊妹站转录）", "url": SHEET_URL}],
         "items": seals,
     })
@@ -272,7 +274,7 @@ def main() -> None:
             "cost": {"normal": int(cost[0]), "hard": int(cost[1])} if len(cost) >= 2 else None,
             "note": "剧情解锁，不可侍奉" if key == "fortuna" else "",
         })
-    write(SRC / "blessings.json", {
+    write(BASE / "blessings.json", {
         "_source": [{"label": "姊妹站手册 3.2 七神加护效果全表", "url": "https://fe-guide.pages.dev/"}],
         "items": gods,
     })

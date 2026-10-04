@@ -1,0 +1,69 @@
+{
+ "_说明": "血印（天冠）。前十枚按效果与持有者对上共创表／姊妹站的名称（sheet）；狂信、胜者两枚只见于 Game8，名称为本站暂译。",
+ "names": {
+  "Diadem of Balance": [
+   "天秤之天冠",
+   "sheet",
+   "libra"
+  ],
+  "Diadem of Duality": [
+   "魂魄之天冠",
+   "sheet",
+   "soul"
+  ],
+  "Diadem of Fetters": [
+   "束缚之天冠",
+   "sheet",
+   "bind"
+  ],
+  "Diadem of Reflection": [
+   "孤高之天冠",
+   "sheet",
+   "solitude"
+  ],
+  "Diadem of Revival": [
+   "再生之天冠",
+   "sheet",
+   "rebirth"
+  ],
+  "Diadem of the Apostle": [
+   "使徒之天冠",
+   "sheet",
+   "apostle"
+  ],
+  "Diadem of the Auger": [
+   "预言者之冠",
+   "sheet",
+   "prophet"
+  ],
+  "Diadem of the Earth": [
+   "大地之天冠",
+   "sheet",
+   "earth"
+  ],
+  "Diadem of the Endless": [
+   "永远之天冠",
+   "sheet",
+   "eternity"
+  ],
+  "Diadem of Valor": [
+   "勇气之天冠",
+   "sheet",
+   "courage"
+  ],
+  "Diadem of the Fanatic": [
+   "狂信之天冠",
+   "provisional",
+   "fanatic"
+  ],
+  "Diadem of the Victor": [
+   "胜者之天冠",
+   "provisional",
+   "victor"
+  ]
+ },
+ "effects": {
+  "Grants Atk+5, Hit+5 when attacking": "攻击时，攻击 +5、命中 +5",
+  "Grants Atk+5 when attacking": "攻击时，攻击 +5"
+ }
+}

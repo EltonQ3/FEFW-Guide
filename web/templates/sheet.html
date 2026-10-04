@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import page_hero, filterbar %}
+{% from "_macros.html" import page_hero, filterbar with context %}
 {% block main %}
 {{ page_hero(tab.en or "FROM THE SHEET", tab.title, tab.intro, tab.color, tab.sources) }}
 <div class="wrap view-cards" data-filter-scope data-view-scope="sheet-{{ tab.slug }}">
@@ -10,7 +10,7 @@
   <section class="group" data-filter-section>
     {% if g.name %}
     <div class="group-head">
-      <span class="num"><span>{{ loop.index }}</span></span>
+      <span class="crest"><span class="latin">{{ loop.index }}</span></span>
       <div><h2>{{ g.name }}</h2><span class="sub">{{ g.rows|length }} 项</span></div>
       <span class="rule"></span>
     </div>
